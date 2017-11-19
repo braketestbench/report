@@ -1,7 +1,7 @@
 \select@language {brazil}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Schematic for disk brake systems \relax }}{29}{figure.caption.12}
+\contentsline {figure}{\numberline {1}{\ignorespaces Schematic for disk brake systems \cite {fig-working-of-disk-breaks}\relax }}{29}{figure.caption.12}
 \contentsline {figure}{\numberline {2}{\ignorespaces \textit {Crankshaft Position Sensor} \cite {ckp-gm}\relax }}{29}{figure.caption.13}
 \contentsline {figure}{\numberline {3}{\ignorespaces Magnetic Sensor Signal \cite {cam-sensor-signal}\relax }}{30}{figure.caption.14}
 \contentsline {figure}{\numberline {4}{\ignorespaces Thermocouple characteristic voltage output \cite {termo-curves}\relax }}{30}{figure.caption.15}
@@ -22,6 +22,9 @@
 \contentsline {figure}{\numberline {16}{\ignorespaces \textit {ATmega238p} \cite {coorporation2011atmel}\relax }}{46}{figure.caption.29}
 \contentsline {figure}{\numberline {17}{\ignorespaces INA125 Schematic \cite {ina125data}\relax }}{48}{figure.caption.30}
 \contentsline {figure}{\numberline {18}{\ignorespaces Conditioning Circuit for the Load Cell\relax }}{49}{figure.caption.31}
+\contentsline {figure}{\numberline {19}{\ignorespaces Weg CFW-08 Frequency Inverter \cite {fig-wegCFW08}\relax }}{50}{figure.caption.32}
+\contentsline {figure}{\numberline {20}{\ignorespaces Sallen-Key Active Low Pass Filter \cite {texas1999sallenkey}\relax }}{52}{figure.caption.33}
+\contentsline {figure}{\numberline {21}{\ignorespaces PWM to Speed Reference Circuit\relax }}{54}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {19}{\ignorespaces Microcontroller Code Map \cite {microCodeMap}\relax }}{52}{figure.caption.32}
+\contentsline {figure}{\numberline {22}{\ignorespaces Microcontroller Code Map \cite {microCodeMap}\relax }}{56}{figure.caption.35}
 \addvspace {10\p@ }

@@ -14,8 +14,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibliografia.bib
 Warning--entry type for "mcuDef" isn't style-file defined
---line 275 of file bibliografia.bib
-Warning--I didn't find a database entry for "mancini2000understanding"
+--line 320 of file bibliografia.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -25,45 +24,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 48 entries,
+You've used 61 entries,
             6714 wiz_defined-function locations,
-            1420 strings with 15597 characters,
-and the built_in function-call counts, 56284 in all, are:
-= -- 6259
-> -- 1003
-< -- 1315
-+ -- 1696
-- -- 317
-* -- 3376
-:= -- 7136
-add.period$ -- 170
-call.type$ -- 48
-change.case$ -- 366
-chr.to.int$ -- 63
-cite$ -- 47
-duplicate$ -- 5346
-empty$ -- 2770
-format.name$ -- 1474
-if$ -- 11483
-int.to.chr$ -- 6
+            1473 strings with 16828 characters,
+and the built_in function-call counts, 68164 in all, are:
+= -- 7465
+> -- 1237
+< -- 1523
++ -- 1980
+- -- 392
+* -- 4096
+:= -- 8677
+add.period$ -- 221
+call.type$ -- 61
+change.case$ -- 462
+chr.to.int$ -- 84
+cite$ -- 60
+duplicate$ -- 6349
+empty$ -- 3515
+format.name$ -- 1822
+if$ -- 14052
+int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 806
-newline$ -- 228
-num.names$ -- 235
-pop$ -- 1074
+missing$ -- 1016
+newline$ -- 293
+num.names$ -- 295
+pop$ -- 1324
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 203
 quote$ -- 0
-skip$ -- 5628
+skip$ -- 6668
 stack$ -- 1
-substring$ -- 2313
-swap$ -- 1921
-text.length$ -- 34
+substring$ -- 2753
+swap$ -- 2288
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 2
 warning$ -- 0
-while$ -- 316
+while$ -- 394
 width$ -- 0
-write$ -- 691
-(There were 2 warnings)
+write$ -- 882
+(There was 1 warning)

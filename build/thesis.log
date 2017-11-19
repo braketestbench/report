@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.7)  18 OCT 2017 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.7)  19 NOV 2017 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1005,6 +1005,64 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
+\@mathmargin=\skip263
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks28
+\ex@=\dimen161
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen162
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count175
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count176
+\leftroot@=\count177
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count178
+\DOTSCASE@=\count179
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box32
+\strutbox@=\box33
+\big@size=\dimen163
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+\macc@depth=\count180
+\c@MaxMatrixCols=\count181
+\dotsspace@=\muskip11
+\c@parentequation=\count182
+\dspbrk@lvl=\count183
+\tag@help=\toks29
+\row@=\count184
+\column@=\count185
+\maxfields@=\count186
+\andhelp@=\toks30
+\eqnshift@=\dimen164
+\alignsep@=\dimen165
+\tagshift@=\dimen166
+\tagwidth@=\dimen167
+\totwidth@=\dimen168
+\lineht@=\dimen169
+\@envbody=\toks31
+\multlinegap=\skip264
+\multlinetaggap=\skip265
+\mathdisplay@stack=\toks32
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
+)
 (./fixos/comandos.tex) (./fixos/customizacoes.sty
 
 Class memoir Warning: You are using the caption package with the memoir class. 
@@ -1018,20 +1076,20 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen161
-\captionmargin@=\dimen162
-\captionwidth=\dimen163
-\caption@tempdima=\dimen164
-\caption@indent=\dimen165
-\caption@parindent=\dimen166
-\caption@hangindent=\dimen167
+\captionmargin=\dimen170
+\captionmargin@=\dimen171
+\captionwidth=\dimen172
+\caption@tempdima=\dimen173
+\caption@indent=\dimen174
+\caption@parindent=\dimen175
+\caption@hangindent=\dimen176
 )
 Package caption Info: We need package `newfloat' on input line 292.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
-\c@ContinuedFloat=\count175
+\c@ContinuedFloat=\count187
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 ))
@@ -1065,7 +1123,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 10.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box32
+\AtBeginShipoutBox=\box34
 Package hyperref Info: Link coloring ON on input line 10.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1074,7 +1132,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count176
+\c@section@level=\count188
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -1082,24 +1140,24 @@ LaTeX Info: Redefining \nameref on input line 10.
 LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
 LaTeX Info: Redefining \nameref on input line 10.
-\myptabbox=\box33
-\myptabboxwidth=\skip263
+\myptabbox=\box35
+\myptabboxwidth=\skip266
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 10.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count177
-\scratchdimen=\dimen168
-\scratchbox=\box34
-\nofMPsegments=\count178
-\nofMParguments=\count179
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count180
-\MPscratchDim=\dimen169
-\MPnumerator=\count181
-\makeMPintoPDFobject=\count182
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count189
+\scratchdimen=\dimen177
+\scratchbox=\box36
+\nofMPsegments=\count190
+\nofMParguments=\count191
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count192
+\MPscratchDim=\dimen178
+\MPnumerator=\count193
+\makeMPintoPDFobject=\count194
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1115,7 +1173,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count183
+\c@lstlisting=\count266
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 13.
@@ -1124,10 +1182,10 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 13.
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package epstopdf Info: Source file: <figuras/capa.eps>
-(epstopdf)                    date: 2017-10-07 18:44:53
+(epstopdf)                    date: 2017-11-02 18:49:08
 (epstopdf)                    size: 649636 bytes
 (epstopdf)             Output file: <figuras/capa-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-10-07 18:44:53
+(epstopdf)                    date: 2017-11-02 18:49:08
 (epstopdf)                    size: 105943 bytes
 (epstopdf)             Command: <repstopdf --outfile=figuras/capa-eps-converted
 -to.pdf figuras/capa.eps>
@@ -1261,7 +1319,7 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 17.
  [21]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 68.
+(Font)              <14.4> on input line 72.
 ) [22])
 (./contents/introduction.tex (./contents/introduction/introduction.tex)
 (./contents/introduction/needBrakeTests.tex
@@ -1292,23 +1350,24 @@ Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [27])
 (./contents/literatureReview/brakeDisc.tex
-<figuras/disk_brake_working.jpg, id=413, 477.785pt x 348.30125pt>
-File: figuras/disk_brake_working.jpg Graphic file (type jpg)
+<figuras/fig-disk_brake_working.jpg, id=436, 477.785pt x 348.30125pt>
+File: figuras/fig-disk_brake_working.jpg Graphic file (type jpg)
 
-<use figuras/disk_brake_working.jpg>
-Package pdftex.def Info: figuras/disk_brake_working.jpg used on input line 9.
+<use figuras/fig-disk_brake_working.jpg>
+Package pdftex.def Info: figuras/fig-disk_brake_working.jpg used on input line 
+9.
 (pdftex.def)             Requested size: 262.78256pt x 191.56627pt.
 )
 (./contents/literatureReview/electronicBackground.tex
 (./contents/literatureReview/electronicBackground/ckp.tex
-<figuras/fig-ckp-real.jpg, id=415, 266.9975pt x 189.70876pt>
+<figuras/fig-ckp-real.jpg, id=442, 266.9975pt x 189.70876pt>
 File: figuras/fig-ckp-real.jpg Graphic file (type jpg)
 
 <use figuras/fig-ckp-real.jpg>
 Package pdftex.def Info: figuras/fig-ckp-real.jpg used on input line 7.
 (pdftex.def)             Requested size: 213.59827pt x 151.7672pt.
  [28]
-<figuras/fig-ckp-signal.png, id=427, 672.5125pt x 273.02pt>
+<figuras/fig-ckp-signal.png, id=454, 672.5125pt x 273.02pt>
 File: figuras/fig-ckp-signal.png Graphic file (type png)
 
 <use figuras/fig-ckp-signal.png>
@@ -1316,8 +1375,8 @@ Package pdftex.def Info: figuras/fig-ckp-signal.png used on input line 18.
 (pdftex.def)             Requested size: 403.5106pt x 163.81326pt.
 )
 (./contents/literatureReview/electronicBackground/thermocouple.tex [29 <./figur
-as/disk_brake_working.jpg> <./figuras/fig-ckp-real.jpg>]
-<figuras/fig-thermocouple-output.jpg, id=441, 559.33969pt x 413.29407pt>
+as/fig-disk_brake_working.jpg> <./figuras/fig-ckp-real.jpg>]
+<figuras/fig-thermocouple-output.jpg, id=468, 559.33969pt x 413.29407pt>
 File: figuras/fig-thermocouple-output.jpg Graphic file (type jpg)
 
 <use figuras/fig-thermocouple-output.jpg>
@@ -1325,7 +1384,7 @@ Package pdftex.def Info: figuras/fig-thermocouple-output.jpg used on input line
  7.
 (pdftex.def)             Requested size: 335.6064pt x 247.97835pt.
  [30 <./figuras/fig-ckp-signal.png> <./figuras/fig-thermocouple-output.jpg>]
-<figuras/fig-thermocouple-measurement.jpg, id=453, 637.38126pt x 199.74625pt>
+<figuras/fig-thermocouple-measurement.jpg, id=480, 637.38126pt x 199.74625pt>
 File: figuras/fig-thermocouple-measurement.jpg Graphic file (type jpg)
 
 <use figuras/fig-thermocouple-measurement.jpg>
@@ -1338,22 +1397,22 @@ Overfull \hbox (23.03477pt too wide) in paragraph at lines 16--17
  []
 
 
-LaTeX Warning: Reference `table-thermocouple' on page 31 undefined on input lin
+LaTeX Warning: Reference `table:thermocouple' on page 31 undefined on input lin
 e 21.
 
 
-LaTeX Warning: Reference `table-thermocouple' on page 31 undefined on input lin
+LaTeX Warning: Reference `table:thermocouple' on page 31 undefined on input lin
 e 26.
 
 ) (./contents/literatureReview/electronicBackground/loadCell.tex
-<figuras/fig-distension.png, id=458, 700.6175pt x 211.79124pt>
+<figuras/fig-distension.png, id=485, 700.6175pt x 211.79124pt>
 File: figuras/fig-distension.png Graphic file (type png)
 
 <use figuras/fig-distension.png>
 Package pdftex.def Info: figuras/fig-distension.png used on input line 7.
 (pdftex.def)             Requested size: 420.37373pt x 127.07571pt.
 
-<figuras/fig-wheatstone.jpg, id=465, 152.06813pt x 93.34875pt>
+<figuras/fig-wheatstone.jpg, id=492, 152.06813pt x 93.34875pt>
 File: figuras/fig-wheatstone.jpg Graphic file (type jpg)
 
 <use figuras/fig-wheatstone.jpg>
@@ -1362,7 +1421,7 @@ Package pdftex.def Info: figuras/fig-wheatstone.jpg used on input line 16.
 )
 (./contents/literatureReview/electronicBackground/accelerometer.tex [31 <./figu
 ras/fig-thermocouple-measurement.jpg>]
-<figuras/fig-piezo-acel.jpg, id=483, 232.87pt x 217.81375pt>
+<figuras/fig-piezo-acel.jpg, id=511, 232.87pt x 217.81375pt>
 File: figuras/fig-piezo-acel.jpg Graphic file (type jpg)
 
 <use figuras/fig-piezo-acel.jpg>
@@ -1371,33 +1430,34 @@ Package pdftex.def Info: figuras/fig-piezo-acel.jpg used on input line 11.
 )
 (./contents/literatureReview/electronicBackground/instrumentationAmplifier.tex
 [32 <./figuras/fig-distension.png> <./figuras/fig-wheatstone.jpg>]
-
-LaTeX Warning: Citation `mancini2000understanding' on page 33 undefined on inpu
-t line 5.
-
-<figuras/fig-opamp.png, id=498, 401.5pt x 341.275pt>
+<figuras/fig-opamp.png, id=529, 401.5pt x 341.275pt>
 File: figuras/fig-opamp.png Graphic file (type png)
 
 <use figuras/fig-opamp.png>
 Package pdftex.def Info: figuras/fig-opamp.png used on input line 9.
 (pdftex.def)             Requested size: 240.90184pt x 204.76657pt.
  [33 <./figuras/fig-piezo-acel.jpg> <./figuras/fig-opamp.png>] <figuras/fig-clo
-sed-loop-opamp.png, id=510, 441.65pt x 435.6275pt>
+sed-loop-opamp.png, id=541, 441.65pt x 435.6275pt>
 File: figuras/fig-closed-loop-opamp.png Graphic file (type png)
 
 <use figuras/fig-closed-loop-opamp.png>
 Package pdftex.def Info: figuras/fig-closed-loop-opamp.png used on input line 2
 2.
 (pdftex.def)             Requested size: 264.99203pt x 261.37851pt.
- [34 <./figuras/fig-closed-loop-opamp.png>] <figuras/fig-instrumentation-amp.pn
-g, id=526, 270.00874pt x 187.70125pt>
+
+
+LaTeX Warning: Reference `eqn:gain-neg-closed-loop-amp' on page 34 undefined on
+ input line 27.
+
+[34 <./figuras/fig-closed-loop-opamp.png>]
+<figuras/fig-instrumentation-amp.png, id=559, 270.00874pt x 187.70125pt>
 File: figuras/fig-instrumentation-amp.png Graphic file (type png)
 
 <use figuras/fig-instrumentation-amp.png>
 Package pdftex.def Info: figuras/fig-instrumentation-amp.png used on input line
  41.
 (pdftex.def)             Requested size: 337.51009pt x 234.62598pt.
- [35 <./figuras/fig-instrumentation-amp.png>] <figuras/fig-ina118.jpg, id=550, 
+ [35 <./figuras/fig-instrumentation-amp.png>] <figuras/fig-ina118.jpg, id=587, 
 294.09875pt x 172.645pt>
 File: figuras/fig-ina118.jpg Graphic file (type jpg)
 
@@ -1406,7 +1466,7 @@ Package pdftex.def Info: figuras/fig-ina118.jpg used on input line 58.
 (pdftex.def)             Requested size: 411.73543pt x 241.70132pt.
 )
 (./contents/literatureReview/electronicBackground/relay.tex
-<figuras/fig-relay.png, id=558, 588.1975pt x 338.26375pt>
+<figuras/fig-relay.png, id=595, 588.1975pt x 338.26375pt>
 File: figuras/fig-relay.png Graphic file (type png)
 
 <use figuras/fig-relay.png>
@@ -1425,7 +1485,7 @@ Underfull \hbox (badness 1097) in paragraph at lines 1--1
  []
 
 (./contents/projectRequirements/problemAnalysis.tex
-<figuras/fig-projectProblem.png, id=595, 402.00188pt x 285.31593pt>
+<figuras/fig-projectProblem.png, id=633, 402.00188pt x 285.31593pt>
 File: figuras/fig-projectProblem.png Graphic file (type png)
 
 <use figuras/fig-projectProblem.png>
@@ -1438,7 +1498,7 @@ Underfull \vbox (badness 1308) has occurred while \output is active []
  [42])
 (./contents/projectRequirements/functionalRequirements.tex [43]))
 (./contents/hardwareProject.tex [44]
-<figuras/fig-hardwareProject.png, id=647, 635.37375pt x 484.81125pt>
+<figuras/fig-hardwareProject.png, id=684, 635.37375pt x 484.81125pt>
 File: figuras/fig-hardwareProject.png Graphic file (type png)
 
 <use figuras/fig-hardwareProject.png>
@@ -1452,7 +1512,7 @@ Overfull \hbox (53.29968pt too wide) in paragraph at lines 6--7
 (./contents/hardwareProject/mcu.tex [45
 
  <./figuras/fig-hardwareProject.png>]
-<figuras/fig-atmega328p.png, id=657, 712.6625pt x 423.5825pt>
+<figuras/fig-atmega328p.png, id=694, 712.6625pt x 423.5825pt>
 File: figuras/fig-atmega328p.png Graphic file (type png)
 
 <use figuras/fig-atmega328p.png>
@@ -1465,18 +1525,18 @@ Overfull \hbox (43.86035pt too wide) in paragraph at lines 6--7
 
 ) (./contents/hardwareProject/temperatureAcquisitionChannel.tex)
 (./contents/hardwareProject/brakePressureAcquisitionChannel.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2865) has occurred while \output is active []
 
  [46 <./figuras/fig-atmega328p.png>]
-<figuras/fig-ina125-schematic.png, id=672, 359.09157pt x 559.33969pt>
+<figuras/fig-ina125-schematic.png, id=709, 359.09157pt x 559.33969pt>
 File: figuras/fig-ina125-schematic.png Graphic file (type png)
 
 <use figuras/fig-ina125-schematic.png>
 Package pdftex.def Info: figuras/fig-ina125-schematic.png used on input line 14
 .
 (pdftex.def)             Requested size: 305.22926pt x 475.44098pt.
- [47] [48 <./figuras/fig-ina125-schematic.png>] <figuras/fig-cic-cell.png, id=6
-91, 1309.89375pt x 792.9625pt>
+ [47] [48 <./figuras/fig-ina125-schematic.png>] <figuras/fig-cic-cell.png, id=7
+29, 1309.89375pt x 792.9625pt>
 File: figuras/fig-cic-cell.png Graphic file (type png)
 
 <use figuras/fig-cic-cell.png>
@@ -1489,12 +1549,44 @@ Overfull \hbox (3.4697pt too wide) in paragraph at lines 34--35
 
 ) (./contents/hardwareProject/speedAcquisitionChannel.tex)
 (./contents/hardwareProject/accelerationAcquisitionChannel.tex)
-(./contents/hardwareProject/digitalOutputChannel.tex))
-(./contents/softwareProject.tex [49 <./figuras/fig-cic-cell.png>] [50
+(./contents/hardwareProject/analogSpeedReferenceOutputChannel.tex [49 <./figura
+s/fig-cic-cell.png>]
+<figuras/fig-wegCFW08.jpg, id=737, 552.0625pt x 552.0625pt>
+File: figuras/fig-wegCFW08.jpg Graphic file (type jpg)
 
-]
-(./contents/softwareProject/microCode.tex
-<figuras/fig-microCodeMap.png, id=708, 469.755pt x 376.40625pt>
+<use figuras/fig-wegCFW08.jpg>
+Package pdftex.def Info: figuras/fig-wegCFW08.jpg used on input line 16.
+(pdftex.def)             Requested size: 220.82108pt x 220.82108pt.
+ [50 <./figuras/fig-wegCFW08.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51]
+<figuras/fig-sallenKeyLPF.png, id=784, 576.1525pt x 359.3425pt>
+File: figuras/fig-sallenKeyLPF.png Graphic file (type png)
+
+<use figuras/fig-sallenKeyLPF.png>
+Package pdftex.def Info: figuras/fig-sallenKeyLPF.png used on input line 74.
+(pdftex.def)             Requested size: 345.69415pt x 215.60715pt.
+ [52 <./figuras/fig-sallenKeyLPF.png>]
+
+LaTeX Warning: Reference `dorfSvodoba2014' on page 53 undefined on input line 1
+04.
+
+[53]
+<figuras/fig-pwmToSpeedReferenceCircuit.png, id=834, 1161.33875pt x 592.2125pt>
+File: figuras/fig-pwmToSpeedReferenceCircuit.png Graphic file (type png)
+<use figuras/fig-pwmToSpeedReferenceCircuit.png>
+Package pdftex.def Info: figuras/fig-pwmToSpeedReferenceCircuit.png used on inp
+ut line 120.
+(pdftex.def)             Requested size: 464.52727pt x 236.8808pt.
+
+Overfull \hbox (9.52727pt too wide) in paragraph at lines 120--121
+ [][] 
+ []
+
+)) (./contents/softwareProject.tex [54 <./figuras/fig-pwmToSpeedReferenceCircui
+t.png>] (./contents/softwareProject/microCode.tex
+<figuras/fig-microCodeMap.png, id=849, 469.755pt x 376.40625pt>
 File: figuras/fig-microCodeMap.png Graphic file (type png)
 
 <use figuras/fig-microCodeMap.png>
@@ -1505,13 +1597,15 @@ Overfull \hbox (14.75386pt too wide) in paragraph at lines 24--25
  [][] 
  []
 
-[51] [52 <./figuras/fig-microCodeMap.png>])
+[55
+
+] [56 <./figuras/fig-microCodeMap.png>])
 (./contents/softwareProject/computerSoftware.tex)) (build/thesis.bbl
 (build/thesis.brf)
 \tf@brf=\write5
 \openout5 = `thesis.brf'.
 
- [53] [54
+ [57] [58
 
 ]
 
@@ -1519,15 +1613,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-[55] [56]) (./contents/extras/apendices.tex [57] [58]
+[59] [60] [61]) (./contents/extras/apendices.tex [62]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 4.
 
-[59
+[63
 
 
-] [60] (./contents/extras/apendices/microCode.tex
+] [64] (./contents/extras/apendices/microCode.tex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1536,7 +1630,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 Underfull \vbox (badness 5388) has occurred while \output is active []
 
- [61
+ [65
 
 ]
 Overfull \hbox (235.89581pt too wide) in paragraph at lines 51--52
@@ -1576,7 +1670,7 @@ Overfull \hbox (45.54697pt too wide) in paragraph at lines 67--68
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
+ [66]
 Overfull \hbox (31.44705pt too wide) in paragraph at lines 87--88
 [][][][][][][][][][][][][] 
  []
@@ -1624,7 +1718,7 @@ Overfull \hbox (45.54697pt too wide) in paragraph at lines 111--112
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63]
+ [67]
 Overfull \hbox (80.79675pt too wide) in paragraph at lines 136--137
 [][][][][][][][][][][][] 
  []
@@ -1637,7 +1731,7 @@ Overfull \hbox (17.34714pt too wide) in paragraph at lines 138--139
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64]
+ [68]
 Overfull \hbox (348.69513pt too wide) in paragraph at lines 160--161
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1665,7 +1759,7 @@ Overfull \hbox (3.24722pt too wide) in paragraph at lines 179--180
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [65]
+ [69]
 Overfull \hbox (45.54697pt too wide) in paragraph at lines 196--197
 [][][][][][][][][][][] 
  []
@@ -1719,7 +1813,7 @@ Overfull \hbox (101.94662pt too wide) in paragraph at lines 207--208
 No file thesis.ind.
 
 AED: lastpage setting LastPage
-[66]
+[70]
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
@@ -1746,32 +1840,34 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 15821 strings out of 493029
- 240497 string characters out of 6136234
- 384251 words of memory out of 5000000
- 18464 multiletter control sequences out of 15000+600000
+ 16607 strings out of 493029
+ 251467 string characters out of 6136234
+ 401148 words of memory out of 5000000
+ 19196 multiletter control sequences out of 15000+600000
  88807 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,13n,51p,1240b,2009s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texm
+ 46i,20n,51p,1321b,2027s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
+m/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lme
 x10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on build/thesis.pdf (68 pages, 1030153 bytes).
+nts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+s12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx
+10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on build/thesis.pdf (72 pages, 1232217 bytes).
 PDF statistics:
- 1446 PDF objects out of 1728 (max. 8388607)
- 1279 compressed objects within 13 object streams
- 446 named destinations out of 1000 (max. 500000)
- 617 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1639 PDF objects out of 1728 (max. 8388607)
+ 1454 compressed objects within 15 object streams
+ 481 named destinations out of 1000 (max. 500000)
+ 664 words of extra memory for PDF output out of 10000 (max. 10000000)
 

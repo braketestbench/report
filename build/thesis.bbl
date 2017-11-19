@@ -5,12 +5,23 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Alter 2008]{alter2008pwm}
+\abntrefinfo{Alter}{ALTER}{2008}
+{ALTER, D.~M. \emph{Using PWM Output as a Digital-to-Analog Converter on a
+  TMS320F280x Digital Signal Controller}.
+[S.l.], 2008.}
+
 \bibitem[Bartz, Zhaksilikov e Ogami 2004]{bartz2004data}
 \abntrefinfo{Bartz, Zhaksilikov e Ogami}{BARTZ; ZHAKSILIKOV; OGAMI}{2004}
 {BARTZ, M.; ZHAKSILIKOV, M.; OGAMI, K.~Y. \emph{Data driven method and system
   for monitoring hardware resource usage for programming an electronic device}.
   [S.l.]: Google Patents, 2004.
 US Patent 6,785,881.}
+
+\bibitem[Burgess 2015]{burgess2015pwm}
+\abntrefinfo{Burgess}{BURGESS}{2015}
+{BURGESS, K. \emph{PWM to DC Voltage Conversion}.
+[S.l.], 2015.}
 
 \bibitem[CNW 2017]{cnwgol2013}
 \abntrefinfo{CNW}{CNW}{2017a}
@@ -28,6 +39,13 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Coorporation}{COORPORATION}{2011}
 {COORPORATION, A. \emph{Atmel ATmega328P Datasheet}. 2011.}
 
+\bibitem[Counts e Kitchen 2006]{analogDevDesignersGuide}
+\abntrefinfo{Counts e Kitchen}{COUNTS; KITCHEN}{2006}
+{COUNTS, L.; KITCHEN, C. A designer's guide to instrumentation amplifiers.
+In:  \underline{\ \ \ \ \ \ \ \ }. 3. ed. [S.l.]: Analog Devices, 2006. cap.~2,
+  p.~3.
+Adapted.}
+
 \bibitem[Desconhecido 2016]{cam-sensor-signal}
 \abntrefinfo{Desconhecido}{DESCONHECIDO}{2016a}
 {DESCONHECIDO. \emph{Magnetic Cam Sensor Signal}. 2016.
@@ -39,6 +57,17 @@ Dispon{\'\i}vel em:
 {DESCONHECIDO. \emph{Typical instrumentation amplifier schematic}. 2016.
 Dispon{\'\i}vel em:
   \url{https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Op-Amp\_Instrumentation\_Amplifier.svg/400px-Op-Amp\_Instrumentation\_Amplifier.svg.png}.}
+
+\bibitem[Dorf e Svoboda 2014]{dorf-non-inverting-opamp-eqn}
+\abntrefinfo{Dorf e Svoboda}{DORF; SVOBODA}{2014a}
+{DORF, R.~C.; SVOBODA, J.~A. Introduction to electrical circuits.
+In:  \underline{\ \ \ \ \ \ \ \ }. 8. ed. [S.l.]: LTC, 2014. cap.~6, p.~203.
+Equation 6.5-1 (b).}
+
+\bibitem[Dorf e Svoboda 2014]{dorfSvodoba2014}
+\abntrefinfo{Dorf e Svoboda}{DORF; SVOBODA}{2014b}
+{DORF, R.~C.; SVOBODA, J.~A. \emph{Introduction to Electrical Circuits}. 8. ed.
+  [S.l.]: LTC, 2014.}
 
 \bibitem[ECIL 2016]{termo-med}
 \abntrefinfo{ECIL}{ECIL}{2016}
@@ -125,6 +154,12 @@ Dispon{\'\i}vel em:
   objetiva de um veículo de passeio.
 São Paulo, Brazil, p.~101, 2005.}
 
+\bibitem[Keim 2016]{keim2016pwm}
+\abntrefinfo{Keim}{KEIM}{2016}
+{KEIM, R. \emph{Low-Pass Filter a PWM Signal into an Analog Voltage}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://www.allaboutcircuits.com/technical-articles/low-pass-filter-a-pwm-signal-into-an-analog-voltage/}.}
+
 \bibitem[Keller 1962]{keller1962relays}
 \abntrefinfo{Keller}{KELLER}{1962}
 {KELLER, A. Relays and switches.
@@ -140,6 +175,11 @@ São Paulo, Brazil, p.~101, 2005.}
 {KINZIE, P.~A.; RUBIN, L.~G. Thermocouple temperature measurement.
 \emph{Physics Today}, v.~26, p.~52, 1973.}
 
+\bibitem[Mancini 2003]{mancini2003op}
+\abntrefinfo{Mancini}{MANCINI}{2003}
+{MANCINI, R. \emph{Op amps for everyone: design reference}. [S.l.]: Newnes,
+  2003.}
+
 \bibitem[Mandell 1972]{mandell1972hardware}
 \abntrefinfo{Mandell}{MANDELL}{1972}
 {MANDELL, R.~L. Hardware/software trade-offs: reasons and directions. In:  ACM.
@@ -152,6 +192,12 @@ São Paulo, Brazil, p.~101, 2005.}
   Systems: Using Assembly and C}. 1st. ed. Upper Saddle River, NJ, USA:
   Prentice Hall Press, 2010.
 ISBN 0138003319, 9780138003319.}
+
+\bibitem[Metivier 2013]{metivier2013pwm}
+\abntrefinfo{Metivier}{METIVIER}{2013}
+{METIVIER, R. \emph{Method for Converting a PWM Output to an Analog Output When
+  Using Hall-Effect Sensor ICs}.
+[S.l.], 2013.}
 
 \bibitem[MettingVanRijn, Peper e Grimbergen 1994]{mettingvanrijn1994amplifiers}
 \abntrefinfo{MettingVanRijn, Peper e Grimbergen}{METTINGVANRIJN; PEPER;
@@ -167,6 +213,11 @@ ISBN 0138003319, 9780138003319.}
   solar radiation and environmental monitoring.
 \emph{IEEE transactions on instrumentation and measurement}, IEEE, v.~48, n.~6,
   p. 1232--1238, 1999.}
+
+\bibitem[Nice 2017]{fig-working-of-disk-breaks}
+\abntrefinfo{Nice}{NICE}{2017}
+{NICE, K. \emph{How Disc Brakes Work}. 2017.
+Dispon{\'\i}vel em: \url{https://s.hswstatic.com/gif/disc-brake3.jpg}.}
 
 \bibitem[Omegatron 2007]{fig-opamp}
 \abntrefinfo{Omegatron}{OMEGATRON}{2007}
@@ -227,6 +278,11 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://machinedesign.com/site-files/machinedesign.com/files/uploads/2014/07/relay\_diagram.gif}.}
 
+\bibitem[Texas Instruments 1999]{texas1999sallenkey}
+\abntrefinfo{Texas Instruments}{TEXAS INSTRUMENTS}{1999}
+{TEXAS INSTRUMENTS. \emph{Analysis of the Sallen-Key Architecture}.
+Dallas, Texas 75265, 1999.}
+
 \bibitem[Thomsen et al. 2003]{thomsen2003application}
 \abntrefinfo{Thomsen et al.}{THOMSEN et al.}{2003}
 {THOMSEN, A. et al. \emph{Application of a conditionally stable instrumentation
@@ -250,11 +306,27 @@ Dispon{\'\i}vel em:
 {WAIT, J.~V.; HUELSMAN, L.~P.; KORN, G.~A. \emph{Introduction to operational
   amplifier theory and applications}. [S.l.]: McGraw-Hill Companies, 1975.}
 
+\bibitem[Walsh 2017]{walshAD}
+\abntrefinfo{Walsh}{WALSH}{2017}
+{WALSH, A. \emph{Protecting ADC Inputs}.
+[S.l.], 2017.}
+
 \bibitem[Webster e Eren 2014]{webster2014measurement}
 \abntrefinfo{Webster e Eren}{WEBSTER; EREN}{2014}
 {WEBSTER, J.~G.; EREN, H. \emph{Measurement, instrumentation, and sensors
   handbook: spatial, mechanical, thermal, and radiation measurement}. [S.l.]:
   CRC press, 2014. v.~1.}
+
+\bibitem[WEG 2009]{wegCFW08Manual}
+\abntrefinfo{WEG}{WEG}{2009}
+{WEG. \emph{CFW-08 Frequency Inverter}.
+[S.l.], 2009.}
+
+\bibitem[WEG 2017]{fig-wegCFW08}
+\abntrefinfo{WEG}{WEG}{2017}
+{WEG. \emph{WEG CFW08 Frequency Inverter}. 2017.
+Dispon{\'\i}vel em:
+  \url{http://ecatalog.weg.net/files/produtos/CFW-08\_G.jpg}.}
 
 \bibitem[Window, Holister et al. 1982]{window1982strain}
 \abntrefinfo{Window, Holister et al.}{WINDOW; HOLISTER et al.}{1982}
