@@ -20,8 +20,7 @@
 
 	\subsection{Filter characteristics definition}\label{ssec:filterCharacteristicsDefinition}
 		\par
-		Fortunately the microcontroller has pre-configured PWM \textit{(Pulse Width Modulation)}, as explained in Subsection %\ref{ssec:pulseWidthModulation}
-, a PWM signal can encode a analog voltage value proportional to it`s duty cycle, and this is usually done with the aid of a low pass filter that will extract this analog voltage from the PWM signal. As said in the previous paragraph the frequency inverter used in this project is the \textit{Weg CFW-08}, and it's analog input has a zero to ten voltage input with eight bits of resolution. We can calculate the minimal voltage difference that will change the output frequency of the device using Voltage, in which $\delta V$ is the minimal voltage difference, $V_{max}$ is the maximum voltage and \textit{"n"} is the number of bits of the input resolution.
+		Fortunately the microcontroller has pre-configured PWM \textit{(Pulse Width Modulation)}, as explained in Subsection \ref{ssec:pwm}, a PWM signal can encode a analog voltage value proportional to it`s duty cycle, and this is usually done with the aid of a low pass filter that will extract this analog voltage from the PWM signal. As said in the previous paragraph the frequency inverter used in this project is the \textit{Weg CFW-08}, and it's analog input has a zero to ten voltage input with eight bits of resolution. We can calculate the minimal voltage difference that will change the output frequency of the device using Voltage, in which $\delta V$ is the minimal voltage difference, $V_{max}$ is the maximum voltage and \textit{"n"} is the number of bits of the input resolution.
 
 			\begin{equation}\label{eqn:minVoltage}
 				\delta V=\frac{V_{max}}{2^{n}}

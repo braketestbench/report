@@ -111,6 +111,11 @@ Dispon{\'\i}vel em: \url{http://www.ecil.com.br/imagens/seedback2.jpg}.}
 Dispon{\'\i}vel em:
   \url{https://www.flatout.com.br/relembre-todos-os-carros-que-ja-lideraram-as-vendas-no-brasil-em-60-anos-de-historia/}.}
 
+\bibitem[Holmes e Lipo 2003]{holmes2003pulse}
+\abntrefinfo{Holmes e Lipo}{HOLMES; LIPO}{2003}
+{HOLMES, D.~G.; LIPO, T.~A. \emph{Pulse width modulation for power converters:
+  principles and practice}. [S.l.]: John Wiley \& Sons, 2003. v.~18.}
+
 \bibitem[INMETRO 2013]{inmetro2013}
 \abntrefinfo{INMETRO}{INMETRO}{2013}
 {INMETRO. \emph{Regulamento Técnico da Qualidade para Materiais de Atrito
@@ -142,6 +147,12 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Instruments}{INSTRUMENTS}{2000b}
 {INSTRUMENTS, T. \emph{INA118 Precision, Low Power Instrumentation Amplifier}.
 [S.l.], 2000. 29~p.}
+
+\bibitem[James 2001]{james2001fundamentals}
+\abntrefinfo{James}{JAMES}{2001}
+{JAMES, C. Fundamentals of linear electronics: Integrated and discrete.
+\emph{Fundamentals of linear electronics: integrated and discrete. Cengage
+  Learning}, 2001.}
 
 \bibitem[Jr 1968]{nordtvedt1968equivalence}
 \abntrefinfo{Jr}{JR}{1968}
@@ -246,6 +257,12 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://internetofthingsagenda.techtarget.com/definition/microcontroller}.}
 
+\bibitem[RZtronics 2016]{fig-dutyCycle}
+\abntrefinfo{RZtronics}{RZTRONICS}{2016}
+{RZTRONICS. \emph{Duty Cycle}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://i1.wp.com/rztronics.com/wp-content/uploads/2016/10/pwm.gif?zoom=1.899999976158142&resize=390\%2C427}.}
+
 \bibitem[SAE 2003]{saej2522}
 \abntrefinfo{SAE}{SAE}{2003}
 {SAE. \emph{Dynamometer Global Brake Effectiveness}.
@@ -271,6 +288,11 @@ US Patent 6,346,808.}
   Opportunities}. 2016.
 Dispon{\'\i}vel em:
   \url{https://www.careerindia.com/courses/unique-courses/what-is-instrumentation-engineering-scope-and-career-opportunities-015486.html}.}
+
+\bibitem[Standard 1996]{standard19961037c}
+\abntrefinfo{Standard}{STANDARD}{1996}
+{STANDARD, F. 1037c. telecommunications: Glossary of telecommunication terms.
+\emph{Institute for Telecommunications Sciences}, v.~7, 1996.}
 
 \bibitem[Teschler 2016]{relay-scheme}
 \abntrefinfo{Teschler}{TESCHLER}{2016}

@@ -14,17 +14,18 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Instrumentation Amplifier \cite {3opamp}\relax }}{35}{figure.caption.23}
 \contentsline {figure}{\numberline {12}{\ignorespaces INA 118 \cite {schematic-ina118}\relax }}{36}{figure.caption.24}
 \contentsline {figure}{\numberline {13}{\ignorespaces Schematic Relay \cite {relay-scheme}\relax }}{37}{figure.caption.25}
+\contentsline {figure}{\numberline {14}{\ignorespaces Duty Cycle Examples \cite {fig-dutyCycle}\relax }}{38}{figure.caption.26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {14}{\ignorespaces Project Problem Depuration \cite {projectProblem}\relax }}{41}{figure.caption.26}
+\contentsline {figure}{\numberline {15}{\ignorespaces Project Problem Depuration \cite {projectProblem}\relax }}{41}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15}{\ignorespaces Hardware Project Architecture \cite {hw-proj}\relax }}{45}{figure.caption.28}
-\contentsline {figure}{\numberline {16}{\ignorespaces \textit {ATmega238p} \cite {coorporation2011atmel}\relax }}{46}{figure.caption.29}
-\contentsline {figure}{\numberline {17}{\ignorespaces INA125 Schematic \cite {ina125data}\relax }}{48}{figure.caption.30}
-\contentsline {figure}{\numberline {18}{\ignorespaces Conditioning Circuit for the Load Cell\relax }}{49}{figure.caption.31}
-\contentsline {figure}{\numberline {19}{\ignorespaces Weg CFW-08 Frequency Inverter \cite {fig-wegCFW08}\relax }}{50}{figure.caption.32}
-\contentsline {figure}{\numberline {20}{\ignorespaces Sallen-Key Active Low Pass Filter \cite {texas1999sallenkey}\relax }}{52}{figure.caption.33}
-\contentsline {figure}{\numberline {21}{\ignorespaces PWM to Speed Reference Circuit\relax }}{54}{figure.caption.34}
+\contentsline {figure}{\numberline {16}{\ignorespaces Hardware Project Architecture \cite {hw-proj}\relax }}{45}{figure.caption.29}
+\contentsline {figure}{\numberline {17}{\ignorespaces \textit {ATmega238p} \cite {coorporation2011atmel}\relax }}{46}{figure.caption.30}
+\contentsline {figure}{\numberline {18}{\ignorespaces INA125 Schematic \cite {ina125data}\relax }}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {19}{\ignorespaces Conditioning Circuit for the Load Cell\relax }}{49}{figure.caption.32}
+\contentsline {figure}{\numberline {20}{\ignorespaces Weg CFW-08 Frequency Inverter \cite {fig-wegCFW08}\relax }}{50}{figure.caption.33}
+\contentsline {figure}{\numberline {21}{\ignorespaces Sallen-Key Active Low Pass Filter \cite {texas1999sallenkey}\relax }}{52}{figure.caption.34}
+\contentsline {figure}{\numberline {22}{\ignorespaces PWM to Speed Reference Circuit\relax }}{54}{figure.caption.35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {22}{\ignorespaces Microcontroller Code Map \cite {microCodeMap}\relax }}{56}{figure.caption.35}
+\contentsline {figure}{\numberline {23}{\ignorespaces Microcontroller Code Map \cite {microCodeMap}\relax }}{56}{figure.caption.36}
 \addvspace {10\p@ }

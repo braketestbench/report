@@ -14,7 +14,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: bibliografia.bib
 Warning--entry type for "mcuDef" isn't style-file defined
---line 320 of file bibliografia.bib
+--line 343 of file bibliografia.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -24,45 +24,45 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 61 entries,
+You've used 65 entries,
             6714 wiz_defined-function locations,
-            1473 strings with 16828 characters,
-and the built_in function-call counts, 68164 in all, are:
-= -- 7465
-> -- 1237
-< -- 1523
-+ -- 1980
-- -- 392
-* -- 4096
-:= -- 8677
-add.period$ -- 221
-call.type$ -- 61
-change.case$ -- 462
-chr.to.int$ -- 84
-cite$ -- 60
-duplicate$ -- 6349
-empty$ -- 3515
-format.name$ -- 1822
-if$ -- 14052
+            1492 strings with 17426 characters,
+and the built_in function-call counts, 72543 in all, are:
+= -- 7947
+> -- 1301
+< -- 1634
++ -- 2109
+- -- 412
+* -- 4357
+:= -- 9203
+add.period$ -- 235
+call.type$ -- 65
+change.case$ -- 491
+chr.to.int$ -- 94
+cite$ -- 64
+duplicate$ -- 6797
+empty$ -- 3734
+format.name$ -- 1915
+if$ -- 14945
 int.to.chr$ -- 7
 int.to.str$ -- 0
-missing$ -- 1016
-newline$ -- 293
-num.names$ -- 295
-pop$ -- 1324
+missing$ -- 1084
+newline$ -- 312
+num.names$ -- 310
+pop$ -- 1416
 preamble$ -- 1
-purify$ -- 203
+purify$ -- 216
 quote$ -- 0
-skip$ -- 6668
+skip$ -- 7120
 stack$ -- 1
-substring$ -- 2753
-swap$ -- 2288
-text.length$ -- 41
+substring$ -- 2931
+swap$ -- 2442
+text.length$ -- 44
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 2
 warning$ -- 0
-while$ -- 394
+while$ -- 414
 width$ -- 0
-write$ -- 882
+write$ -- 940
 (There was 1 warning)
