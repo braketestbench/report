@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.7)  19 NOV 2017 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.7)  20 NOV 2017 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1319,7 +1319,7 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 17.
  [21]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 72.
+(Font)              <14.4> on input line 84.
 ) [22])
 (./contents/introduction.tex (./contents/introduction/introduction.tex)
 (./contents/introduction/needBrakeTests.tex
@@ -1350,7 +1350,7 @@ Underfull \vbox (badness 2698) has occurred while \output is active []
 
  [27])
 (./contents/literatureReview/brakeDisc.tex
-<figuras/fig-disk_brake_working.jpg, id=436, 477.785pt x 348.30125pt>
+<figuras/fig-disk_brake_working.jpg, id=460, 477.785pt x 348.30125pt>
 File: figuras/fig-disk_brake_working.jpg Graphic file (type jpg)
 
 <use figuras/fig-disk_brake_working.jpg>
@@ -1360,14 +1360,14 @@ Package pdftex.def Info: figuras/fig-disk_brake_working.jpg used on input line
 )
 (./contents/literatureReview/electronicBackground.tex
 (./contents/literatureReview/electronicBackground/ckp.tex
-<figuras/fig-ckp-real.jpg, id=442, 266.9975pt x 189.70876pt>
+<figuras/fig-ckp-real.jpg, id=466, 266.9975pt x 189.70876pt>
 File: figuras/fig-ckp-real.jpg Graphic file (type jpg)
 
 <use figuras/fig-ckp-real.jpg>
 Package pdftex.def Info: figuras/fig-ckp-real.jpg used on input line 7.
 (pdftex.def)             Requested size: 213.59827pt x 151.7672pt.
  [28]
-<figuras/fig-ckp-signal.png, id=454, 672.5125pt x 273.02pt>
+<figuras/fig-ckp-signal.png, id=478, 672.5125pt x 273.02pt>
 File: figuras/fig-ckp-signal.png Graphic file (type png)
 
 <use figuras/fig-ckp-signal.png>
@@ -1376,7 +1376,7 @@ Package pdftex.def Info: figuras/fig-ckp-signal.png used on input line 18.
 )
 (./contents/literatureReview/electronicBackground/thermocouple.tex [29 <./figur
 as/fig-disk_brake_working.jpg> <./figuras/fig-ckp-real.jpg>]
-<figuras/fig-thermocouple-output.jpg, id=468, 559.33969pt x 413.29407pt>
+<figuras/fig-thermocouple-output.jpg, id=492, 559.33969pt x 413.29407pt>
 File: figuras/fig-thermocouple-output.jpg Graphic file (type jpg)
 
 <use figuras/fig-thermocouple-output.jpg>
@@ -1384,7 +1384,7 @@ Package pdftex.def Info: figuras/fig-thermocouple-output.jpg used on input line
  7.
 (pdftex.def)             Requested size: 335.6064pt x 247.97835pt.
  [30 <./figuras/fig-ckp-signal.png> <./figuras/fig-thermocouple-output.jpg>]
-<figuras/fig-thermocouple-measurement.jpg, id=480, 637.38126pt x 199.74625pt>
+<figuras/fig-thermocouple-measurement.jpg, id=505, 637.38126pt x 199.74625pt>
 File: figuras/fig-thermocouple-measurement.jpg Graphic file (type jpg)
 
 <use figuras/fig-thermocouple-measurement.jpg>
@@ -1396,23 +1396,15 @@ Overfull \hbox (23.03477pt too wide) in paragraph at lines 16--17
  [][] 
  []
 
-
-LaTeX Warning: Reference `table:thermocouple' on page 31 undefined on input lin
-e 21.
-
-
-LaTeX Warning: Reference `table:thermocouple' on page 31 undefined on input lin
-e 26.
-
 ) (./contents/literatureReview/electronicBackground/loadCell.tex
-<figuras/fig-distension.png, id=485, 700.6175pt x 211.79124pt>
+<figuras/fig-distension.png, id=511, 700.6175pt x 211.79124pt>
 File: figuras/fig-distension.png Graphic file (type png)
 
 <use figuras/fig-distension.png>
 Package pdftex.def Info: figuras/fig-distension.png used on input line 7.
 (pdftex.def)             Requested size: 420.37373pt x 127.07571pt.
 
-<figuras/fig-wheatstone.jpg, id=492, 152.06813pt x 93.34875pt>
+<figuras/fig-wheatstone.jpg, id=518, 152.06813pt x 93.34875pt>
 File: figuras/fig-wheatstone.jpg Graphic file (type jpg)
 
 <use figuras/fig-wheatstone.jpg>
@@ -1421,7 +1413,7 @@ Package pdftex.def Info: figuras/fig-wheatstone.jpg used on input line 16.
 )
 (./contents/literatureReview/electronicBackground/accelerometer.tex [31 <./figu
 ras/fig-thermocouple-measurement.jpg>]
-<figuras/fig-piezo-acel.jpg, id=511, 232.87pt x 217.81375pt>
+<figuras/fig-piezo-acel.jpg, id=536, 232.87pt x 217.81375pt>
 File: figuras/fig-piezo-acel.jpg Graphic file (type jpg)
 
 <use figuras/fig-piezo-acel.jpg>
@@ -1430,14 +1422,14 @@ Package pdftex.def Info: figuras/fig-piezo-acel.jpg used on input line 11.
 )
 (./contents/literatureReview/electronicBackground/instrumentationAmplifier.tex
 [32 <./figuras/fig-distension.png> <./figuras/fig-wheatstone.jpg>]
-<figuras/fig-opamp.png, id=529, 401.5pt x 341.275pt>
+<figuras/fig-opamp.png, id=554, 401.5pt x 341.275pt>
 File: figuras/fig-opamp.png Graphic file (type png)
 
 <use figuras/fig-opamp.png>
 Package pdftex.def Info: figuras/fig-opamp.png used on input line 9.
 (pdftex.def)             Requested size: 240.90184pt x 204.76657pt.
  [33 <./figuras/fig-piezo-acel.jpg> <./figuras/fig-opamp.png>] <figuras/fig-clo
-sed-loop-opamp.png, id=541, 441.65pt x 435.6275pt>
+sed-loop-opamp.png, id=566, 441.65pt x 435.6275pt>
 File: figuras/fig-closed-loop-opamp.png Graphic file (type png)
 
 <use figuras/fig-closed-loop-opamp.png>
@@ -1450,14 +1442,14 @@ LaTeX Warning: Reference `eqn:gain-neg-closed-loop-amp' on page 34 undefined on
  input line 27.
 
 [34 <./figuras/fig-closed-loop-opamp.png>]
-<figuras/fig-instrumentation-amp.png, id=559, 270.00874pt x 187.70125pt>
+<figuras/fig-instrumentation-amp.png, id=584, 270.00874pt x 187.70125pt>
 File: figuras/fig-instrumentation-amp.png Graphic file (type png)
 
 <use figuras/fig-instrumentation-amp.png>
 Package pdftex.def Info: figuras/fig-instrumentation-amp.png used on input line
  41.
 (pdftex.def)             Requested size: 337.51009pt x 234.62598pt.
- [35 <./figuras/fig-instrumentation-amp.png>] <figuras/fig-ina118.jpg, id=587, 
+ [35 <./figuras/fig-instrumentation-amp.png>] <figuras/fig-ina118.jpg, id=612, 
 294.09875pt x 172.645pt>
 File: figuras/fig-ina118.jpg Graphic file (type jpg)
 
@@ -1466,7 +1458,7 @@ Package pdftex.def Info: figuras/fig-ina118.jpg used on input line 58.
 (pdftex.def)             Requested size: 411.73543pt x 241.70132pt.
 )
 (./contents/literatureReview/electronicBackground/relay.tex
-<figuras/fig-relay.png, id=595, 588.1975pt x 338.26375pt>
+<figuras/fig-relay.png, id=620, 588.1975pt x 338.26375pt>
 File: figuras/fig-relay.png Graphic file (type png)
 
 <use figuras/fig-relay.png>
@@ -1474,10 +1466,11 @@ Package pdftex.def Info: figuras/fig-relay.png used on input line 6.
 (pdftex.def)             Requested size: 264.68643pt x 152.21727pt.
 )
 (./contents/literatureReview/electronicBackground/mcu.tex [36 <./figuras/fig-in
-a118.jpg>]))) (./contents/methodology.tex [37 <./figuras/fig-relay.png>]
-[38
+a118.jpg>]) (./contents/literatureReview/electronicBackground/pwm.tex)))
+(./contents/methodology.tex [37 <./figuras/fig-relay.png>] [38
 
-]) (./contents/projectRequirements.tex [39] [40
+])
+(./contents/projectRequirements.tex [39] [40
 
 ]
 Underfull \hbox (badness 1097) in paragraph at lines 1--1
@@ -1485,7 +1478,7 @@ Underfull \hbox (badness 1097) in paragraph at lines 1--1
  []
 
 (./contents/projectRequirements/problemAnalysis.tex
-<figuras/fig-projectProblem.png, id=633, 402.00188pt x 285.31593pt>
+<figuras/fig-projectProblem.png, id=658, 402.00188pt x 285.31593pt>
 File: figuras/fig-projectProblem.png Graphic file (type png)
 
 <use figuras/fig-projectProblem.png>
@@ -1498,7 +1491,7 @@ Underfull \vbox (badness 1308) has occurred while \output is active []
  [42])
 (./contents/projectRequirements/functionalRequirements.tex [43]))
 (./contents/hardwareProject.tex [44]
-<figuras/fig-hardwareProject.png, id=684, 635.37375pt x 484.81125pt>
+<figuras/fig-hardwareProject.png, id=709, 635.37375pt x 484.81125pt>
 File: figuras/fig-hardwareProject.png Graphic file (type png)
 
 <use figuras/fig-hardwareProject.png>
@@ -1512,7 +1505,7 @@ Overfull \hbox (53.29968pt too wide) in paragraph at lines 6--7
 (./contents/hardwareProject/mcu.tex [45
 
  <./figuras/fig-hardwareProject.png>]
-<figuras/fig-atmega328p.png, id=694, 712.6625pt x 423.5825pt>
+<figuras/fig-atmega328p.png, id=719, 712.6625pt x 423.5825pt>
 File: figuras/fig-atmega328p.png Graphic file (type png)
 
 <use figuras/fig-atmega328p.png>
@@ -1524,44 +1517,44 @@ Overfull \hbox (43.86035pt too wide) in paragraph at lines 6--7
  []
 
 ) (./contents/hardwareProject/temperatureAcquisitionChannel.tex)
-(./contents/hardwareProject/brakePressureAcquisitionChannel.tex
-Underfull \vbox (badness 2865) has occurred while \output is active []
-
- [46 <./figuras/fig-atmega328p.png>]
-<figuras/fig-ina125-schematic.png, id=709, 359.09157pt x 559.33969pt>
+(./contents/hardwareProject/brakePressureAcquisitionChannel.tex [46 <./figuras/
+fig-atmega328p.png>]
+<figuras/fig-ina125-schematic.png, id=735, 359.09157pt x 559.33969pt>
 File: figuras/fig-ina125-schematic.png Graphic file (type png)
 
 <use figuras/fig-ina125-schematic.png>
-Package pdftex.def Info: figuras/fig-ina125-schematic.png used on input line 14
+Package pdftex.def Info: figuras/fig-ina125-schematic.png used on input line 18
 .
-(pdftex.def)             Requested size: 305.22926pt x 475.44098pt.
- [47] [48 <./figuras/fig-ina125-schematic.png>] <figuras/fig-cic-cell.png, id=7
-29, 1309.89375pt x 792.9625pt>
+(pdftex.def)             Requested size: 233.40674pt x 363.56648pt.
+ [47]
+<figuras/fig-cic-cell.png, id=749, 1309.89375pt x 792.9625pt>
 File: figuras/fig-cic-cell.png Graphic file (type png)
 
 <use figuras/fig-cic-cell.png>
-Package pdftex.def Info: figuras/fig-cic-cell.png used on input line 34.
+Package pdftex.def Info: figuras/fig-cic-cell.png used on input line 38.
 (pdftex.def)             Requested size: 458.4697pt x 277.54103pt.
 
-Overfull \hbox (3.4697pt too wide) in paragraph at lines 34--35
+Overfull \hbox (3.4697pt too wide) in paragraph at lines 38--39
  [][] 
  []
 
 ) (./contents/hardwareProject/speedAcquisitionChannel.tex)
-(./contents/hardwareProject/accelerationAcquisitionChannel.tex)
-(./contents/hardwareProject/analogSpeedReferenceOutputChannel.tex [49 <./figura
-s/fig-cic-cell.png>]
-<figuras/fig-wegCFW08.jpg, id=737, 552.0625pt x 552.0625pt>
+(./contents/hardwareProject/vibrationAcquisitionChannel.tex)
+(./contents/hardwareProject/analogSpeedReferenceOutputChannel.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./figuras/fig-ina125-schematic.png>] [49 <./figuras/fig-cic-cell.png>]
+<figuras/fig-wegCFW08.jpg, id=762, 552.0625pt x 552.0625pt>
 File: figuras/fig-wegCFW08.jpg Graphic file (type jpg)
 
 <use figuras/fig-wegCFW08.jpg>
 Package pdftex.def Info: figuras/fig-wegCFW08.jpg used on input line 16.
 (pdftex.def)             Requested size: 220.82108pt x 220.82108pt.
  [50 <./figuras/fig-wegCFW08.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5787) has occurred while \output is active []
 
  [51]
-<figuras/fig-sallenKeyLPF.png, id=784, 576.1525pt x 359.3425pt>
+<figuras/fig-sallenKeyLPF.png, id=809, 576.1525pt x 359.3425pt>
 File: figuras/fig-sallenKeyLPF.png Graphic file (type png)
 
 <use figuras/fig-sallenKeyLPF.png>
@@ -1573,7 +1566,7 @@ LaTeX Warning: Reference `dorfSvodoba2014' on page 53 undefined on input line 1
 04.
 
 [53]
-<figuras/fig-pwmToSpeedReferenceCircuit.png, id=834, 1161.33875pt x 592.2125pt>
+<figuras/fig-pwmToSpeedReferenceCircuit.png, id=860, 1161.33875pt x 592.2125pt>
 File: figuras/fig-pwmToSpeedReferenceCircuit.png Graphic file (type png)
 <use figuras/fig-pwmToSpeedReferenceCircuit.png>
 Package pdftex.def Info: figuras/fig-pwmToSpeedReferenceCircuit.png used on inp
@@ -1586,7 +1579,7 @@ Overfull \hbox (9.52727pt too wide) in paragraph at lines 120--121
 
 )) (./contents/softwareProject.tex [54 <./figuras/fig-pwmToSpeedReferenceCircui
 t.png>] (./contents/softwareProject/microCode.tex
-<figuras/fig-microCodeMap.png, id=849, 469.755pt x 376.40625pt>
+<figuras/fig-microCodeMap.png, id=874, 469.755pt x 376.40625pt>
 File: figuras/fig-microCodeMap.png Graphic file (type png)
 
 <use figuras/fig-microCodeMap.png>
@@ -1840,10 +1833,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 16607 strings out of 493029
- 251467 string characters out of 6136234
- 401148 words of memory out of 5000000
- 19196 multiletter control sequences out of 15000+600000
+ 16636 strings out of 493029
+ 251941 string characters out of 6136234
+ 400382 words of memory out of 5000000
+ 19210 multiletter control sequences out of 15000+600000
  88807 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,20n,51p,1321b,2027s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1864,10 +1857,10 @@ nts/type1/public/lm/lmssbo10.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on build/thesis.pdf (72 pages, 1232217 bytes).
+Output written on build/thesis.pdf (72 pages, 1234722 bytes).
 PDF statistics:
- 1639 PDF objects out of 1728 (max. 8388607)
- 1454 compressed objects within 15 object streams
- 481 named destinations out of 1000 (max. 500000)
- 664 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1703 PDF objects out of 1728 (max. 8388607)
+ 1517 compressed objects within 16 object streams
+ 493 named destinations out of 1000 (max. 500000)
+ 760 words of extra memory for PDF output out of 10000 (max. 10000000)
 
