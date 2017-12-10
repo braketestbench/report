@@ -35,10 +35,6 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=431}.}
 
-\bibitem[Coorporation 2011]{coorporation2011atmel}
-\abntrefinfo{Coorporation}{COORPORATION}{2011}
-{COORPORATION, A. \emph{Atmel ATmega328P Datasheet}. 2011.}
-
 \bibitem[Counts e Kitchen 2006]{analogDevDesignersGuide}
 \abntrefinfo{Counts e Kitchen}{COUNTS; KITCHEN}{2006}
 {COUNTS, L.; KITCHEN, C. A designer's guide to instrumentation amplifiers.
@@ -134,11 +130,6 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{http://www.ni.com/cms/images/devzone/tut/a/a28b553b1069.gif}.}
 
-\bibitem[Instruments 1998]{ina125data}
-\abntrefinfo{Instruments}{INSTRUMENTS}{1998}
-{INSTRUMENTS, T. \emph{Instrumentation Amplifier, With Precision Voltage
-  Reference}. 1998.}
-
 \bibitem[Instruments 2000]{schematic-ina118}
 \abntrefinfo{Instruments}{INSTRUMENTS}{2000a}
 {INSTRUMENTS, T. \emph{INA 118}. 2000.}
@@ -185,6 +176,11 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Kinzie e Rubin}{KINZIE; RUBIN}{1973}
 {KINZIE, P.~A.; RUBIN, L.~G. Thermocouple temperature measurement.
 \emph{Physics Today}, v.~26, p.~52, 1973.}
+
+\bibitem[Lepkowski e Lepkowski 2006]{lepkowski2006evaluating}
+\abntrefinfo{Lepkowski e Lepkowski}{LEPKOWSKI; LEPKOWSKI}{2006}
+{LEPKOWSKI, J.; LEPKOWSKI, W. Evaluating tvs protection circuits with spice.
+\emph{Power Electronics Technology}, PRIMEDIA, v.~32, n.~1, p.~44, 2006.}
 
 \bibitem[Mancini 2003]{mancini2003op}
 \abntrefinfo{Mancini}{MANCINI}{2003}
@@ -327,11 +323,6 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Wait, Huelsman e Korn}{WAIT; HUELSMAN; KORN}{1975}
 {WAIT, J.~V.; HUELSMAN, L.~P.; KORN, G.~A. \emph{Introduction to operational
   amplifier theory and applications}. [S.l.]: McGraw-Hill Companies, 1975.}
-
-\bibitem[Walsh 2017]{walshAD}
-\abntrefinfo{Walsh}{WALSH}{2017}
-{WALSH, A. \emph{Protecting ADC Inputs}.
-[S.l.], 2017.}
 
 \bibitem[Webster e Eren 2014]{webster2014measurement}
 \abntrefinfo{Webster e Eren}{WEBSTER; EREN}{2014}

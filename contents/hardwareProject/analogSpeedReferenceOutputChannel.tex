@@ -20,34 +20,34 @@
 
 	\subsection{Filter characteristics definition}\label{ssec:filterCharacteristicsDefinition}
 		\par
-		Fortunately the microcontroller has pre-configured PWM \textit{(Pulse Width Modulation)}, as explained in Subsection \ref{ssec:pwm}, a PWM signal can encode a analog voltage value proportional to it`s duty cycle, and this is usually done with the aid of a low pass filter that will extract this analog voltage from the PWM signal. As said in the previous paragraph the frequency inverter used in this project is the \textit{Weg CFW-08}, and it's analog input has a zero to ten voltage input with eight bits of resolution. We can calculate the minimal voltage difference that will change the output frequency of the device using Voltage, in which $\delta V$ is the minimal voltage difference, $V_{max}$ is the maximum voltage and \textit{"n"} is the number of bits of the input resolution.
+		Fortunately the microcontroller has pre-configured PWM \textit{(Pulse Width Modulation)}, as explained in Subsection \ref{ssec:pwm}, a PWM signal can encode a analog voltage value proportional to it`s duty cycle, and this is usually done with the aid of a low pass filter that will extract this analog voltage from the PWM signal. As said in the previous paragraph the frequency inverter used in this project is the \textit{Weg CFW-08}, and it's analog input has a zero to ten voltage input with eight bits of resolution. We can calculate the minimal voltage difference that will change the output frequency of the device using Voltage, in which $\Delta V$ is the minimal voltage difference, $V_{max}$ is the maximum voltage and \textit{"n"} is the number of bits of the input resolution.
 
 			\begin{equation}\label{eqn:minVoltage}
-				\delta V=\frac{V_{max}}{2^{n}}
+				\Delta V=\frac{V_{max}}{2^{n}}
 			\end{equation}
 	
 		As mentioned in Section \ref{sec:mcu}, the choosen MCU has a five volts high logic level, this voltage level will need amplification in order to best suit the zero to ten volts input from the frequency inverter. According to \cite{alter2008pwm}, converting a PWM signal to a analog voltage generates a constant voltage ripple. It was decided to amplify this voltage prior to filtering because this way the voltage ripple generated from the filtering stage will not be amplified. Using a 10V source, a N-MOSFET and two \textit{pull-down} resistors it is possible to convert a five volts amplitude square wave (PWM wave) to a 10V amplitude wave as Figure \ref{fig:fiveToTenVolts} shows how to.
 
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=0.4]{figuras/fig-fiveToTenVolts}
+				\includegraphics[scale=0.25]{figuras/fig-fiveToTenVolts}
 			\caption{Five to ten volts square wave amplifier}
 			\label{fig:fiveToTenVolts}
 		\end{figure}
-		
-		The maximum ripple is the $\delta V$ from Equation \ref{eqn:minVoltage}. Equation \ref{eqn:attenuation} \cite{metivier2013pwm} gives the necessary $\frac{dB}{decade}$ attenuation to guarantee a PWM converted signal desired ripple.
 
-	 		\begin{equation}\label{eqn:attenuation}
+		The maximum ripple is the $\Delta V$ from Equation \ref{eqn:minVoltage}. Equation \ref{eqn:atte} \cite{metivier2013pwm} gives the necessary $\frac{dB}{decade}$ attenuation to guarantee a PWM converted signal desired ripple.
+
+	 		\begin{equation}\label{eqn:atte}
 				A_{dB}=20\cdot log \left( \frac{V_{RIPPLE}}{V_PWM} \right) 
 			\end{equation}
 			
-		As the $V_{PWM}$ will already be aplified prior to filtering, $V_{PWM}=V_{max}$, this will produce the following Equation \ref{eqn:attenuation2}.
+		As the $V_{PWM}$ will already be aplified prior to filtering, $V_{PWM}=V_{max}$, this will produce the following Equation \ref{eqn:attenuation}.
 		
 			\begin{equation}\label{eqn:attenuation}
 				A_{dB}=-20 \cdot n \cdot log \left( 2 \right) 
 			\end{equation}
 	
-		And Equation \ref{eqn:LPFcuttoffFrequency} \cite{metivier2013pwm}, is used to calculate the maximum needed cuttoff frequency for the further to be designed LPF \textit{Low-Pass-Filter} in order to convert the PWM signal to a analog voltage. This cutoff frequency can not be to much smaller than the one calculated otherwise this will have negative consequences to the output signal \cite{keim2016pwm}. The slope value is the filter slope and for first order filters and second order filters this slope value is equal respectively to 20dB/decade and 40dB/decade \cite{metivier2013pwm}.
+		And Equation \ref{eqn:LPFcuttoffFrequency} \cite{metivier2013pwm}, is used to calculate the maximum needed cuttoff frequency for the further to be designed LPF (\textit{Low-Pass-Filter}) in order to convert the PWM signal to a analog voltage. This cutoff frequency can not be to much smaller than the one calculated otherwise this will have negative consequences to the output signal \cite{keim2016pwm}. The slope value is the filter slope and for first order filters and second order filters this slope value is equal respectively to 20dB/decade and 40dB/decade \cite{metivier2013pwm}.
 	
 			\begin{equation}\label{eqn:LPFcuttoffFrequency}
 				f_{c}=f_{PWM} \cdot 10^{-\frac{A_{dB}}{Slope}}
@@ -82,7 +82,7 @@
 			\label{fig:sallenKeyLPF}
 		\end{figure}
 
-		According to \cite{texas1999sallenkey}, this filter setup has a cutoff frequency defined by Equation \ref{eqn:sallenKeyTransferFunction}, quality factor (Q) defined by Equation \ref{eqn:sallenKeyQ}, gain(k) defined by Equation \ref{eqn:sallenKeyK} and cutoff frequency giver by Equation \ref{eqn:sallenKeyCutoffFrequency}.
+				According to \cite{texas1999sallenkey}, this filter setup has a cutoff frequency defined by Equation \ref{eqn:sallenKeyTransferFunction}, quality factor (Q) defined by Equation \ref{eqn:sallenKeyQ}, gain (k) defined by Equation \ref{eqn:sallenKeyK} and cutoff frequency giver by Equation \ref{eqn:sallenKeyCutoffFrequency}.
 
 		\begin{equation}\label{eqn:sallenKeyTransferFunction}
 			H(s)=\frac{k}{s^{2} \cdot \left( R_{1} \cdot R_{2} \cdot C_{1} \cdot C_{2} \right) + s \cdot \left( R_{1} \cdot C_{1} + R_{2} \cdot C_{1} + R_{1} \cdot C_{2} \cdot \left( 1 - k \right) \right) + 1} 
@@ -90,6 +90,10 @@
 
 		\begin{equation}\label{eqn:sallenKeyQ}
 			Q=\frac{\sqrt{R_{1} \cdot R_{2} \cdot C_{1} \cdot C_{2}}}{R_{1} \cdot C_{1} + R_{2} \cdot C_{1} + R_{1} \cdot C_{2} \cdot \left( 1 - k \right)}
+		\end{equation}
+
+		\begin{equation}\label{eqn:sallenKeyK}
+			k = 1 + \frac{R_{3}}{R_{4}}
 		\end{equation}
 
 		\begin{equation}\label{eqn:sallenKeyCutoffFrequency}
@@ -111,14 +115,12 @@
 
 		Using the previously calculated values for \textit{m}, \textit{n}, \textit{$f_{c}$} and Equation \ref{eqn:sallenKeyRC} wil give us a $R \cdot C = 3.50115 \cdot 10^{-5}$. Setting a arbitrary value of $R=10 \cdot 10^{3}$ will lead to $C=3.5 \cdot 10^{-9}$. Using the relations: $R_{1}= m \cdot R$, $R_{2}=R$, $C_{1}=C$ and $C_{2}= n \cdot C$ and the commercial resistors and capacitors values from \cite{burgess2015pwm}, will produce the following values: $R_{1}= 22k\Omega$, $R_{2}=10k\Omega$, $C_{1}=3900pF$ and $C_{2}= 2700pF$. If theese values are used in Equations \ref{eqn:sallenKeyQ} and \ref{eqn:sallenKeyCutoffFrequency}, we will have a  quality factor of 0.7359 and a cutoff frequency of 3306.6986kHz, both which are close from the ideal ones.
 
-
-	\subsection{Final Circuit}
+		\subsection{Final Circuit}
 	
-		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. A voltage follower buffer was added at the output to prevent the components from output protection circuit to affect the filter perfomance. The protection circuit was composed of Schottky Diodes, series resistors and a capacitor as \cite{walshAD} shows how to. 
-
+		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. A voltage follower buffer was added at the output to prevent the components from output protection circuit to affect the filter perfomance. The protection circuit was composed of a TVS diode and series resistors. A TVS diode is a Transient Voltage Supression Diode, also called thyrector, is an electronic component used to protect electronics from voltage spikes induced on connected wires \cite{lepkowski2006evaluating}. It works like any other diode, the difference regards the surge current this devices can work during clamping without failing. The series resistors are used to protect the OPAMP output and to reduce the current induced to the TVS.
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=0.4]{figuras/fig-pwmToSpeedReferenceCircuit}
+				\includegraphics[scale=0.25]{figuras/fig-pwmToSpeedReferenceCircuit}
 			\caption{PWM to Speed Reference Circuit}
 			\label{fig:pwmToSpeedReferenceCircuit}
 		\end{figure}
