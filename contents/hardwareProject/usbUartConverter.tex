@@ -9,12 +9,12 @@
 
 	\subsection{Conversion Circuit}
 
-		The issue discussed in the previous section is not a new thing, so there are loads of integrated solutions to solve this issue \cite{usbSerialAdapter}. The choosen one was the Microchip's MCP2221A \cite{mcp2221a-datasheet}, this is a USB to UART/I2C converter chip, it emulates a virtual serial port on the computer, making it possible to communicate with the microcontroller UART ports just using a pair of capacitors and a resistor as Figure \ref{fig:mcp2221a-basic-circuit} shows.
+		The issue discussed in the previous section is not a new thing, so there are loads of integrated solutions to solve this issue \cite{usbSerialAdapter}. The choosen one was the Microchip's MCP2221A \cite{mcp2221a-datasheet}, this is a USB to UART/I$^2$C converter chip, it emulates a virtual serial port on the computer, making it possible to communicate with the microcontroller UART ports just using a pair of capacitors and a resistor as Figure \ref{fig:mcp2221a-basic-circuit} shows.
 
 		\begin{figure}[htbp]
 			\centering
 				\includegraphics[scale=1]{figuras/fig-mcp2221a-basic-circuit}
-			\caption{AD8495 Functional Block Diagram \cite{mcp2221a-basic-circuit}}
+			\caption{MCP2221A basic circuit \cite{mcp2221a-basic-circuit}}
 			\label{fig:mcp2221a-basic-circuit}
 		\end{figure}
 
@@ -39,7 +39,7 @@
 
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=1]{figuras/fig-usb-uart-circuit}
+				\includegraphics[scale=.8]{figuras/fig-usb-uart-circuit}
 			\caption{USB/UART Converter Circuit \cite{usb-uart-circuit}}
 			\label{fig:usb-uart-circuit}
 		\end{figure}
