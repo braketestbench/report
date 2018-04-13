@@ -26,14 +26,7 @@
 				\Delta V=\frac{V_{max}}{2^{n}}
 			\end{equation}
 	
-		As mentioned in Section \ref{sec:mcu}, the choosen MCU has a five volts high logic level, this voltage level will need amplification in order to best suit the zero to ten volts input from the frequency inverter. According to \cite{alter2008pwm}, converting a PWM signal to a analog voltage generates a constant voltage ripple. It was decided to amplify this voltage prior to filtering because this way the voltage ripple generated from the filtering stage will not be amplified. Using a 10V source, a N-MOSFET and two \textit{pull-down} resistors it is possible to convert a five volts amplitude square wave (PWM wave) to a 10V amplitude wave as Figure \ref{fig:fiveToTenVolts} shows how to.
-
-		\begin{figure}[htbp]
-			\centering
-				\includegraphics[scale=0.25]{figuras/fig-fiveToTenVolts}
-			\caption{Five to ten volts square wave amplifier}
-			\label{fig:fiveToTenVolts}
-		\end{figure}
+		As mentioned in Section \ref{sec:mcu-hw}, the choosen MCU has a five volts high logic level, this voltage level will need amplification in order to best suit the zero to ten volts input from the frequency inverter. According to \cite{alter2008pwm}, converting a PWM signal to a analog voltage generates a constant voltage ripple. It was decided to amplify this voltage prior to filtering because this way the voltage ripple generated from the filtering stage will not be amplified. Using a OPAMP and two resistors it is possible to convert a five volts amplitude square wave (PWM wave) to a 10V amplitude wave by giving a gain of two to the input signal. Using Equation \ref{eqn-gain-neg-closed-loop-amp} from Sub-section \ref{ssec:closed-loop-amplifier}, it is possible to achieve the desired gain of two using both R$_{f}$ and R$_{g}$ of 10k$\Omega$ as Figure \ref{fig:closed-loop-opamp} shows how to.
 
 		The maximum ripple is the $\Delta V$ from Equation \ref{eqn:minVoltage}. Equation \ref{eqn:atte} \cite{metivier2013pwm} gives the necessary $\frac{dB}{decade}$ attenuation to guarantee a PWM converted signal desired ripple.
 
@@ -117,10 +110,12 @@
 
 		\subsection{Final Circuit}
 	
-		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. A voltage follower buffer was added at the output to prevent the components from output protection circuit to affect the filter perfomance. The protection circuit was composed of a TVS diode and series resistors. A TVS diode is a Transient Voltage Supression Diode, also called thyrector, is an electronic component used to protect electronics from voltage spikes induced on connected wires \cite{lepkowski2006evaluating}. It works like any other diode, the difference regards the surge current this devices can work during clamping without failing. The series resistors are used to protect the OPAMP output and to reduce the current induced to the TVS.
+		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. R60 was added to reference the input to ground and R58 was added to limit the amount of current that can flow from the MCU and the DAC circuit. R55 was added to prevent undesired currents to flow from the circuit output to the OPAMP, R59 is used to reference the output to GND and TZ8 is a TVS used to prevent any ESD or voltage spikes \cite{lepkowski2006evaluating} to enter the board from the \textit{Speed Reference Output Channel}.
+
+	
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=0.25]{figuras/fig-pwmToSpeedReferenceCircuit}
+				\includegraphics[scale=0.8]{figuras/fig-pwmToSpeedReferenceCircuit}
 			\caption{PWM to Speed Reference Circuit}
 			\label{fig:pwmToSpeedReferenceCircuit}
 		\end{figure}
