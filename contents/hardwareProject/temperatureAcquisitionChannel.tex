@@ -1,6 +1,6 @@
-\section{Temperature Acquisition Channel}
+\section{Temperature Acquisition Channel}\label{sec:temperatura-acquisition-channel}
 
-	\subsection{Thermocouple Type and Signal}	
+	\subsection{Thermocouple Types and Characteristic Signal}\label{ssec:thermocouple-types-characteristic-signal}	
 			
 	 For this project it was defined that thermocouples of type K (formed by the junction of two metal leagues: Alumel and Cromel) would be used in this project. This is because this specific type of thermocouple has a wide range of operation (-200$^{\circ}$C - 1200 $^{\circ}$C), so according to the requirements they are never too close from the boundary values, a thermocouple of type T or even a type J would not be suitable. Other appealing factor is that this type of thermocouple is quite common so getting eventual replacements would be easier, in comparisson with type E thermocouples.
 
@@ -50,7 +50,7 @@
 		
 	Using the values for the current limiting resistors (10k$\Omega$), Equation \ref{eqn:bw-common-mode-rejection-filter} and the suggested cutoff frequency of 16kHz \cite{two-ways-thermocouple}, it is possible to calculate a value of 1nF for C$_{C}$. Choosing a C$_{D}$ value ten times larger than C$_{c}$ implies on using a C$_{D}$ value of 10nF, that used on Equation \ref{eqn:bw-differential-rejection-filter} will produce a differential interference filter cutoff frequency of 1.3kHz.
 		
-	\subsection{Thermocouple Sensor Detection}
+	\subsection{Thermocouple Sensor Detection}\label{ssec:thermocouple-sensor-detection}
 		
 	A important feature of any acquisition system is to detect when a sensor is disconnected from the the acquisition system input \cite{o2011pressure}, because a signal acquisition circuit without the signal source will generate outputs that are uncorrelated to what the system was designed to measure/sense on the outside world. The AD8495 has a quite useful feature \cite{ad8495-datasheet}, it offers open thermocouple detection, the inputs of the AD8495 are PNP type transistors, which means that the bias current always flows out of the inputs. This way, the input bias current drives any unconnected output high, which saturates the output to the maximum possible reading, being in this case 1000$^{o}$C or 5V (considering the fixed 5mv$\/ ^{o}$C gain. In Section \ref{sec:functionalRequirements}, it was defined that the system must measure temperatures up to 600$^{o}$C, with the fixed gain of 5mv$\/^{o}$ this means an output voltage of 3V. The so called \textit{Thermocouple Sensor Detection} must be able to detect whenever the output exceeds 3V. In order to do that, the circuit displayed in Figure \ref{fig:overvoltage-sensor-detection} was designed.
 	
@@ -63,7 +63,7 @@
 		
 	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the \textit{4V5$\_$VREF} the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net \textit{4V5\textunderscore VREF} will be further explained in Section \ref{sec:power-supplies}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R77} is just a pull-down resistor to reference the output to the GND net. The capacitor \textit{C31} is just a decoupling capacitor for the OPAMP power supply. The resistors R73 and R71 should not be required and shall not be soldered on the circuit board, they were added to the circuit just to reserve the space for there footprint on the PCB just in case for some unexpected reason thoose nets would be neeeded to be shorted to be connected to the 5V power supply.
 
-	\subsection{Complete Circuit}
+	\subsection{Complete Circuit}\label{ssec:thermocouple-complete-circuit}
 		The thermocouple complete circuit is displayed on Figure \ref{fig:thermocouple-complete-circuit}.
 
 		\begin{figure}[htbp]
