@@ -1,6 +1,6 @@
-\section{Speed Reference Output Channel}
+\section{Speed Reference Output Channel}\label{sec:speed-reference-output-channel}
 
-	\subsection{Speed Control}
+	\subsection{Speed Control}\label{ssec:speed-control}
 		\par
 		For the braketests, somethings as important as measuring the speed of the rotor is controlling it, as mentioned in Subsection \ref{ssec:lowerLayerlHardware}. The rotor speed can be controlled in two ways:
 			\begin{itemize}
@@ -64,7 +64,7 @@
 	
 		As shown in Appendix \ref{app:microCode}, the PWM frequency was defined so $f_{PWM}=62.5kHz$, also $n=8$ and as according to \cite{metivier2013pwm}, a second order LPF is better for converting a PWM signal to voltage and it has by default $Slope=-40dB/decade$, using Equation \ref{eqn:LPFcuttoffFrequency2} it is possible to calculate a maximum cutoff frequency of 3906.25Hz. 
 
-	\subsection{Sallen-Key Low Pass Active Filter}
+	\subsection{Sallen-Key Low Pass Active Filter}\label{ssec:sallen-key-low-pass-active-filter}
 	
 		The Sallen-Key LPF setup is probably one of the best second order filters architectures available \cite{dorfSvodoba2014}, this setup is displayed on Figure \ref{fig:sallenKeyLPF}.
 
@@ -108,7 +108,7 @@
 
 		Using the previously calculated values for \textit{m}, \textit{n}, \textit{$f_{c}$} and Equation \ref{eqn:sallenKeyRC} wil give us a $R \cdot C = 3.50115 \cdot 10^{-5}$. Setting a arbitrary value of $R=10 \cdot 10^{3}$ will lead to $C=3.5 \cdot 10^{-9}$. Using the relations: $R_{1}= m \cdot R$, $R_{2}=R$, $C_{1}=C$ and $C_{2}= n \cdot C$ and the commercial resistors and capacitors values from \cite{burgess2015pwm}, will produce the following values: $R_{1}= 22k\Omega$, $R_{2}=10k\Omega$, $C_{1}=3900pF$ and $C_{2}= 2700pF$. If theese values are used in Equations \ref{eqn:sallenKeyQ} and \ref{eqn:sallenKeyCutoffFrequency}, we will have a  quality factor of 0.7359 and a cutoff frequency of 3306.6986kHz, both which are close from the ideal ones.
 
-		\subsection{Final Circuit}
+		\subsection{Copmlete Circuit}\label{ssec:pwm-to-speed-reference-circuit}
 	
 		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. R60 was added to reference the input to ground and R58 was added to limit the amount of current that can flow from the MCU and the DAC circuit. R55 was added to prevent undesired currents to flow from the circuit output to the OPAMP, R59 is used to reference the output to GND and TZ8 is a TVS used to prevent any ESD or voltage spikes \cite{lepkowski2006evaluating} to enter the board from the \textit{Speed Reference Output Channel}.
 

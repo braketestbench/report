@@ -1,10 +1,72 @@
 \section{MCU}\label{sec:mcu-hw}
-		The system will be microcontrolled rather than microprocessed because this is the most practical way to ensure that the real-time constrain will be respected. The choosen microcontroller is the \textit{ATmega328p} developed by \textit{Atmel Corporation} with 32 Kb of flash memory, 1 Kb of \textit{EEPROM} (Electrically Erasable Programmable Read-Only Memory), 32Kb of \textit{SRAM} (Static Random Access Memory) and a 16 MHz clock. This microncontroller is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega328p} has six ADC inputs with a resolution of 10 bits and more 14 GPIO ports. This microcontroller also has serial communication, I$^2$C communication and other convinient features. It is really versatile and more important it meets this project requirements. This microcontroller will be used with a five volts supply, giving digital inputs and outputs a standar high logic level of five volts and low logic level of zero volts. The Figure \ref{fig:atmega328p} shows the pinage of this device in it's most commom footprint (DIP28).
+
+		\subsection{The choosen MCU}\label{ssec:the-choosen-mcu}
+
+		The system will be microcontrolled rather than microprocessed because this is the most practical way to ensure that the real-time constrain will be respected. The choosen microcontroller is the \textit{ATMEGA328PB} developed by \textit{Microchip} with 32 Kb of flash memory, 1 Kb of \textit{EEPROM} (Electrically Erasable Programmable Read-Only Memory), 2Kb of \textit{SRAM} (Static Random Access Memory), 27 GPIOs, 32 general purpose registers, five flexible timer/counters, two USARTs, 8-channel 10bit ADC \cite{atmega328p-datasheet}. 
+		\par
+		This microncontroller is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega328p} has eight ADC inputs with a resolution of 10 bits and more 27 GPIO ports. This microcontroller also has a UART (explained in Section \ref{sssec:uart}). It is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. This microcontroller will be used with a five volts supply, giving digital inputs and outputs a standar high logic level of five volts and low logic level of zero volts. The Figure \ref{fig:atmega328pb} shows the pinout of this device.
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-atmega328p.png}
-			\caption{\textit{ATmega238p} \cite{coorporation2011atmel}}
-			\label{fig:atmega328p}
+			\includegraphics[scale=0.7]{figuras/fig-atmega328pb.png}
+			\caption{\textit{ATmega238PB} pinout \cite{atmega328p-datasheet}}
+			\label{fig:atmega328pb}
 		\end{figure}
-	
+		
+
+		\subsection{MCU circuit}\label{ssec:mcu-circuit}
+
+		Figure \ref{fig:mcu-circuit} shows the complete complementary circuit for the MCU.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-mcu-circuit.png}
+			\caption{MCU Complete Complementary Circuit \cite{mcu-circuit}}
+			\label{fig:mcu-circuit}
+		\end{figure}
+
+			\subsubsection{MCU Communication Ports}\label{sssec:mcu-com-ports}
+				The ports in yellow and the RST ports are the MCU communication connections with other circuit modules, they are described as it follows.
+
+				\begin{itemize}
+					\item \textit{MCU_RX (input):} This port is used for receiving the serial data from the USB/UART circuit, as it was explained in Section \ref{ssec:usb-uart-complete-circuit}.
+					\item \textit{MCU_TX (output):} This port is used for transmitting the serial data to the USB/UART circuit, as it was explained in Section \ref{ssec:usb-uart-complete-circuit}. 
+					\item \textit{SPD_CON_MCU (input):} A signal coming from the speed acquisition channel (Section \ref{ssec:ckp-sensor-detection-circuit}) that indicates whether the sensor in connected or not.
+					\item \textit{THERM_1_CON_MCU (input):} A signal coming from the first temperature acquisition channel (Section \ref{ssec:thermocouple-sensor-detection}) that indicates whether the sensor in connected or not.
+					\item \textit{THERM_1_CON_MCU (input):} A signal coming from the second temperature acquisition channel (Section \ref{ssec:thermocouple-sensor-detection}) that indicates whether the sensor in connected or not.
+					\item \textit{LOAD_CELL_1_MCU (input):} A signal coming from the first brake pressure acquisition channel (Section \ref{ssec:load-cell-sensor-detection}) that indicates whether the sensor in connected or not.
+					\item \textit{LOAD_CELL_2_MCU (input):} A signal coming from the second brake pressure acquisition channel (Section \ref{ssec:load-cell-sensor-detection}) that indicates whether the sensor in connected or not.
+					\item \textit{VIBRATION_CON (input):} A signal coming from the vibration acquisition channel (Section \ref{ssec:accelerometer-sensor-detection-circuit}) that indicates whether the sensor in connected or not.
+					\item \textit{PWM_OUT_MCU (output):} This is a PWM signal that goes from the MCU to the DAC circuit in other to control the electric engine speed (Section \ref{ssec:pwm-to-speed-reference-circuit}) 
+					\item \textit{DIG_OUT_1_MCU (output):} First digital external output used in the circuit (Section \ref{ssec:digital-outputs}).
+					\item \textit{DIG_OUT_2_MCU (output):} Second digital external output used in the circuit (Section \ref{ssec:digital-outputs}).
+					\item \textit{DIG_IN_1_MCU (input):} First digital external input used in the circuit (Section \ref{ssec:digital-inputs}).
+					\item \textit{DIG_IN_2_MCU (input):} Second digital external input used in the circuit (Section \ref{ssec:digital-inputs}). 
+					\item \textit{ACQ_OUT (output):} Used to control a LED that blinks when signal acquisition is taking place (Section \ref{ssec:acquisition-led}).   
+					\item \textit{MCU_MOSI:} Used for ISP programming (Section \ref{sssec:microcontroller-isp-programming}).
+					\item \textit{MCU_MISO:} Used for ISP programming (Section \ref{sssec:microcontroller-isp-programming}).
+					\item \textit{MCU_SCK:} Used for ISP programming (Section \ref{sssec:microcontroller-isp-programming}).
+					\item \textit{SPD_SIG: (input):} Analog input for the speed signal (Section \ref{ssec:ckp-signal-conditioning-circuit}).
+					\item \textit{THERM_1_SIG: (input):} Analog input for the first temperature signal (Section \ref{ssec:thermocouple-signal-conditioning}).
+					\item \textit{THERM_2_SIG (input):} Analog input for the second temperature signal (Section \ref{ssec:thermocouple-signal-conditioning}). 
+					\item \textit{LOAD_CELL_1_SIG (input):} Analog input for the first brake pressure signal (Section \ref{ssec:load-cell-signal-conditioning}).  
+					\item \textit{LOAD_CELL_2_SIG (input):} Analog input for the second brake pressure signal (Section \ref{ssec:load-cell-signal-conditioning}). 
+					\item \textit{VIBRATION_SIG (input):} Analog input for the vibration intensity signal (Section \ref{ssec:accelerometer-signal-conditioning-circuit}).
+					\item \textit{ADC0_MCU (input):} This port is not used and an internal MCU pull-up resistor is used.
+					\item \textit{ADC1_MCU (input):} This port is not used and an internal MCU pull-up resistor is used.
+					\item \textit{RST (input):} This is the reset connection for the MCU, used to reset the MCU using ISP programming.
+				\end{itemize}
+		
+			\subsubsection{MCU Power Ports}\label{sssec:mcu-power-ports}
+				The MCU power ports are described as it follows, each power port funcion was taken from the components datasheet \cite{atmega328p-datasheet}. All voltage supplies have a 100nF decoupling capacitor also recommended by the MCU datasheet.
+
+				\begin{itemize}
+					\item \textit{VCC: } This is the main voltage supply port for the MCU, as mentioned in Section \ref {ssec:the-choosen-mcu} the MCU will be powered up with a 5V supply. More details of this supply line in Section \ref{sssec:5v-supply}.
+					\item \textit{GND: } This is the ground reference for the MCU.
+					\item \textit{AREF: } This is the analogic voltage reference for the ADC, a ADC is as good as it's voltage reference \cite{adc-good}. The net \textit{5V_VREF} is a precision 5V reference explained in Section \ref{sssec:5v-reference}.
+					\item \textit{AVCC: } This is the ADC power supply, the inductor was used to filter unwanted noise, and the usage of this inductor was based on the Arduino Uno Rev3 Schematic \cite{arduino-rev3-schematic}.
+				\end{itemize}
+
+			\subsubsection{Crystal Oscilator Circuit}\label{sssec:mcu-crystal-oscilator}
+
+				The MCU datasheet indicates the use of a external oscilation crystal, the additional components to the crystal were based on the Arduino Uno Rev3 \cite{arduino-rev3-schematic}.
