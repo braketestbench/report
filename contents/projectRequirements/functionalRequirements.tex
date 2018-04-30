@@ -3,30 +3,30 @@
 	According to the specification of the \textit{SAE J2522} and according to parameters considered to be important, some requirements for the testbench were defined.
 
 	\begin{enumerate}
-		\item Measure a braking pressure up to 16 MPa.
-		\item Apply a braking pressure of at least 300 kPa.
-		\item Measure temperatures up to 600 $^{\circ}$C
-		\item Measure temperatures with a minimal resolution of 7.5 $^{\circ}$C.
-		\item Accelerate the rotor to a speed up to 200 kph.
-		\item System most have a sampling period of 50ms.
-		\item The system hardware most be able to operate under temperatures up to 40$^{\circ}$C.
-		\item System must two acquisition channels for temperature.
-		\item System must have at least one channel for braking pressure acquisition.
-		\item System must have a channel for vibration acquisition.
-		\item System must have at least two digital outputs to control relays.
-		\item System must have a channel for acquiring speed.
-		\item The system must work with real time acquisition.
+		\item Measure a braking pressure up to 16 MPa.\label{itm:func-req-1}
+		\item Apply a braking pressure of at least 300 kPa.\label{itm:func-req-2}
+		\item Measure temperatures up to 600 $^{\circ}$C\label{itm:func-req-3}
+		\item Measure temperatures with a minimal resolution of 7.5 $^{\circ}$C.\label{itm:func-req-4}
+		\item Accelerate the rotor to a speed up to 200 kph.\label{itm:func-req-5}
+		\item System most have a sampling period of 50ms.\label{itm:func-req-6}
+		\item The system hardware most be able to operate under temperatures up to 40$^{\circ}$C.\label{itm:func-req-7}
+		\item System must two acquisition channels for temperature.\label{itm:func-req-8}
+		\item System must have at least one channel for braking pressure acquisition.\label{itm:func-req-9}
+		\item System must have a channel for vibration acquisition.\label{itm:func-req-10}
+		\item System must have at least two digital outputs to control relays.\label{itm:func-req-11}
+		\item System must have a channel for acquiring speed.\label{itm:func-req-12}
+		\item The system must work with real time acquisition.\label{itm:func-req-13}
 	\end{enumerate}
 	
-\section{Software Requirements}
+\section{Software Requirements}\label{sec:software-requirements}
 	
 	\begin{enumerate}
-		\item System must have a sampling rate of 50 ms.
-		\item System must be able to monitor six analog channels at once.
-		\item System must be able to control the digital outputs and one analog output during acquisition without loosing the real time constrain.
-		\item The data acquired does not need to be shown to user in real time.
-		\item The software layer must be able to record the data of the test.
-		\item The software highest layer must have a friendly GUI, advanced electronic and simple programmable knowledge cannot be a requirement to operate the software.
-		\item Calibration of the sensors data must be easy to modify on the software.
-		\item Software must be multiplatform.
+		\item System must have a sampling rate of 50 ms.\label{itm:soft-req-1}
+		\item System must be able to monitor six analog channels at once.\label{itm:soft-req-2}
+		\item System must be able to control the digital outputs and one analog output during acquisition without loosing the real time constrain.\label{itm:soft-req-3}
+		\item The data acquired does not need to be shown to user in real time.\label{itm:soft-req-4}
+		\item The software layer must be able to record the data of the test.\label{itm:soft-req-5}
+		\item The software highest layer must have a friendly GUI, advanced electronic and simple programmable knowledge cannot be a requirement to operate the software.\label{itm:soft-req-6}
+		\item Calibration of the sensors data must be easy to modify on the software.\label{itm:soft-req-7}
+		\item Software must be multiplatform.\label{itm:soft-req-8}
 	\end{enumerate}
