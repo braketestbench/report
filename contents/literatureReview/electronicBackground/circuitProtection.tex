@@ -11,7 +11,7 @@ In order to enhance energy efficiency, devices are now operating at lower voltag
 \par
 In automotive environment, many of the supporting electrical components of the vehicle can generate transients, specially from inductive load switching. When the inductive load is switched off, the collapsing magnetic field is converted into electrical energy that turns into a a transient \cite{littlelFuseWhatIsTransientVoltage}.
 
-\subsubsection{Low Pass Filters}\label{lowPassFilterTransientProtection}
+\subsubsection{Low Pass Filters}\label{sssec:lowPassFilterTransientProtection}
 	According to \cite{littlelFuseWhatIsTransientVoltage}, a ESD pulse (fastest common transient pulse) has a overall duration period of less than 100ns (50$\%$ of the peak value) and a rising time that lasts less than 1.2$\micro$s. Figure \ref{fig:esd-test-waveform} shows an example of a ESD Test Waveform.
 
 	\begin{figure}[htbp]
@@ -24,7 +24,7 @@ In automotive environment, many of the supporting electrical components of the v
 	Considering that a signal has a frequency that is lower than the frequency of the transient it is vulnerable to, using a low pass filter to provide suitable attenuation for that transient and still letting the signal frequency on the passaband, it is possible to protect that part of the circuit against this particular transient \ref{standler1988use}. 
 
 
-\subsubsection{Transient Voltage Supression Diodes (TVS)}\label{ssec:tvsTransientProtection}
+\subsubsection{Transient Voltage Supression Diodes (TVS)}\label{sssec:tvsTransientProtection}
 
 	\subsubsubsection{TVS diodes principle of operation}\label{ssssec:tvsOperation}
 		Transient Voltage Supression Diodes or TVS Diodes are nowadays the most popular choice for protection components in circuit due to their fast response, low clamping voltage and longevity. Under normal operation TVS diodes are high-impedance devices, interacting as a open circuit to the protected component, during a tarnsient event the TVS diode junction provides a low-impedance path for the transient current \cite{renesasTVS}.
