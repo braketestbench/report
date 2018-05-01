@@ -59,4 +59,13 @@
 
 \subsection{Sensor Detection Circuit}\label{ssec:accelerometer-sensor-detection-circuit}
 
-	As mentioned in Section \ref{ssec:accelerometer-signal}, the choosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)} has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the line is in 0V or 3V3.
+	As mentioned in Section \ref{ssec:accelerometer-signal}, the choosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)} has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
+	\par
+	The detection circuit can be seen in Figure \ref{fig:accelerometer-sensor-detection-circuit}, TZ16 is TVS diode with a standoff voltage (Item \ref{itm:tvs-standoff-voltage} from Section \ref{ssssec:tvsSelection}) of 3V3 used to protect the circuit net without interfering with it's signal. Resistor R99 is pull-down resistor, used to guarantee that the the mosfet will be not conduct current when there is no input, sensor disconnected, and the voltage on the \textit{VIBRATION_CON} net will go to 5V. R98 and C46 form a first order LPF with a cutoff frequency of aproximately 16Hz, and as a sensor disconnection process is not that fast it will filter any interference and also the noise from the 50/60Hz power lines. Finally there is R100, this is a pull-up resistor that will hold the voltage on the output to 5V when the mosfet is not polarized, sensor disconnected.
+
+	\begin{figure}[htbp]
+		\centering
+			\includegraphics[scale=0.95]{figuras/fig-accelerometer-sensor-detection-circuit.jpg}
+		\caption{Accelerometer Sensor Detection Circuit \cite{accelerometer-sensor-detection-circuit}}
+		\label{fig:accelerometer-sensor-detection-circuit}
+	\end{figure}
