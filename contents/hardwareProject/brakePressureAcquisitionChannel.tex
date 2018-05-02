@@ -3,9 +3,9 @@
 \subsection{Load Cell Signal}\label{ssec:load-cell-signal}
 
 	A very influential parameter in a braking system is the pressure that the brake exerts on the rotor. Pressure is a magnitude measured in Pascal and can be expressed by the force ratio by the area. There are some sensors based on the piezoelectric effect, but the most accurate way to measure force is by using load cells.
-
-	Load cells have very low output levels, of the level of 2mV/V, and therefore an amplification is fundamental. It is not necessary to know the nature of the strain gauges when a load cell is being calibrated since generally the manufacturers provide a calibration curve based on the signals $V_{O}$ and $V_{EX}$ of the Figure \ref{fig:wheatstone}, it is worth noting that these signals can not have the same reference, otherwise it will not be possible to excite the wheatstone bridge correctly. 
-
+	\par
+	Load cells have very low output levels, of the level of 2mV/V, and therefore an amplification is fundamental. It is not necessary to know the nature of the strain gauges when a load cell is being calibrated since generally the manufacturers provide a calibration curve based on the signals $V_{O}$ and $V_{EX}$ of the Figure \ref{fig:wheatstone}, it is worth noting that these signals can not have the same reference, otherwise it will not be possible to excite the wheatstone bridge correctly.
+	\par
 	The most common way to amplify the signal of a load cell is using a instrumentation amplifier. Although it is a widely used configuration, assembling this amplifier using three different operational amplifiers and seven resistors as in Figure \ref{fig:instrumentation-amplifier} may make it inaccurate due to manufacturing imperfections of the components. Another factor that greatly influences the output signal of a load cell is the excitation voltage of its wheatstone bridge, if it varies too much the output will vary greatly as well, which will hamper its calibration.
 
 \subsection{Load Cell Signal Conditioning}\label{ssec:load-cell-signal-conditioning}
@@ -24,7 +24,9 @@
 			R_{G}=\frac{80k\Omega}{G - 5}
 		\end{equation}
 
-		Taking into account the sensitivity of 2mV/V, this means that if the cell is excited with 10V, its output will vary from 0 to 20mV. Since the analog input of the chosen microcontroller \textit{(Atmega328)} is 0 to 5V, we may to amplify the cell output signal by a factor of 250 in order to use the most number of bits from de MCU's ADC. Using Equation \ref{eqn:ad8223-g}, to obtain a gain of amplification ratio of the ideal $R_{G}$ would be 326$\Omega$, a resistor of this value and minimal tolerance (1$\%$) is not commercially available, the closest one is 332$\Omega$. This resistor will generate a gain of 246 and cause the IC output to range from about 0V to 4.92V, using 98.4\% of the resolution of the microcontroller input. 
+		Taking into account the sensitivity of 2mV/V, this means that if the cell is excited with 10V, its output will vary from 0 to 20mV. The precision of the excitation voltage will naturally affect the performance of the sensor, Section \ref{sssec:10v-reference} will explain how a precise 10V voltage reference will be achieved.
+		\par
+		Since the analog input of the chosen microcontroller \textit{(Atmega328)} is 0 to 5V, we may to amplify the cell output signal by a factor of 250 in order to use the most number of bits from de MCU's ADC. Using Equation \ref{eqn:ad8223-g}, to obtain a gain of amplification ratio of the ideal $R_{G}$ would be 326$\Omega$, a resistor of this value and minimal tolerance (1$\%$) is not commercially available, the closest one is 332$\Omega$. This resistor will generate a gain of 246 and cause the IC output to range from about 0V to 4.92V, using 98.4\% of the resolution of the microcontroller input. 
 		\par
 
 		Figure \ref{fig:cic-cell} shows the schematic of the load cell conditioning circuit with the AD8223.
