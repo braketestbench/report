@@ -61,7 +61,7 @@
 			\label{fig:overvoltage-sensor-detection}
 		\end{figure}
 		
-	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the \textit{4V5$\_$VREF} the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net \textit{4V5\textunderscore VREF} will be further explained in Section \ref{sec:power-supplies}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R77} is just a pull-down resistor to reference the output to the GND net. The capacitor \textit{C31} is just a decoupling capacitor for the OPAMP power supply. The resistors R73 and R71 should not be required and shall not be soldered on the circuit board, they were added to the circuit just to reserve the space for there footprint on the PCB just in case for some unexpected reason thoose nets would be neeeded to be shorted to be connected to the 5V power supply.
+	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the \textit{4V5$\_$VREF} the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net \textit{4V5\textunderscore VREF} will be further explained in Section \ref{sssec:4v5-reference}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R71} is a pull-up resistor used to guarantee that signal will go to high-logic level in case the voltage in the inputs is not present. The capacitor \textit{C31} is just a decoupling capacitor for the OPAMP power supply.
 
 	\subsection{Complete Circuit}\label{ssec:thermocouple-complete-circuit}
 		The thermocouple complete circuit is displayed on Figure \ref{fig:thermocouple-complete-circuit}.

@@ -49,18 +49,55 @@
 		In this project any power supply that the precision and stability of the output voltage is more concerning than the maximum output current will be called a voltage reference.
 
 		\subsubsection{10V Reference}\label{sssec:10v-reference}
-			As it was explained in Section \ref{ssec:load-cell-signal-conditioning}, this voltage reference will be used to excite the load cells sensors of this project.
-		\subsubsection{5V Reference}\label{sssec:5v-reference}
-			This reference will be used by the MCU ADC, as said in Item \ref{itm:mcu-aref} from Section \ref{sssec:mcu-power-ports}, a ADC is only as good as it voltage reference. The choosen component for this reference was the LM4040DYM3-5.0-TR from \textit{Microchip} \cite{LM4040DYM3-5.0-TR-datasheet}. According to the datasheet, this voltage reference has a maximum tolerance of $\pm 58mV$ and has maximum operating output current of 15mA. Figure \ref{fig:LM4040DYM3-5.0-TR-circuit} shows to reference circuit.
+			As it was explained in Section \ref{ssec:load-cell-signal-conditioning}, this voltage reference will be used to excite the load cells sensors of this project. The choosen component for this reference was the LM78L10 from \textit{Microchip} \cite{LM78L10-datasheet}. According to the datasheet, this voltage reference has a typical tolerance of $\pm 0.2\%$ and has maximum operating output current of 100mA. Load cells have a typical bridge resitance from 350$\ohm$ to 1k$\ohm$ \cite{GMIloadcell}. It was defined on this project requirements on Item \ref{itm:func-req-9} in Section \ref{sec:functionalRequirements} that the system must have two brake pressure acquistion channels. Hence, having two load cels with 350$\ohm$ bridge resistance and 10V excitation, 68mA of current would be needed, 100mA from the voltage reference would be suitable. Figure \ref{fig:LM78L10-circuit} shows to reference circuit.
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-LM4040DYM3-5.0-TR-circuit.png}
-				\caption{10V voltage reference circuit \cite{LM4040DYM3-5.0-TR-circuit}}
-				\label{fig:LM4040DYM3-5.0-TR-circuit}
+					\includegraphics[scale=0.4]{figuras/fig-LM78L10-circuit.png.png}
+				\caption{10V voltage reference circuit \cite{LM78L10-circuit}}
+				\label{fig:LM78L10-circuit}
 			\end{figure}
 
-			The only external component needed
+			The device's datasheet recommends using two decoupling capacitors, one in the input and other in the ouput with the given values from Figure \ref{fig:LM78L10-circuit}.
 
 		\subsubsection{4V5 Reference}\label{sssec:4v5-reference}
+
+			As said in Section \ref{ssec:thermocouple-sensor-detection}, the sensor detection circuit needs a 4V5 voltage reference for the comparator. This is achieved using the MAX6107EUR+T from \textit{Maxim Integrated} \cite{max6107eur+t-datasheet}. This is a precise 4V5 voltage reference and according to the datsheet it has a tolerance of $\pm0.4\%$ and a maximum operating output current of 5mA. Figure \ref{fig:max6107eur+t-circuit} shows the circuit for the 4V5 voltage reference.
+
+			\begin{figure}[htbp]
+				\centering
+					\includegraphics[scale=0.4]{figuras/fig-MAX6107EUR+T-circuit.png}
+				\caption{4V5 voltage reference circuit \cite{MAX6107EUR+T-circuit}}
+				\label{fig:max6107eur+t-circuit}
+			\end{figure}
+
+			According to the datasheet the only needed extra component is a decoupling capacitor at the output.
+
 		\subsubsection{1V Reference}\label{sssec:1v-reference}
+
+			The 1V reference from the circuit of Section \ref{ssec:ckp-signal-conditioning-circuit} is achieved using the ADR510ARTZ from \textit{Analog Devices} \cite{adr510artz-datasheet}. This is a 1V precision voltage reference with a tolerance of $\pm 0.35\%$ and maximum operating output current of 10mA. Figure \ref{fig:adr510-typical-circuit} shows the typical circuit using this voltage reference.
+
+			\begin{figure}[htbp]
+				\centering
+					\includegraphics[scale=0.4]{figuras/fig-adr510-typical-circuit.png}
+				\caption{ADR510 Typical Operating Circuit \cite{adr510-typical-circuit}}
+				\label{fig:adr510-typical-circuit}
+			\end{figure}
+
+			The only external component needed is a bias resistor which can be calculated using \ref{eqn:rbis-adr510} \cite{adr510artz-datasheet}.
+
+			\begin{equation}
+				R_{BIAS} = \frac{V_{S} - V_{OUT}}{I_{L} - I_{Q}}
+			\end{equation}
+
+			The used $V_{S}$ \textit{Voltage Supply} will be the 5V obtained in the circuit from Figure \ref{fig:tl2575-05-circuit} in Section \ref{sssec:5v-supply}. According to the datasheet, the minimul operating voltage ($I_{Q}$ in this case) is 100uA. Moreover, $V_{OUT}$ is naturally 1V5. The minimum bias current (load current $I_{L}$) is of 500nA (according to the IC that used the 1V reference \cite{lm2907-datasheet}). Hence, any value of resistance that guarantee that the current that flows through the regulator is less than 10mA is acceptable.
+			\par
+			Using a 1k$\ohm$ resistor a current of 4mA can be achieved. Figure \ref{fig:ADR510ARTZ-circuit} shows the circuit for the 1V reference, the capacitor is just a decoupling capacitor recommended by the datasheet.
+
+			\begin{figure}[htbp]
+				\centering
+					\includegraphics[scale=0.4]{figuras/fig-ADR510ARTZ-circuit.png}
+				\caption{1V voltage reference circuit \cite{ADR510ARTZ-circuit}}
+				\label{fig:ADR510ARTZ-circuit}
+			\end{figure}	 
+

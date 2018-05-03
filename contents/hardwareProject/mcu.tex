@@ -63,7 +63,7 @@
 				\begin{itemize}
 					\item \textit{VCC: } This is the main voltage supply port for the MCU, as mentioned in Section \ref {ssec:the-choosen-mcu} the MCU will be powered up with a 5V supply. More details of this supply line in Section \ref{sssec:5v-supply}.\label{itm:mcu-vcc}
 					\item \textit{GND: } This is the ground reference for the MCU.\label{itm:mcu-gnd}
-					\item \textit{AREF: } This is the analogic voltage reference for the ADC, a ADC is as good as it's voltage reference \cite{adc-good}. The net \textit{5V_VREF} is a precision 5V reference explained in Section \ref{sssec:5v-reference}.\label{itm:mcu-aref}
+					\item \textit{AREF: } This is the analogic voltage reference for the ADC, a ADC is as good as it's voltage reference \cite{adc-good}. The net \textit{5V_VREF} is internally connect to the MCU precision reference.
 					\item \textit{AVCC: } This is the ADC power supply, the inductor was used to filter unwanted noise, and the usage of this inductor was based on the Arduino Uno Rev3 Schematic \cite{arduino-rev3-schematic}.\label{mcu-avcc}
 				\end{itemize}
 
