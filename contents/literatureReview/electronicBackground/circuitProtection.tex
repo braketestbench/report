@@ -12,7 +12,7 @@ In order to enhance energy efficiency, devices are now operating at lower voltag
 In automotive environment, many of the supporting electrical components of the vehicle can generate transients, specially from inductive load switching. When the inductive load is switched off, the collapsing magnetic field is converted into electrical energy that turns into a a transient \cite{littlelFuseWhatIsTransientVoltage}.
 
 \subsubsection{Low Pass Filters}\label{sssec:lowPassFilterTransientProtection}
-	According to \cite{littlelFuseWhatIsTransientVoltage}, a ESD pulse (fastest common transient pulse) has a overall duration period of less than 100ns (50$\%$ of the peak value) and a rising time that lasts less than 1.2$\micro$s. Figure \ref{fig:esd-test-waveform} shows an example of a ESD Test Waveform.
+	According to \cite{littlelFuseWhatIsTransientVoltage}, a ESD pulse (fastest common transient pulse) has a overall duration period of less than 100ns (50$\%$ of the peak value) and a rising time that lasts less than 1.2$\mu$s. Figure \ref{fig:esd-test-waveform} shows an example of a ESD Test Waveform.
 
 	\begin{figure}[htbp]
 		\centering
@@ -50,23 +50,23 @@ In automotive environment, many of the supporting electrical components of the v
 
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=0.6]{figuras/fig-uni-tvs-curve}
+				\includegraphics[scale=1]{figuras/fig-uni-tvs-curve}
 			\caption{\textit{V X I} characteristic of a uni-directional TVS \cite{uni-tvs-curve}}
 			\label{fig:uni-tvs-curve}
 		\end{figure}
 
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=0.6]{figuras/fig-bi-tvs-curve}
+				\includegraphics[scale=1]{figuras/fig-bi-tvs-curve}
 			\caption{\textit{V X I} characteristic of a uni-directional TVS \cite{bi-tvs-curve}}
 			\label{fig:bi-tvs-curve}
 		\end{figure}
 
 	\subsubsubsection{Selecting TVS Diodes}\label{ssssec:tvsSelection}
-	According to \ref{microSemiSelectTVS}, the following parameters of TVS devices are important to consider in order to choose one for protecting a particular circuit net:
+	According to \cite{microSemiSelectTVS}, the following parameters of TVS devices are important to consider in order to choose one for protecting a particular circuit net:
 
 	\begin{itemize}
 		\item $V_{C}$ (Campling Voltage): the voltage limit that the TVS will allow on the point of intended protection. This voltage should be slightly lower than the point of intended protection absolute maximum voltage rating.\label{itm:campling-voltage}
 		\item V$_{WM}$ (Rated Standoff Voltage): this is the maximum voltage in which the TVS still works as a high-impedance device. Therefore, the first step when selecting a TVS device is to know the peak voltage at the point of intended protection during normal operation and then select a TVS device with a appropriate $V_{WM}$.\label{itm:tvs-standoff-voltage}
-		\item P$_{PP} (Peak Pulse Power): in order to ensure the durability of the TVS device, the maximum power it needs to dissipate should be known. This P$_{PP}$ is calculated by multipling the TVS device $V_{C}$ (Clamping Voltage) and the $I_{PP}$ (Peak Impulse Current, peak current for the transient event).\label{itm:peak-pulse-power}
+		\item P$_{PP}$ (Peak Pulse Power): in order to ensure the durability of the TVS device, the maximum power it needs to dissipate should be known. This P$_{PP}$ is calculated by multipling the TVS device $V_{C}$ (Clamping Voltage) and the $I_{PP}$ (Peak Impulse Current, peak current for the transient event).\label{itm:peak-pulse-power}
 	\end{itemize}

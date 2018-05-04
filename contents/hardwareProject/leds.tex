@@ -5,18 +5,18 @@
 	The ideia is to have LEDs that will indicate in which stage of operation the system is. It was decided to make a separate LED circuit block in order to make changes on LED's types independent from the circuit they are giving feedback. The following sections will show and explain each functionality of the system that will have LED feedback. All LEDs will be directly connect to the power supplies and just their cathodes will be connect to the drivers circuit.
 		
 	\subsection{Serial Communication Leds}\label{ssec:serial-communication-leds}
-		One important feature of the system is it's serial communication, this is the only way the MCU will communicate with the outside world, as was explained in Section \ref{sec:hardware-interface-between-mcu-and-computer}. In Section \ref{ssec:usb-uart-complete-circuit} it was said that nets \textit{TX_CON} and \textit{RX_CON} from Figure \ref{fig:usb-uart-circuit} are open drain input when the system is respectively transmitting and receiving serial data and high-impedance ports when they are not communicating.
+		One important feature of the system is it's serial communication, this is the only way the MCU will communicate with the outside world, as was explained in Section \ref{sec:hardware-interface-between-mcu-and-computer}. In Section \ref{ssec:usb-uart-complete-circuit} it was said that nets \textit{TX$\_$CON} and \textit{RX$\_$CON} from Figure \ref{fig:usb-uart-circuit} are open drain input when the system is respectively transmitting and receiving serial data and high-impedance ports when they are not communicating.
 		\par
 		The system will have a LED to indicate transmission and another for reception of serial data, the solution to drive this LEDs will be the NTZD3152PT1H from \textit{ON Semiconductor} \cite{ntzd3152pt1h-datasheet}. This is a dual P-Channel mosfet in one IC with very low maximum\textit{Gate Threshold Voltage} ($V_{GS}=-1V$), as the USB/UART feedback pins drains current when communicating, by connecting theese pins to the Gate of theese PMOS it will be possible to control when the LEDs will be turned on. Figure \ref{fig:leds-uart} show this circuit configuration implemented.
 
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[scale=1]{figuras/fig-leds-uart.png}
+				\includegraphics[scale=1.3]{figuras/fig-leds-uart.png}
 			\caption{UART feedback LEDs driver \cite{leds-uart}}
 			\label{fig:leds-uart}
 		\end{figure}
 
-		The resistors R44 and R45 are current limiting resistors, there value may vary with the choosen LEDs, so this 1k$\ohm$ value is not necessary fixed. Resistors R46 and R47 have a relatively bigger resistance of 100k$\ohm$ because they are pull-up resistos, they do not control current on that port, they were used just to guarantee that the voltage on the gate of the PMOS is higher than 1V (Gate-Source Threshold Voltae of the transistors according to the NTZD3152PT1H datasheet \cite{ntzd3152pt1h-datasheet}) when the UART/USB IC is turned off (in Section \ref{ssec:usb-uart-conversion-circuit} a possible scenario that the IC is not turned on is presented).
+		The resistors R44 and R45 are current limiting resistors, there value may vary with the choosen LEDs, so this 1k$\omega$ value is not necessary fixed. Resistors R46 and R47 have a relatively bigger resistance of 100k$\omega$ because they are pull-up resistos, they do not control current on that port, they were used just to guarantee that the voltage on the gate of the PMOS is higher than 1V (Gate-Source Threshold Voltae of the transistors according to the NTZD3152PT1H datasheet \cite{ntzd3152pt1h-datasheet}) when the UART/USB IC is turned off (in Section \ref{ssec:usb-uart-conversion-circuit} a possible scenario that the IC is not turned on is presented).
 
 	\subsection{Sensor Disconnection and Acquisition Leds}\label{ssec:sensor-disconnection-acquisition-leds}	
 
@@ -34,7 +34,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=1]{figuras/fig-leds-sensor-disconnection-acquisition-circuit.png}
+					\includegraphics[scale=0.7]{figuras/fig-leds-sensor-disconnection-acquisition-circuit.png}
 				\caption{Sensor Disconnection and Acquisition LED driver circuit \cite{leds-sensor-disconnection-acquisition-circuit}}
 				\label{fig:leds-sensor-disconnection-acquisition-circuit}
 			\end{figure}
@@ -45,7 +45,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=1]{figuras/fig-power-supplies-leds.png}
+					\includegraphics[scale=1.3]{figuras/fig-power-supplies-leds.png}
 				\caption{Power Supplies Voltage LEDs Circuit \cite{power-supplies-leds}}
 				\label{fig:power-supplies-leds}
 			\end{figure}

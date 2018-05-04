@@ -17,12 +17,12 @@
 			According to the datasheet (\cite{lm2907-datasheet}), in order to configure the gain of the frequency-to-voltage converter, C1, R1 and C2 must configured in respect to the following design requirements.
 
 			\begin{itemize}
-				\item\textbf{\textit{C1:}} This capacitor is charged and discharged every cycle by a 180-µA typical current source. C1 must not be sized lower than 500-pF due to its role in internal compensation.\label{itm:lm2907-c1}
-				\item\textbf{\textit{R1:}} Higher of R1 values increase the output voltage for a given frequency, but too large will degrade the output’s linearity. Because the current pulses are a fixed magnitude of 180 µA typical, R1 must be big enough to produce the maximum desired output voltage at maximum input frequency. At maximum input frequency the pulse train duty cycle is 100$\%$, therefore the average current is 180 $\micro$A and R1 = Vo(max) / 180 µA.\label{itm:lm2907-r1}
+				\item\textbf{\textit{C1:}} This capacitor is charged and discharged every cycle by a 180$\mu$A typical current source. C1 must not be sized lower than 500-pF due to its role in internal compensation.\label{itm:lm2907-c1}
+				\item\textbf{\textit{R1:}} Higher of R1 values increase the output voltage for a given frequency, but too large will degrade the output’s linearity. Because the current pulses are a fixed magnitude of 180 $\mu$A  typical, R1 must be big enough to produce the maximum desired output voltage at maximum input frequency. At maximum input frequency the pulse train duty cycle is 100$\%$, therefore the average current is 180 $\mu$A and R1 = Vo(max) / 180 $\mu$A.\label{itm:lm2907-r1}
 				\item\textbf{\textit{C2:}} This capacitor filters the ripple produced by the current pulses sourced by the charge pump. Large values reduce the output voltage ripple but increase the output’s response time to changes in input frequency.\label{itm:lm2907-c2}
 			\end{itemize}
 
-			The output voltage ($V_{O}$) can be calculated using Equation \ref{eqn:lm2907-output-voltage}, $V_{CC}$ is the supply voltage and f_{IN} the input frequency.
+			The output voltage ($V_{O}$) can be calculated using Equation \ref{eqn:lm2907-output-voltage}, $V_{CC}$ is the supply voltage and $f_{IN}$ the input frequency.
 
 			\begin{equation}\label{eqn:lm2907-output-voltage}
 				V_{O}=V_{REF} + \left( V_{CC} \cdot f_{IN} \cdot C1 \cdot R1 \right)
@@ -48,17 +48,17 @@
 				C = \pi \cdot D
 			\end{equation}
 
-			A speed of 200kph equals aproximately 55.5556m/s, using this value of speed divided by the calculated values of length, we have maximum frequencies of aproximately 31.52Hz (for the smaller tyre standard) and 22.88Hz (for the bigger tyre standard). Applying the greater value of frequency, a supply voltage of 5V (check Section \ref{ssec:the-choosen-mcu}) on Equation \ref{eqn:lm2907-max-freq} (remembering that $I_{2} equals$) gives a aproximately value of C1=1$\micro$F.
+			A speed of 200kph equals aproximately 55.5556m/s, using this value of speed divided by the calculated values of length, we have maximum frequencies of aproximately 31.52Hz (for the smaller tyre standard) and 22.88Hz (for the bigger tyre standard). Applying the greater value of frequency, a supply voltage of 5V (check Section \ref{ssec:the-choosen-mcu}) on Equation \ref{eqn:lm2907-max-freq} (remembering that $I_{2} equals$) gives a aproximately value of C1=1$\mu$F.
 			\par
-			Using this calculated value of C1 (1$\micro$F), with the maximum frequency (31.52Hz), the $V_{CC}$ value (5V), the desired offset voltage $V_{REF}$ (1V) and the maximum output voltage $V_{O}$ (5V) on Equation \ref{eqn:lm2907-output-voltage} gives a R1 value of 25.381k$\ohm$, the closest commercial value is of 24k$\ohm$, using this value gives a maximum output voltage in respect to the maximum input frequency of aproximately 4.78V.
+			Using this calculated value of C1 (1$\mu$F), with the maximum frequency (31.52Hz), the $V_{CC}$ value (5V), the desired offset voltage $V_{REF}$ (1V) and the maximum output voltage $V_{O}$ (5V) on Equation \ref{eqn:lm2907-output-voltage} gives a R1 value of 25.381k$\omega$, the closest commercial value is of 24k$\omega$, using this value gives a maximum output voltage in respect to the maximum input frequency of aproximately 4.78V.
 			\par
-			In Section \ref{ssec:the-choosen-mcu}, it is said that the choosen microcontroller's ADC has a resolution of 10-bit. A analog reference of 5V with 10-bit resolution gives a voltage resolution of 4.88mV. Hence, the calculated voltage ripple of the frequency-to-voltage converter must be less than the ADC resolution. Using values o $V_{RIPPLE}$, C1, R1, $f_{IN}$ and $V_{CC}$ in Equation \ref{eqn:lm2907-ripple} gives a C2 value of aproximately 63.75$\micro$F, the closest commercial value is 68$\micro$F.
+			In Section \ref{ssec:the-choosen-mcu}, it is said that the choosen microcontroller's ADC has a resolution of 10-bit. A analog reference of 5V with 10-bit resolution gives a voltage resolution of 4.88mV. Hence, the calculated voltage ripple of the frequency-to-voltage converter must be less than the ADC resolution. Using values o $V_{RIPPLE}$, C1, R1, $f_{IN}$ and $V_{CC}$ in Equation \ref{eqn:lm2907-ripple} gives a C2 value of aproximately 63.75$\mu$F, the closest commercial value is 68$\mu$F.
 			\par
 			Figure \ref{fig:ckp-conditioning-circuit} shows the designed circuit for the speed acquisition channel.
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.6]{figuras/fig-ckp-conditioning-circuit.png}
+					\includegraphics[scale=0.5]{figuras/fig-ckp-conditioning-circuit.png}
 				\caption{Speed Acquisition Channel Circuit \cite{ckp-conditioning-circuit}}
 				\label{fig:ckp-conditioning-circuit}
 			\end{figure}

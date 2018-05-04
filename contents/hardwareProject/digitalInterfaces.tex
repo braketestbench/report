@@ -12,7 +12,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-				\includegraphics[scale=0.7]{figuras/fig-pmos-low-side-driver.png}
+				\includegraphics[scale=1]{figuras/fig-pmos-low-side-driver.png}
 				\caption{PMOS low side driver \cite{pmos-low-side-driver}}
 				\label{fig:pmos-low-side-driver}
 			\end{figure}
@@ -25,7 +25,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-				\includegraphics[scale=0.7]{figuras/fig-digital-output-circuit.png}
+				\includegraphics[scale=1]{figuras/fig-digital-output-circuit.png}
 				\caption{Digital Output Circuit \cite{digital-output-circuit}}
 				\label{fig:digital-output-circuit}
 			\end{figure}
@@ -38,7 +38,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-				\includegraphics[scale=0.7]{figuras/fig-digital-input-circuit.png}
+				\includegraphics[scale=1]{figuras/fig-digital-input-circuit.png}
 				\caption{Digital Input Circuit \cite{digital-input-circuit}}
 				\label{fig:digital-input-circuit}
 			\end{figure}
@@ -48,10 +48,10 @@
 		This circuit is adjustable to different input voltages ($V_{IN}$), R2 and R3 creates a voltage divider and must be choosen according to Equation \ref{eqn:voltage-divider-digital-input}.
 
 		\begin{equation}\label{eqn:voltage-divider-digital-input}
-			2.1 \leqslant \frac{R3}{R2} + R3} \cdot V_{IN} \leqslant 5V
+			2.1 < \frac{R3}{R2 + R3} \cdot V_{IN} < 5V
 		\end{equation}
 
-		For a 12V voltage input as an example, using $R_{2}=150k\ohm$ and $R_{3}=100k\ohm$ will produce a voltage at the gate equal to 4.8V, meeting the limits from Equation \ref{eqn:voltage-divider-digital-input}.
+		For a 12V voltage input as an example, using $R_{2}=150k\omega$ and $R_{3}=100k\omega$ will produce a voltage at the gate equal to 4.8V, meeting the limits from Equation \ref{eqn:voltage-divider-digital-input}.
 
 		This circuit also has a LPF formed by the combination of R2 and C1, it is used to filter any noise from the input. Equation \ref{eqn:1st-order-lpf-fc} is used to calculate the center frequency of this filter.
 

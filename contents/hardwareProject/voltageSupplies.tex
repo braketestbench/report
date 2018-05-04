@@ -8,7 +8,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-tl2575-05-circuit.png}
+					\includegraphics[scale=2]{figuras/fig-tl2575-05-circuit.png}
 				\caption{5V Power Supply Circuit \cite{tl2575-05-circuit}}
 				\label{fig:tl2575-05-circuit}
 			\end{figure}
@@ -22,8 +22,8 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-lm2574-12-circuit.png}
-				\caption{5V Power Supply Circuit\cite{lm2574-12-circuit}}
+					\includegraphics[scale=1.8]{figuras/fig-lm2574-12-circuit.png}
+				\caption{12V Power Supply Circuit\cite{lm2574-12-circuit}}
 				\label{fig:lm2574-12-circuit}
 			\end{figure}	
 
@@ -37,7 +37,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-input-protection-circuit.png}
+					\includegraphics[scale=1]{figuras/fig-input-protection-circuit.png}
 				\caption{Voltage Input Protection Circuit \cite{input-protection-circuit}}
 				\label{fig:input-protection-circuit}
 			\end{figure}
@@ -49,11 +49,11 @@
 		In this project any power supply that the precision and stability of the output voltage is more concerning than the maximum output current will be called a voltage reference.
 
 		\subsubsection{10V Reference}\label{sssec:10v-reference}
-			As it was explained in Section \ref{ssec:load-cell-signal-conditioning}, this voltage reference will be used to excite the load cells sensors of this project. The choosen component for this reference was the LM78L10 from \textit{Microchip} \cite{LM78L10-datasheet}. According to the datasheet, this voltage reference has a typical tolerance of $\pm 0.2\%$ and has maximum operating output current of 100mA. Load cells have a typical bridge resitance from 350$\ohm$ to 1k$\ohm$ \cite{GMIloadcell}. It was defined on this project requirements on Item \ref{itm:func-req-9} in Section \ref{sec:functionalRequirements} that the system must have two brake pressure acquistion channels. Hence, having two load cels with 350$\ohm$ bridge resistance and 10V excitation, 68mA of current would be needed, 100mA from the voltage reference would be suitable. Figure \ref{fig:LM78L10-circuit} shows to reference circuit.
+			As it was explained in Section \ref{ssec:load-cell-signal-conditioning}, this voltage reference will be used to excite the load cells sensors of this project. The choosen component for this reference was the LM78L10 from \textit{Microchip} \cite{LM78L10-datasheet}. According to the datasheet, this voltage reference has a typical tolerance of $\pm 0.2\%$ and has maximum operating output current of 100mA. Load cells have a typical bridge resitance from 350$\omega$ to 1k$\omega$ \cite{GMIloadcell}. It was defined on this project requirements on Item \ref{itm:func-req-9} in Section \ref{sec:functionalRequirements} that the system must have two brake pressure acquistion channels. Hence, having two load cels with 350$\omega$ bridge resistance and 10V excitation, 68mA of current would be needed, 100mA from the voltage reference would be suitable. Figure \ref{fig:LM78L10-circuit} shows to reference circuit.
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-LM78L10-circuit.png.png}
+					\includegraphics[scale=1.35]{figuras/fig-LM78L10-circuit.png}
 				\caption{10V voltage reference circuit \cite{LM78L10-circuit}}
 				\label{fig:LM78L10-circuit}
 			\end{figure}
@@ -62,13 +62,13 @@
 
 		\subsubsection{4V5 Reference}\label{sssec:4v5-reference}
 
-			As said in Section \ref{ssec:thermocouple-sensor-detection}, the sensor detection circuit needs a 4V5 voltage reference for the comparator. This is achieved using the MAX6107EUR+T from \textit{Maxim Integrated} \cite{max6107eur+t-datasheet}. This is a precise 4V5 voltage reference and according to the datsheet it has a tolerance of $\pm0.4\%$ and a maximum operating output current of 5mA. Figure \ref{fig:max6107eur+t-circuit} shows the circuit for the 4V5 voltage reference.
+			As said in Section \ref{ssec:thermocouple-sensor-detection}, the sensor detection circuit needs a 4V5 voltage reference for the comparator. This is achieved using the MAX6107EUR+T from \textit{Maxim Integrated} \cite{max6107eur+t-datasheet}. This is a precise 4V5 voltage reference and according to the datsheet it has a tolerance of $\pm0.4\%$ and a maximum operating output current of 5mA. Figure \ref{fig:max6107-circuit-circuit} shows the circuit for the 4V5 voltage reference.
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-MAX6107EUR+T-circuit.png}
-				\caption{4V5 voltage reference circuit \cite{MAX6107EUR+T-circuit}}
-				\label{fig:max6107eur+t-circuit}
+					\includegraphics[scale=1.1]{figuras/fig-max6107-circuit.png}
+				\caption{4V5 voltage reference circuit \cite{max6107-circuit-circuit}}
+				\label{fig:max6107-circuit-circuit}
 			\end{figure}
 
 			According to the datasheet the only needed extra component is a decoupling capacitor at the output.
@@ -79,7 +79,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-adr510-typical-circuit.png}
+					\includegraphics[scale=0.5]{figuras/fig-adr510-typical-circuit.png}
 				\caption{ADR510 Typical Operating Circuit \cite{adr510-typical-circuit}}
 				\label{fig:adr510-typical-circuit}
 			\end{figure}
@@ -92,11 +92,11 @@
 
 			The used $V_{S}$ \textit{Voltage Supply} will be the 5V obtained in the circuit from Figure \ref{fig:tl2575-05-circuit} in Section \ref{sssec:5v-supply}. According to the datasheet, the minimul operating voltage ($I_{Q}$ in this case) is 100uA. Moreover, $V_{OUT}$ is naturally 1V5. The minimum bias current (load current $I_{L}$) is of 500nA (according to the IC that used the 1V reference \cite{lm2907-datasheet}). Hence, any value of resistance that guarantee that the current that flows through the regulator is less than 10mA is acceptable.
 			\par
-			Using a 1k$\ohm$ resistor a current of 4mA can be achieved. Figure \ref{fig:ADR510ARTZ-circuit} shows the circuit for the 1V reference, the capacitor is just a decoupling capacitor recommended by the datasheet.
+			Using a 1k$\omega$ resistor a current of 4mA can be achieved. Figure \ref{fig:ADR510ARTZ-circuit} shows the circuit for the 1V reference, the capacitor is just a decoupling capacitor recommended by the datasheet.
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.4]{figuras/fig-ADR510ARTZ-circuit.png}
+					\includegraphics[scale=1.2]{figuras/fig-ADR510ARTZ-circuit.png}
 				\caption{1V voltage reference circuit \cite{ADR510ARTZ-circuit}}
 				\label{fig:ADR510ARTZ-circuit}
 			\end{figure}	 
