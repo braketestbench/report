@@ -74,4 +74,15 @@
 
 	\subsection{CKP Sensor Detection}\label{ssec:ckp-sensor-detection-circuit}
 
-	\subsection{Complete Circuit}\label{ssec:spd-acq-complete-circuit}
+		The detection circuit consists basically of a filtered digital input, a extra cable from the CKP power supply line will need to be wired in order to detect when the board sensor is connected. Naturally, when this cable is disconnected this extra wire input will have zero volts.
+
+		Figure \ref{fig:ckp-detection-circuit} shows the detection circuit for the CKP sensor.
+
+			\begin{figure}[htbp]
+				\centering
+					\includegraphics[scale=0.6]{figuras/fig-ckp-detection-circuit.png}
+				\caption{Speed Sensor Detection Channel Circuit \cite{ckp-detection-circuit}}
+				\label{fig:ckp-detection-circuit}
+			\end{figure}
+
+		TZ10 is TVS diode to protect the input from overvoltages. Resistors R67 and R69 form a voltage divider that will transform the 12V input signal to a 5V level signal. Resistor R67 and C29 form a LPF with cutoff frequency of 10.66Hz, this filter is used to attenuate unwanted noise from the input.
