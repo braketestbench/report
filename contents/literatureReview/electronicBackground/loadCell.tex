@@ -1,5 +1,17 @@
-\subsection{Load Cell}\label{ssec:load-cell}
+\subsection{Brake Pressure Measurement}\label{ssec:load-cell}
 
+	Brake pressure can be interpreted as the force that the brake system applies to the disc in a distributed way along the area of the pads. Considering this, in other to find out the break pressure the force applied to the calipers must be measured.
+	\par
+	There are different types of force tranducers (devices that converts a signal from one physical form to a corresponding signal having a different physical form \cite{palla2012sensors}) and they are used with instrumentation of varying complexity. The load cell is the most common type \ref{npl2007force}, and according to \cite{dillon1989load} the main advantages and disadvantages of Load Cells are: 
+
+	\begin{itemize}
+		\item \textit{Accuracy}: usually less than $0.1\%$.\label{itm:accuracy-load-cell}
+		\item \textit{Rigid in Construction}: it is extremely resistant to impact and to any mechanical stress.\label{itm:rigid-load-cell}
+		\item \textit{Calibration}: load cells are usually already calibrated by manufacturers and vendors.\label{itm:calibration-load-cell}
+	\end{itemize}
+
+	The main disadvantage of the Load Cell is its size and weight, which is not a issue for a testbench.
+	\par
 	The load cell is a transducer formed by strain gauges. Thoose are devices which their electrical resistance varies proportionally to their distension. Distension is a quantification of the deformation of a body, it can also be defined as a fractional change of the body of a body. Distension may be negative (compression) or positive (traction).
 
 	\begin{figure}[htbp]
@@ -23,4 +35,3 @@
 	\begin{equation}\label{eqn:voWheatstone}
 		V_{O}=\frac{ R_{3} }{ R_{3} + R_{4} } - \frac{ R_{2} }{ R_{1} + R_{2}}
 	\end{equation}
-
