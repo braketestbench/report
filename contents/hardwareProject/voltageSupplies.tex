@@ -16,7 +16,7 @@
 			The diode FM205-W from \textit{Rectron Semiconductor} \cite{fm205-2-datasheet} is used to protect the input of converter from inverse polarity. This diode has a maximum current of 2A, twice the maximum curret output of the regulator, so it will not interfere with the input current. Inductor L4 is fundamental for the device to work according to the datasheet. Capacitors C16 and C17 are a bypass capacitors recommended by the converter's datasheet. Diode D3 is a catch diode used to protect the converter from flyback currents from the inductor, the datasheet only specifies it should be a Schottky diode with maximum current at least the same as the maximum output current of the converter (1A). The choosen diode is FM5819-W from \textit{Rectron Semiconductor} \cite{fm5819-w-datasheet}.
 			\par
 			According to the datasheet this circuit has a input voltage from 7V to 40V.
-
+\begin{comment}
 		\subsubsection{12V Supply}\label{sssec:12v-supply}
 			For the 12V supply the choosen regulator was LM2574-12 from \textit{Texas Instruments} \cite{lm2574-12-datasheet}, it has a output up to 500mA, voltage drop of 2V, and typical efficiency of $88\%$. Figure \ref{fig:lm2574-12-circuit} shows the circuit used for the 12V supply.
 
@@ -30,10 +30,10 @@
 			The diode FM5819-W from \textit{Rectron Semiconductor} \cite{fm5819-w-datasheet} is used to protect the input of converter from inverse polarity. This diode has a maximum current of 1A, twice the maximum curret output of the regulator, so it will not interfere with the input current. Inductor L5 is fundamental for the device to work according to the datasheet. Capacitors C18 and C19 are a bypass capacitors recommended by the converter's datasheet. Diode D5 is a catch diode used to protect the converter from flyback currents from the inductor, the datasheet only specifies it should be a Schottky diode with maximum current at least the same as the maximum output current of the converter (0.5A). The choosen diode is NSR0530HT1G from \textit{ON Semiconductor} \cite{NSR0530HT1G-datasheet}.
 			\par
 			According to the datasheet, this circuit has a input voltage from 14V to 40V.	
-
+\end{comment}
 		\subsubsection{Voltage Input Protection}\label{sssec:voltage-input-protection}
 
-			The voltage that goes to each of the switching voltage regulatores from Sections \ref{sssec:12v-supply} and \ref{sssec:5v-supply} is only protected against inverse polarity but not to overvoltage and overcurrent. Figure \ref{fig:input-protection-circuit} show the circuit used to protect the power supplies.
+			Figure \ref{fig:input-protection-circuit} show the circuit used to protect the power supplies.
 
 			\begin{figure}[htbp]
 				\centering
@@ -42,8 +42,8 @@
 				\label{fig:input-protection-circuit}
 			\end{figure}
 
-			TZ7 is a TVS diode used to protect the circuit against overvoltages. The choosen TVS is the SLD24-018, it has a standoff voltage of 24V and a maximum clamping voltage of 38.9 volts (check Section \ref{ssssec:tvsSelection}). Using this TVS limits the input voltage from 14-24V, in the other hand it ensures protection for the voltage regulators. F1 is a fuse with 5A rating, it will not protect the circuit from fast transients, this will be carried out by the TVS. It has the function to open the circuit when the TVS reaches its clamping voltage and protect the TVS.
-
+			TZ7 is a TVS diode used to protect the circuit against overvoltages. The choosen TVS is the SLD24-018, it has a standoff voltage of 24V and a maximum clamping voltage of 38.9 volts (check Section \ref{ssssec:tvsSelection}). Using this TVS limits the input voltage from 14-24V, in the other hand it ensures protection for the voltage regulators. D2 is a Schottky Diode used to protect the circuit against inverse polarity. The choosen diode is the 1N5822 \cite{1n5822-datasheet} from Vishay, this diode has a continuous forward current of 3A, a peak surge current of 80A  with a 8.3ms response time, making it suitable for protecting the circuit against reverse polaity. During the circuit assembly a fuse should be placed between the connector and the board.
+			
 	\subsection{Voltage References}\label{ssec:voltage-references}
 
 		In this project any power supply that the precision and stability of the output voltage is more concerning than the maximum output current will be called a voltage reference.
