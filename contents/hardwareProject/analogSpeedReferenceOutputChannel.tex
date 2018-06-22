@@ -1,4 +1,4 @@
-\section{Speed Reference Output Channel}\label{sec:speed-reference-output-channel}
+	\section{Speed Reference Output Channel}\label{sec:speed-reference-output-channel}
 
 	\subsection{Speed Control}\label{ssec:speed-control}
 		\par
@@ -26,7 +26,7 @@
 				\Delta V=\frac{V_{max}}{2^{n}}
 			\end{equation}
 	
-		As mentioned in Section \ref{sec:mcu-hw}, the choosen MCU has a five volts high logic level, this voltage level will need amplification in order to best suit the zero to ten volts input from the frequency inverter. According to \cite{alter2008pwm}, converting a PWM signal to a analog voltage generates a constant voltage ripple. It was decided to amplify this voltage prior to filtering because this way the voltage ripple generated from the filtering stage will not be amplified. Using a OPAMP and two resistors it is possible to convert a five volts amplitude square wave (PWM wave) to a 10V amplitude wave by giving a gain of two to the input signal. Using Equation \ref{eqn-gain-neg-closed-loop-amp} from Sub-section \ref{ssec:closed-loop-amplifier}, it is possible to achieve the desired gain of two using both R$_{f}$ and R$_{g}$ of 10k$\Omega$ as Figure \ref{fig:closed-loop-opamp} shows how to.
+		As mentioned in Section \ref{sec:mcu-hw}, the choosen MCU has a five volts high logic level, this voltage level will need amplification in order to best suit the zero to ten volts input from the frequency inverter. According to \cite{alter2008pwm}, converting a PWM signal to a analog voltage generates a constant voltage ripple. It was decided to amplify this voltage prior to filtering because this way the voltage ripple generated from the filtering stage will not be amplified. Using a OPAMP and two resistors it is possible to convert a five volts amplitude square wave (PWM wave) to a 10V amplitude wave by giving a gain of two to the input signal. It is possible to achieve the desired gain of two using both R$_{f}$ and R$_{g}$ of 10k$\Omega$.
 
 		The maximum ripple is the $\Delta V$ from Equation \ref{eqn:minVoltage}. Equation \ref{eqn:atte} \cite{metivier2013pwm} gives the necessary $\frac{dB}{decade}$ attenuation to guarantee a PWM converted signal desired ripple.
 
@@ -66,7 +66,7 @@
 
 	\subsection{Sallen-Key Low Pass Active Filter}\label{ssec:sallen-key-low-pass-active-filter}
 	
-		The Sallen-Key LPF setup is probably one of the best second order filters architectures available \cite{dorfSvodoba2014}, this setup is displayed on Figure \ref{fig:sallenKeyLPF}.
+		The Sallen-Key LPF setup is probably one of the best second order filters architectures available \cite{dorfsvodoba2014}, this setup is displayed on Figure \ref{fig:sallenKeyLPF}.
 
 		\begin{figure}[htbp]
 			\centering
@@ -100,7 +100,7 @@
 			Q=\frac{\sqrt{m \cdot n}}{m + 1 - m \cdot n}
 		\end{equation}
 
-		The quality factor of a Sallen-Key filter is influenced by the gain (k) and defines the dB gain on the cutoff frequency, ideally this factor should be closer as possible to $\frac{\sqrt{2}}{2}$ \ref{dorfSvodoba2014}. Setting a arbitrary value of $m=2$, the ideal value of $Q=\frac{\sqrt{2}}{2}$ and using Equation \ref{eqn:sallenKeyQ2} it is possible to calculate a $n=0,6771$. It is possible to simplify Equation \ref{eqn:sallenKeyCutoffFrequency} using the same method used to simplify Equation \ref{eqn:sallenKeyQ} to \ref{eqn:sallenKeyQ2}. Using this method will produce Equation \ref{eqn:sallenKeyRC} that will be used to determine the $R \cdot C$ constant that will be later used to define the resistors and capacitor values of our filter. 
+		The quality factor of a Sallen-Key filter is influenced by the gain (k) and defines the dB gain on the cutoff frequency, ideally this factor should be closer as possible to $\frac{\sqrt{2}}{2}$ \cite{dorfsvodoba2014}. Setting a arbitrary value of $m=2$, the ideal value of $Q=\frac{\sqrt{2}}{2}$ and using Equation \ref{eqn:sallenKeyQ2} it is possible to calculate a $n=0,6771$. It is possible to simplify Equation \ref{eqn:sallenKeyCutoffFrequency} using the same method used to simplify Equation \ref{eqn:sallenKeyQ} to \ref{eqn:sallenKeyQ2}. Using this method will produce Equation \ref{eqn:sallenKeyRC} that will be used to determine the $R \cdot C$ constant that will be later used to define the resistors and capacitor values of our filter. 
 
 		\begin{equation}\label{eqn:sallenKeyRC}
 			R \cdot C = \frac{1}{2 \cdot \pi f_{c} \cdot \sqrt{m \cdot n}}

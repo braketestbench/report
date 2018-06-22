@@ -43,7 +43,7 @@
 				\label{fig:digital-input-circuit}
 			\end{figure}
 
-		The choosen NMOS was the NX7002AK from \textit{Nexperia} \cite{nx7002ak-datasheet}.This is a extremely versatile NMOS, it has a maximum drain source voltage of 60V, maximum gate-source voltage of $\pm$20V and maximum drain current of 300mA. This circuit is basically a buffer, it is used just to convert the state of the input signal to the MCU voltage limits. 
+		The choosen NMOS was the NX7002AK from \textit{Nexperia} \cite{nx7002ak-datasheet}.This is a extremely versatile NMOS, it has a maximum drain source voltage of 60V, maximum gate-source voltage of $\pm$20V and maximum drain current of 300mA. This circuit is basically a buffer, it is used just as a level translator, converting the voltage level of the input to the voltage level of the MCU. 
 
 		This circuit is adjustable to different input voltages ($V_{IN}$), R4 and R3 creates a voltage divider and must be choosen according to Equation \ref{eqn:voltage-divider-digital-input}.
 

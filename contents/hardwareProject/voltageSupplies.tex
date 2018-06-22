@@ -8,7 +8,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=2]{figuras/fig-tl2575-05-circuit.png}
+					\includegraphics[scale=1.5]{figuras/fig-tl2575-05-circuit.png}
 				\caption{5V Power Supply Circuit \cite{tl2575-05-circuit}}
 				\label{fig:tl2575-05-circuit}
 			\end{figure}
@@ -49,7 +49,7 @@
 		In this project any power supply that the precision and stability of the output voltage is more concerning than the maximum output current will be called a voltage reference.
 
 		\subsubsection{10V Reference}\label{sssec:10v-reference}
-			As it was explained in Section \ref{ssec:load-cell-signal-conditioning}, this voltage reference will be used to excite the load cells sensors of this project. The choosen component for this reference was the LM78L10 from \textit{Microchip} \cite{LM78L10-datasheet}. According to the datasheet, this voltage reference has a typical tolerance of $\pm 0.2\%$ and has maximum operating output current of 100mA. Load cells have a typical bridge resitance from 350$\omega$ to 1k$\omega$ \cite{GMIloadcell}. It was defined on this project requirements on Item \ref{itm:func-req-9} in Section \ref{sec:functionalRequirements} that the system must have two brake pressure acquistion channels. Hence, having two load cels with 350$\omega$ bridge resistance and 10V excitation, 68mA of current would be needed, 100mA from the voltage reference would be suitable. Figure \ref{fig:LM78L10-circuit} shows to reference circuit.
+			As it was explained in Section \ref{ssec:load-cell-signal-conditioning}, this voltage reference will be used to excite the load cells sensors of this project. The choosen component for this reference was the LM78L10 from \textit{Microchip} \cite{LM78L10-datasheet}. According to the datasheet, this voltage reference has a typical tolerance of $\pm 0.2\%$ and has maximum operating output current of 100mA. Load cells have a typical bridge resitance from 350$\Omega$ to 1k$\Omega$ \cite{GMIloadcell}. It was defined on this project requirements on Item \ref{itm:func-req-9} in Section \ref{sec:functionalRequirements} that the system must have two brake pressure acquistion channels. Hence, having two load cels with 350$\Omega$ bridge resistance and 10V excitation, 68mA of current would be needed, 100mA from the voltage reference would be suitable. Figure \ref{fig:LM78L10-circuit} shows to reference circuit.
 
 			\begin{figure}[htbp]
 				\centering
@@ -86,7 +86,7 @@
 
 			The only external component needed is a bias resistor which can be calculated using \ref{eqn:rbis-adr510} \cite{adr510artz-datasheet}.
 
-			\begin{equation}
+			\begin{equation}\label{eqn:rbis-adr510}
 				R_{BIAS} = \frac{V_{S} - V_{OUT}}{I_{L} - I_{Q}}
 			\end{equation}
 

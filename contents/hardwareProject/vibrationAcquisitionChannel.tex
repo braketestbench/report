@@ -20,7 +20,7 @@
 		\label{fig:16lfcsp}
 	\end{figure}
 
-	The are already embdded solutions that can solve this issue, such as the \textit{Adafruit ADXL335 - 5V ready} \cite{adafruit-5v-ready}. This small (75mm x 75mm) board (Figure \ref{fig:adafruit-adxl335}) has the ADXL335 with the capacitors recommended by the datasheet, with a 3V3 voltage regulator so the board can be powererd up with 5V and with the mounting holes to fix the board in any surface, making it ideal for this project.
+	The are already embdded solutions that can solve this issue, such as the \textit{Adafruit ADXL335 - 5V ready} \cite{adafruit-5v-ready}. This small (19mm x 19mm) board (Figure \ref{fig:adafruit-adxl335}) has the ADXL335 with the capacitors recommended by the datasheet, with a 3V3 voltage regulator so the board can be powererd up with 5V and with the mounting holes to fix the board in any surface, making it ideal for this project.
 
 	\begin{figure}[htbp]
 		\centering
@@ -49,7 +49,7 @@
 	\begin{itemize}
 		\item \textbf{First Stage} \textit{(protection)}: Composed of a TVS diode with a standoff voltage of 3V3 (same as the sensor maximum normal output voltage level, check Item \ref{itm:tvs-standoff-voltage} from Section \ref{ssssec:tvsSelection}) and a LPF with a cutoff frequency of approximately 1.6kHz (enough to filter most ESD, check Section \ref{sssec:lowPassFilterTransientProtection}). 
 
-		\item \textbf{Second Stage} \textit{(amplification)}: The second stage is composed by a simple non-inverting amplifier with a gain of 1.5x, to achieve this gain the resistors were choosing using Equation \ref{eqn-gain-neg-closed-loop-amp} from Section \ref{ssec:closed-loop-amplifier}. The choosen OPAMP is the \textit{MCP6001} from \textit{Microship} \cite{mcp6001-datasheet}, it was choosen for this project because it optimized to work with single-supply, has rail-to-rail input/output and has wide-bandwidth operation.
+		\item \textbf{Second Stage} \textit{(amplification)}: The second stage is composed by a simple non-inverting amplifier with a gain of 1.5x. The choosen OPAMP is the \textit{MCP6001} from \textit{Microship} \cite{mcp6001-datasheet}, it was choosen for this project because it optimized to work with single-supply, has rail-to-rail input/output and has wide-bandwidth operation.
 
 		\item \textbf{Third Stage} \textit{(post-filtering)}: The third and final stage is composed just by a LPF filter to attenuate any post amplification noise and the 50/60Hz noise interference from the power line. It has a cutoff frequency of approximately 16Hz.
 

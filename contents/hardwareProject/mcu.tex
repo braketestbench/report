@@ -4,7 +4,7 @@
 
 		The choosen microcontroller for the system is the \textit{ATMEGA328PB} manufactured by \textit{Microchip}.It has 32 Kb of flash memory, 1 Kb of \textit{EEPROM} (Electrically Erasable Programmable Read-Only Memory), 2Kb of \textit{SRAM} (Static Random Access Memory), 27 GPIOs, 32 general purpose registers, five flexible timer/counters, two USARTs, 8-channel 10bit ADC \cite{atmega328p-datasheet}. 
 		\par
-		This microncontroller is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega328p} has eight ADC inputs with a resolution of 10 bits and more 27 GPIO ports. This microcontroller also has a UART (explained in Section \ref{sssec:uart}). It is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. This microcontroller will be used with a five volts supply, giving digital inputs and outputs a standard high logic level of five volts and low logic level of zero volts. The Figure \ref{fig:atmega328pb} shows the pinout of this device.
+		This microncontroller is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega328p} has eight ADC inputs with a resolution of 10 bits and more 27 GPIO ports. This microcontroller also has a UART. It is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. This microcontroller will be used with a five volts supply, giving digital inputs and outputs a standard high logic level of five volts and low logic level of zero volts. The Figure \ref{fig:atmega328pb} shows the pinout of this device.
 
 		\begin{figure}[htbp]
 			\centering
@@ -42,7 +42,7 @@
 					\item \textit{DIG$\_$OUT$\_$2$\_$MCU (output):} Second digital external output used in the circuit (Section \ref{ssec:digital-outputs}).\label{itm:mcu-port-dig-out-2-mcu}
 					\item \textit{DIG$\_$IN$\_$1$\_$MCU (input):} First digital external input used in the circuit (Section \ref{ssec:digital-inputs}).\label{itm:mcu-port-dig-in-1-mcu}
 					\item \textit{DIG$\_$IN$\_$2$\_$MCU (input):} Second digital external input used in the circuit (Section \ref{ssec:digital-inputs}).\label{itm:mcu-port-dig-in-2-mcu} 
-					\item \textit{ACQ$\_$OUT (output):} Used to control a LED that blinks when signal acquisition is taking place (Section \ref{ssec:acquisition-led}).\label{itm:mcu-port-acq-out}   
+					\item \textit{ACQ$\_$OUT (output):} Used to control a LED that blinks when signal acquisition is taking place.\label{itm:mcu-port-acq-out}   
 					\item \textit{MCU$\_$MOSI:} Used for ISP programming (Section \ref{sssec:microcontroller-isp-programming}).\label{itm:mcu-port-mcu-mosi}
 					\item \textit{MCU$\_$MISO:} Used for ISP programming (Section \ref{sssec:microcontroller-isp-programming}).\label{itm:mcu-port-mcu-miso}
 					\item \textit{MCU$\_$SCK:} Used for ISP programming (Section \ref{sssec:microcontroller-isp-programming}).\label{itm:mcu-port-mcu-sck}
