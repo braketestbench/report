@@ -1,0 +1,53 @@
+\section{Circuit Fabrication and Assembly}\label{sec:printed-circuit-board}
+
+	\subsection{PCB Design}\label{ssec:pcb-design}
+
+		The PCB layout for this project was developed using the Altium Designer 17 Software \cite{AD17}. During the layout design some things were considered to ensure functionallity:
+
+		\begin{itemize}
+			\item Instead of soldering the connectors directly to the board, empty pads for soldering wires were placed, this way connectors can be choosen later and fixed on the board housing instead of on the board.\label{itm:pcb-pin-bars}
+			\item Protection devices such as TVS, Fuses and current limiting resistors were placed very close from the terminal pads in order to prevent cooper tracks to be damaged.\label{itm:pcb-protection}
+			\item SMT (Surface Mount Technology) was a priority during design in order to save space on the board.\label{itm:pcb-smt}
+			\item Cooper tracks width: The width of every track was choosen according to the electrical signal it is carrying.\label{itm:pcb-track}
+ 		\end{itemize}
+
+ 		Figures \ref{fig:pcb-design-top} and \ref{fig:pcb-design-bottom} shows respectively the top and the bottom side of the board during design, there are almost no cooperless areas, most of empty spaces were replaced by GND planes in order to make the board corrosion faster and to make a stronger gnd connection. Other interesting fact is the width of power supply tracks, it is easy to notice they are much more thick than normal signal tracks. The board dimmensions are 70mm x 70mm.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.5]{figuras/fig-pcb-design-top.png}
+			\caption{PCB Top 2D View}
+			\label{fig:pcb-design-top}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.5]{figuras/fig-pcb-design-bottom.png}
+			\caption{PCB Bottom 2D View}
+			\label{fig:pcb-design-bottom}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-pcb-print-diagonal.png}
+			\caption{PCB 3D View}
+			\label{fig:pcb-print-diagonal}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.8]{figuras/fig-pcb-print-top.png}
+			\caption{PCB Top 3D View}
+			\label{fig:pcb-print-top}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.8]{figuras/fig-pcb-print-bottom}
+			\caption{PCB Bottom 3D View}
+			\label{fig:pcb-print-bottom}
+		\end{figure}
+
+	\subsection{PCB Assembly}\label{ssec:pcb-assembly}
+
+		The board was manually assembled as the following pictures show.
