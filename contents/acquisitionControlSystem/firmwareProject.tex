@@ -26,20 +26,61 @@
 	
 	As soon as the microcontroller is turned on it enters in the \textit{Setup}, on this part the following things are setted:
 	\begin{itemize}
-		\item \textit{Timer\_1: } Timer\_1 max count value is setted and a interruption service routine is appointed.\label{itm:mcu-prog-timer1}
-		\item \textit{Timer\_2: } Same thing done for Timer\_1 is done for Timer\_2.\label{itm:mcu-prog-timer2}
+		\item \textit{Acquisition Timer:} Timer max count value is setted and a interruption service routine is appointed, this timer is used for the analog sampling/reading function.\label{itm:mcu-prog-timer1}
+		\item \textit{LED Timer:} Same thing done for \textit{Acquisition Timer}is done for \textit{LED Timer}, this timer controls the blinking frequency of the MCU debug LED.\label{itm:mcu-prog-timer2}
 		\item \textit{Serial Port: } The serial port baud rate is defined and the serial port is opened.\label{itm:mcu-prog-serial-port}
-		\item \textit{Port definitions: } The I/O ports are defined as inputs (high impedance) or as outputs (low impedance).\label{itm:mcu-prog-port}
+		\item \textit{Port mapping: } The port mapping is done, \textit{i.e.} digital I/O ports are defined as inputs (high impedance) or as outputs (low impedance) and the analog ports are setted.\label{itm:mcu-prog-port}
 	\end{itemize}
 	
-	After setting up the code enters in a state in which it waits for a \textit{Start Command} from the computer. This command starts Timer\_1 and makes the code enter the \textit{Acquisition State}. Everytime Timer\_1 finishes its count a ISR will be triggered, all the analog inputs will be read (sampled) and stored followed by the timer restarting its counting process. The \textit{Start Command} also starts Timer\_2, this timer operates the same way as Timer\_1, the difference is that its ISR will only toggle the acquistion LED state.
-	\par
-	In the acquistion state, if a \textit{Digital Output Command} is received the code will decrypt this command (this is actually a group of possible commands) and set the digital outputs according to the decrypted message.
-	\par
-	A received \textit{Speed Command} instruction will make the code behave in a similar way than \textit{Digital Output Command}, code will decript the command (it also is a group of possible commands) and output a corresponding PWM value in the analog output port in order to control the electric motor speed.
-	\par
-	During all the \textit{Acquisition State}, everytime Timer\_1 ISR does a presetted number of reads, the code makes an average of thoose reads and will send them through the serial port to the computer. After that the code will reset the number of read samples and start to count samples again. Another useful feature is that during all the \textit{Acquisition State} the code is also continuosly reading the microcontroller digital inputs, this inputs are used to detect if a sensor is not connected, if any of the sensors is considered to be disconnected instead of sending the analog reading from the respective sensor input, the code will send a ``-1'' value to the computer. This way the computer software that the one responsible for treating this event and take the appropriate action.
-	\par
-	The code will exit the \textit{Acquisition State} if the computer sends a \textit{Stop Command}. This will also set all digital outputs to a low logic level and will disable both timers interruption service routines. The code will go back to the \textit{Wait for Command} state and wait for a \textit{Start Command} to restart acquisition. 
-	\par
-	This code architecture was designed in order to make the microcontroller code as simples as possible in order to make execution faster to avoid jeopardizing the real-time constrain. The same code is used during brake tests, during acquisition and any other process. As mentioned before, all the heavy data processing is done by the computer software.
+	After setting up, the code enters in a state in which it waits for a command that can be from three different groups. This commands are coded into ASCII characters \cite{ascii}. Table \ref{table:ascii-comands-table} shows all proposed commands.
+
+	\begin{table}[h!]
+		\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\textbf{ASCII} & \textbf{Command} & \textbf{ASCII} & \textbf{Command} & \textbf{ASCII} & \textbf{Command} \\ \hline
+		32 & Print Version & 65 &  & 98 & PWM 1 - DT 92\% \\ \hline
+		33 & Filter Read & 66 &  & 99 & PWM 1 - DT 96\% \\ \hline
+		34 & One Read & 67 &  & 100 & PWM 1 - DT 100\% \\ \hline
+		35 & DOUT - Reset & 68 &  & 101 & PWM 2 - DT 0\% \\ \hline
+		36 & DOUT 1 - ON & 69 &  & 102 & PWM 2 - DT 4\% \\ \hline
+		37 & DOUT 1 - OFF & 70 &  & 103 & PWM 2 - DT 8\% \\ \hline
+		38 & DOUT 2 - ON & 71 &  & 104 & PWM 2 - DT 12\% \\ \hline
+		39 & DOUT 2 - OFF & 72 &  & 105 & PWM 2 - DT 16\% \\ \hline
+		40 & DOUT 3 - ON & 73 &  & 106 & PWM 2 - DT 20\% \\ \hline
+		41 & DOUT 3 - OFF & 74 &  & 107 & PWM 2 - DT 24\% \\ \hline
+		42 &  & 75 & PWM 1 - DT 0\% & 108 & PWM 2 - DT 28\% \\ \hline
+		43 &  & 76 & PWM 1 - DT 4\% & 109 & PWM 2 - DT 32\% \\ \hline
+		44 &  & 77 & PWM 1 - DT 8\% & 110 & PWM 2 - DT 36\% \\ \hline
+		45 &  & 78 & PWM 1 - DT 12\% & 111 & PWM 2 - DT 40\% \\ \hline
+		46 &  & 79 & PWM 1 - DT 16\% & 112 & PWM 2 - DT 44\% \\ \hline
+		47 &  & 80 & PWM 1 - DT 20\% & 113 & PWM 2 - DT 48\% \\ \hline
+		48 &  & 81 & PWM 1 - DT 24\% & 114 & PWM 2 - DT 52\% \\ \hline
+		49 &  & 82 & PWM 1 - DT 28\% & 115 & PWM 2 - DT 56\% \\ \hline
+		50 &  & 83 & PWM 1 - DT 32\% & 116 & PWM 2 - DT 60\% \\ \hline
+		51 &  & 84 & PWM 1 - DT 36\% & 117 & PWM 2 - DT 64\% \\ \hline
+		52 &  & 85 & PWM 1 - DT 40\% & 118 & PWM 2 - DT 68\% \\ \hline
+		53 &  & 86 & PWM 1 - DT 44\% & 119 & PWM 2 - DT 72\% \\ \hline
+		54 &  & 87 & PWM 1 - DT 48\% & 120 & PWM 2 - DT 76\% \\ \hline
+		55 &  & 88 & PWM 1 - DT 52\% & 121 & PWM 2 - DT 80\% \\ \hline
+		56 &  & 89 & PWM 1 - DT 56\% & 122 & PWM 2 - DT 84\% \\ \hline
+		57 &  & 90 & PWM 1 - DT 60\% & 123 & PWM 2 - DT 88\% \\ \hline
+		58 &  & 91 & PWM 1 - DT 64\% & 124 & PWM 2 - DT 92\% \\ \hline
+		59 &  & 92 & PWM 1 - DT 68\% & 125 & PWM 2 - DT 96\% \\ \hline
+		60 &  & 93 & PWM 1 - DT 72\% & 126 & PWM 2 - DT 100\% \\ \hline
+		61 &  & 94 & PWM 1 - DT 76\% & 127 &  \\ \hline
+		62 &  & 95 & PWM 1 - DT 80\% &  &  \\ \hline
+		63 &  & 96 & PWM 1 - DT 84\% &  &  \\ \hline
+		64 &  & 97 & PWM 1 - DT 88\% &  &  \\ \hline
+		\end{tabular}
+	\end{table}
+
+
+	Each group of commands will lead to a specific block described in Figure \ref{fig:microCode}.
+
+	\begin{itemize}
+		\item \textit{Digital Output Control:} As mentioned in Section \ref{sssec:lower-level-hardware-interfaces}, there are three digital outputs on the circuit board. Hence, there will be two commands for each digital channel (on and off) plus a command to turn all the digital outputs off. 
+		\item \textit{Analog Output Control:} Commands from this block will set the duty cycle for the MCU PWM outputs that will be converted to analog outputs, as explained in Section \ref{sec:speed-reference-output-channel}.
+		\item \textit{Acquisition State: } There is only one command that will lead the code to this loop (\textit{Filter Read}). When in this loop, the code will read the analog outputs for a specific number of times (\textit{Number Of Samples}), \textit{i.e.} sampling the signals. Each samples is summed up and when the desired number of samples is reached, the code divides the sum of all samples by this number, giving a averaged read. Then, this read is print together will the digital inputs read to the upstream data port.
+	\end{itemize}
+
+	Additional to this commands there are the commands \textit{Print Version} and \textit{One Read}, the first is a command that prints the firmware version, the latter performs one read of the analog inputs and is only used for debugging.

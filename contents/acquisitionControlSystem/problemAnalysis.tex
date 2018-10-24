@@ -32,3 +32,37 @@
 		\end{figure}
 
 		It is possible to see that each type of transducer will have a specific circuit in order to perform signal conditioning as better as possible according to the type of transducer parameters. Also it is possible to observe that there will be special circuits to interface the MCU with digital outputs and inputs alongside with analog outputs. Regarding the analog outputs, it is also interesting to have a feedback path to the MCU so adjustments can be made in order to guarantee that the analog outputs voltages are correct according to the desired quantities. Moreover, a power supply block should be designed to generate a stabilized voltage to power up all the circuit modules. Last but not least, a communication port (USB) was placed, through this port the communication with the upper layer of hardware will be done.
+
+		\subsubsection{Lower Level Hardware Interfaces}\label{sssec:lower-level-hardware-interfaces}
+
+			Based on the previous considerations and considering possible future usages for the designed product, this are the following hardware interfaces.
+
+			\begin{itemize}
+				\item \textit{Sensor Inputs:}
+					\begin{itemize}
+						\item Speed Sensor.
+						\item Temperature Sensor 1.
+						\item Temperature Sensor 2.
+						\item Brake Force Sensor 1.
+						\item Brake Force Sensor 2.
+						\item Vibration Sensor 1.
+					\end{itemize}
+				\item \textit{Digital Interfaces:}
+					\begin{itemize}
+						\item Output 1.
+						\item Output 2.
+						\item Output 3.
+						\item Input 1.
+						\item Input 2.
+						\item Input 3.
+					\end{itemize}
+				\item \textit{Analog Outputs:}
+					\begin{itemize}
+						\item Output 1.
+						\item Output 2.
+					\end{itemize}
+				\item \textit{Communication Ports:}
+					\begin{itemize}
+						\item USB Port 1.
+					\end{itemize}
+			\end{itemize}

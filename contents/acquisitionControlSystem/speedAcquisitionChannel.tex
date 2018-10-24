@@ -52,17 +52,13 @@
 
 			Considering this upper limit speed of 200kph, calculated values of tyre circumference length, we have maximum frequencies of aproximately 31.52Hz (for the smaller tyre standard) and 22.88Hz (for the bigger tyre standard). 
 			\par
-			According to \cite{lm2907-datasheet} the input common mode voltage is equal to $V_{CC}$ - 1.5V, and as $V_{CC}$ is equal to 5V (check Section \ref{sssec:5v-supply}) the maximum output voltage $V_{O}$ is equal to 3.5V. Considering a safer upper frequency limit of 60Hz (approximately double of the maximum calculated frequency of 31.52Hz) applied to Equation \ref{eqn:lm2907-output-voltage} with the $V_{CC}=5V$, the desired offset voltage $V_{REF}$ (1.224V, check Section \ref{sssec:1v2-reference}) and the maximum output voltage $V_{O}=3.75$ gives a time constant (R1*C1) of 0.0379. Using commercial resistor and capacitor values it is possible to achieve this time constant using C1=100nF and R1=375k$\Omega$, with this values $V_{O}$ can be described by Equation \ref{eqn:calculated-vo}.
+			According to \cite{lm2907-datasheet} the input common mode voltage is equal to $V_{CC}$ - 1.5V, and as $V_{CC}$ is equal to 5V (check Section \ref{sssec:5v-supply}) the maximum output voltage $V_{O}$ is equal to 3.5V. Considering a safer upper frequency limit of 60Hz (approximately double of the maximum calculated frequency of 31.52Hz) applied to Equation \ref{eqn:lm2907-output-voltage} with the $V_{CC}=5V$, the desired offset voltage $V_{REF}$ (1.225V, check Section \ref{sssec:1v2-reference}) and the maximum output voltage $V_{O}=3.5$ gives a time constant (R1*C1) of 0.0379. Using commercial resistor and capacitor values it is possible to achieve this time constant using C1=100nF and R1=374k$\Omega$, with this values $V_{O}$ can be described by Equation \ref{eqn:calculated-vo}.
 
 			\begin{equation}\label{eqn:diameter-to-length}
-				V_{O}=1.224V + 0.0375 \cdot f_{IN} V\/Hz
+				V_{O}=1.225V + 0.0374 \cdot f_{IN} V\/Hz
 			\end{equation}
 
-			For instance applying the upper frequency value of 31.52Hz calculated previously will give a $V_{O}=2.402V$. 
-
-
-
-			Applying the greater value of frequency, a supply voltage of 5V (check Section \ref{sssec:5v-supply}) on Equation \ref{eqn:lm2907-max-freq} (remembering that $I_{2}=180uA$) gives a aproximately value of C1=1$\mu$F.
+			For instance applying the upper frequency value of 31.52Hz calculated previously will give a $V_{O}=2.403V$.
 			\par
 			According to \ref{sec:mcu-hw}, the choosen microcontroller's ADC has a resolution of 10-bit. A analog reference of 5V with 10-bit resolution gives a voltage resolution of 4.88mV. Hence, the calculated voltage ripple of the frequency-to-voltage converter must be less than the ADC resolution. Using values o $V_{RIPPLE}$, C1, R1, $f_{IN}$ and $V_{CC}$ in Equation \ref{eqn:lm2907-ripple} gives a C2 value of aproximately 10$\mu$F.
 			\par
@@ -93,7 +89,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-					\includegraphics[scale=0.6]{figuras/fig-ckp-detection-circuit}
+					\includegraphics[scale=0.55]{figuras/fig-ckp-detection-circuit}
 				\caption{Speed Sensor Detection Channel Circuit}
 				\label{fig:ckp-detection-circuit}
 			\end{figure}
@@ -102,15 +98,15 @@
 
 	\subsection{1V2 Reference}\label{sssec:1v2-reference}
 
-			The 1V2 reference from the circuit of Section \ref{ssec:ckp-signal-conditioning-circuit} is achieved using the LM4040CYM3-1.2 from \textit{Microchip} \cite{lm4040-datasheet}. This is a 1.224V precision voltage reference with a tolerance of $\pm 1.15\%$ and maximum operating output current of 10mA. The only external component needed is a bias resistor which can be calculated using \ref{eqn:rbis-adr510} \cite{lm4040-datasheet}.
+			The 1V2 reference from the circuit of Section \ref{ssec:ckp-signal-conditioning-circuit} is achieved using the LM4040CYM3-1.2 from \textit{Microchip} \cite{lm4040-datasheet}. This is a 1.225V precision voltage reference with a tolerance of $\pm 1.15\%$ and maximum operating output current of 10mA. The only external component needed is a bias resistor which can be calculated using \ref{eqn:rbis-adr510} \cite{lm4040-datasheet}.
 
 			\begin{equation}\label{eqn:rbis-adr510}
 				R_{BIAS} = \frac{V_{S} - V_{OUT}}{I_{L} - I_{Q}}
 			\end{equation}
 
-			The used $V_{S}$ \textit{Voltage Supply} will be the 5V obtained in the circuit from Figure \ref{fig:tl2575-05-circuit} in Section \ref{sssec:5v-supply}. According to the datasheet, the minimul operating voltage ($I_{Q}$ in this case) is 100uA. Moreover, $V_{OUT}$ is naturally 1.224V. The minimum bias current (load current $I_{L}$) is of 500nA (according to the \cite{lm2907-datasheet}). Hence, any value of resistance that guarantee that the current that flows through the regulator is less than 10mA is acceptable.
+			The used $V_{S}$ \textit{Voltage Supply} will be the 5V obtained in the circuit from Figure \ref{fig:tl2575-05-circuit} in Section \ref{sssec:5v-supply}. According to the datasheet, the minimul operating voltage ($I_{Q}$ in this case) is 100uA. Moreover, $V_{OUT}$ is naturally 1.225V. The minimum bias current (load current $I_{L}$) is of 500nA (according to the \cite{lm2907-datasheet}). Hence, any value of resistance that guarantee that the current that flows through the regulator is less than 10mA is acceptable.
 			\par
-			Using a 1k$\omega$ resistor a current of 4mA can be achieved. Figure \ref{fig:1v2-circuit} shows the circuit for the 1V 2reference, the capacitors are just a bypass capacitors recommended by the datasheet.
+			Using a 1k$\omega$ resistor a current of 4mA can be achieved. Figure \ref{fig:1v2-circuit} shows the circuit for the 1V2 reference, the capacitors are just a bypass capacitors recommended by the datasheet.
 
 			\begin{figure}[htbp]
 				\centering
