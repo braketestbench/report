@@ -1,0 +1,15 @@
+\chapter{Conclusions and Future Endavours}\label{ch:conclusions-and-future-endavours}
+	
+	\section{Conclusions}\label{sec:conclusions}
+
+		The initial goals of this paper comprehended in project a electronic test bench to perform brake tests in automotive components, and this goals were achieved.
+		\par
+		As the tests proved the testbench can perform the required data acquisition of the specified physiscal quantities listed on Section \ref{sec:monitored-parameters} and also meet the mandatory requirements from Section \ref{sec:functionalRequirements} as well as the system can can control the actuators needed for the brake tests.
+		\par
+		During the project phase of this system, versatility was always in mind, the system does not only have the basical functionalities specified on \textit{SAEJ2522}, it also achieved all the optional requirements from Section \ref{sec:functionalRequirements}. At the end, a multifunctional hardware with transient protection in all ports was developed and delivered. A interesting point of the developed hardware is that as it operates with pre-defined commands comming from its generic USB emulated serial port, any higher level software can theoretically be used to control it, as long as it respects the defined communication protocol.
+		\par
+		The results of the brake tests performed shows a crucial point of this system, repeatability, the braketests were carried out for more than a hundred snubs without any interruption or bug, making the system extremely reliable. The transient protections circuits worked really well, even in the noisy and transient-dangerous environment created by the three-phase motor and frequency-inverter, not a single circuit was damaged during the tests.
+
+	\section{Future Endavours}\label{sec:future-endavours}
+
+		As mentioned before, this system is extremely versatile, making it able to perform many different functions. Although this system was initially was developed with the final goal to perform braketests, at another point of view it can be seen as a system a acquisition and control system. For example, considering it has thermocouple reading inputs and digital inputs, it could be used to control a SMT (Surface Mount Technology) oven temperature. Moreover the force acquistion channels can be used to control a industrial precision scale. Considering a vibration channel was implemented, even a vibration testbench could be controlled and monitored. Possibilities are infinite, the only restriction is the amount of inputs and outputs of the designed hardware.

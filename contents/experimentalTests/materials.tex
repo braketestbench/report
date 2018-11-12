@@ -1,0 +1,78 @@
+\section{Materials}\label{sec:materials}
+		The are few materials needed to perform the braketests, most of the materials needed for the validation tests were borrowed from the \textit{Laboratory of Automotive Engineering} from \textit{University of Brasília}.
+		\par
+		The frequency inverter used on the tests is the WEG-CF208, it is a important part of the tests as it is the frequency inverter that controls the speed and acceleration of the motor by varying the current on the three-phase lines that feeds the motor. It has xx digital inputs, as long with one analog input and xxxx outputs \cite{weg-CFW08}. For the tests only the digital inputs will be used to turn the motor on and off, Figure \ref{fig:frequency-inverter} shows the device installed and fixed on the Laboratory`s pannel.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-frequency-inverter}
+			\caption{Frequency Inverter WEG-CFW08}
+			\label{fig:frequency-inverter}
+		\end{figure}
+		\par
+
+		The electric motor used is the WEG-xxx, this is a three-phase motor is xx cv of power (xx W) xxxx (more specs) \cite{weg-motor} and it is connected to the brake disc machine through a pulley system. Figure \ref{fig:electric-motor}.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-electric-motor}
+			\caption{Frequency Inverter WEG-CFW08}
+			\label{fig:electric-motor}
+		\end{figure}
+		\par
+
+		Brake Disc Machine is a machine wielded on \textit{Laboratory of Automotive Engineering} in order to simulate a car's axle submitted to inertial masses. At one end the axle is connected to the electric motor through a pulley system and at the other end connected to the disc brake components as Figure \ref{fig:brake-disc-machine}.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-brake-disc-machine}
+			\caption{Brake Disc Machine}
+			\label{fig:brake-disc-machine}
+		\end{figure}
+		\par
+
+		The Load Cell used to measure the brake force is a xxxxx from xxxx \cite{load-cell}, it has a sensibility of 2mV/V and a maximum load of 500kgf, meaning when it is powered with 2V5 (check Section \ref{ssec:load-cell-signal-conditioning}) and submitted to its maximum load the voltage output will be of 5V. Figure \ref{fig:load-cell-installation-scheme} shows how the load cell can be used to measured the braking force and Figure \ref{fig:load-cell-installed} shows the actual load cell installed on the Brake Disc Machine.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-load-cell-installation-scheme}
+			\caption{Load Cell Installation Scheme \cite{load-cell-caxeta2017}}
+			\label{fig:load-cell-installation-scheme}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-load-cell-installed}
+			\caption{Load Cell Installed}
+			\label{fig:load-cell-installed}
+		\end{figure}
+		\par
+
+		This project uses two generic type K themocouples at each end of the braking disc, as Figure \ref{fig:thermocouple-installation} shows.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-thermocouple-installation}
+			\caption{Thermocouples Installed}
+			\label{fig:thermocouple-installation}
+		\end{figure}
+		\par
+
+		This project also includes a generic Crankshaft Position Sensor, to enhance the CKP signal amplitude six small magnets were placed around the inertial disc that the CKP is perpendicular mounted to, the only important consideration when doing this is that the CKP will actualy measure a frequency six times higher than the actual rotation frequency of the axel. Figures \ref{fig:inertial-mass-with-magnets} and \ref{fig:ckp-installed} shows how the magnets and the CKP sensor was placed.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-inertial-mass-with-magnets}
+			\caption{Innertial mass with magnets placed}
+			\label{fig:inertial-mass-with-magnets}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.7]{figuras/fig-ckp-installed}
+			\caption{CKP installed}
+			\label{fig:ckp-installed}
+		\end{figure}
+		\par
+
+		Additional materials used for the test are the developed hardware and the laptop used to run the test.

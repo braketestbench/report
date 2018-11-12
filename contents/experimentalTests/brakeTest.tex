@@ -1,0 +1,23 @@
+\section{Brake Test}\label{sec:brakeTest}
+
+	\subsection{Full Stop Test}
+
+	The desired test will be the full stop test, described by \cite{caixeta2017} as a test where the speed is set to a upper limit and then to nought rotation at the end. The test can also be carried with different braking pressure (different pressures at the hydraulic valve) in order to achieve more relevant data.
+
+	\par
+	In order to start the brake test the following parameters were configured on the \textit{Labview} Test Application:
+
+	\begin{itemize}Number of Snubs: 
+		\item\textit{Number of Snubs:} In order to achieve solid results, 50 snubs were set.
+		\item\textit{Interval between snubs (s):} In order to let the brake pads cool, five seconds were set between each snub.
+		\item\textit{Upper Limit (RPM):} The upper limit was set at 600 RPMs, that is almost the fastest measured rotation that the brake machine can achieve.
+		\item\textit{Upper Wait Interval (s):} Three seconds, just enough so that the speed can stabilize.
+		\item\textit{Lower Limit (RPM):} Npught, the idea is to fully stop the system.
+		\item\textit{Lower Wait Interval (s):} Nought, as the \textit{Lower Limit (RPM)} will be zero, this time can be compreheended inside the \textit{Inverval Between Snubs}.
+	\end{itemize}
+
+	The test shall be carried twice, first with 1000kPa and later with 200kPa in order to compare results. The goal of this tests is not to evaluate braking performance of components of a brake system but rather to prove that the developed hardware can be used for that, i.e. showing that the measured quantities are directly related to the tests are being carried out. Hence, temperature should increase after each snub, the measured braking pressure should increase as the braking actuator is activated and the CKP signal frequency should start increasing shortly after the electric motor is turned on.
+
+	\subsection{Results}
+
+	Figure \ref{fig:1000k-braking-test-graph} shows the results for the test with 1000kPa...

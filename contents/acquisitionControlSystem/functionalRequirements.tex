@@ -3,21 +3,39 @@
 	According to the specification of the \textit{SAE J2522} and according to parameters considered to be important, some requirements for the testbench were defined.
 
 	\begin{enumerate}
-		\item Measure a braking pressure up to 16 MPa.\label{itm:func-req-1}
+		\item Measure a braking pressure up to 250kgf.\label{itm:func-req-1}
+		\begin{comment}
 		\item Apply a braking pressure of at least 300 kPa.\label{itm:func-req-2}
+		\end{comment}
 		\item Measure temperatures up to 600 $^{\circ}$C\label{itm:func-req-3}
 		\item Measure temperatures with a minimal resolution of 7.5 $^{\circ}$C.\label{itm:func-req-4}
-		\item Accelerate the rotor to a speed up to 200 kph.\label{itm:func-req-5}
+		\item Accelerate the rotor to a speed up to 600 RPMs.\label{itm:func-req-5}
 		\item System most have a sampling period of 50ms.\label{itm:func-req-6}
 		\item The system hardware most be able to operate under temperatures up to 40$^{\circ}$C.\label{itm:func-req-7}
 		\item System must two acquisition channels for temperature.\label{itm:func-req-8}
-		\item System must have at two channels for braking pressure acquisition.\label{itm:func-req-9}
+		\item System must have a channel for braking force acquisition.\label{itm:func-req-9}
+		\begin{comment}
 		\item System must have a channel for vibration acquisition.\label{itm:func-req-10}
-		\item System must have at least two digital outputs to control relays.\label{itm:func-req-11}
-		\item System must have a channel for acquiring speed.\label{itm:func-req-12}
+		\end{comment}
+		\item System must have two digital outputs to control relays.\label{itm:func-req-11}
+		\item System must have a channel for acquiring frequency.\label{itm:func-req-12}
 		\item The system must work with real time acquisition.\label{itm:func-req-13}
+		\begin{comment}
 		\item The system must be able to detect when the sensors from the acquisition channels are disconnected.\label{itm:func-req-14}
+		\end{comment}
 	\end{enumerate}
+
+	Also some other optional requirements were created for making the system more versatile for future tests, thoose being:
+
+	\begin{itemize}
+		\item Having a additional braking force acquisition channel.
+		\item Having a additional input digital channel.
+		\item Having three digital input channels.
+		\item Having two analog outputs.
+		\item Having a vibration acquisition channel
+		\item Having a built-in USB to UART transceiver to make the system more practical to use.
+		\item System being easily reprogrammable.
+	\end{itemize}
 
 \begin{comment}
 \section{Software Requirements}\label{sec:software-requirements}
