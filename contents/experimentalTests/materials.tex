@@ -5,44 +5,65 @@
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-frequency-inverter}
+			\includegraphics[scale=0.05]{figuras/fig-frequency-inverter}
 			\caption{Frequency Inverter WEG-CFW08}
 			\label{fig:frequency-inverter}
 		\end{figure}
 		\par
 
-		The electric motor used is the WEG-xxx, this is a three-phase motor is xx cv of power (xx W) xxxx (more specs) \cite{weg-motor} and it is connected to the brake disc machine through a pulley system. Figure \ref{fig:electric-motor}.
+		The electric motor used is manufactured by WEG, this is a three-phase motor has 12.5 cv of power, 1755 max RPM and has a efficiency of 87.7$\%$ and it is connected to the brake disc machine through a pulley system. Figure \ref{fig:electric-motor-specs} shows the motor specifications and Figure \ref{fig:electric-motor} the motor itself.
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-electric-motor}
-			\caption{Frequency Inverter WEG-CFW08}
+			\includegraphics[scale=0.05]{figuras/fig-electric-motor-specs}
+			\caption{Electric Motor Specifications}
+			\label{fig:electric-motor-specs}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.05]{figuras/fig-electric-motor}
+			\caption{Electric Motor WEG}
 			\label{fig:electric-motor}
 		\end{figure}
 		\par
 
-		Brake Disc Machine is a machine wielded on \textit{Laboratory of Automotive Engineering} in order to simulate a car's axle submitted to inertial masses. At one end the axle is connected to the electric motor through a pulley system and at the other end connected to the disc brake components as Figure \ref{fig:brake-disc-machine}.
+		Brake Disc Machine is a machine wielded on \textit{Laboratory of Automotive Engineering} in order to simulate a car's axle submitted to inertial masses. At one end the axle is connected to the electric motor through a pulley system and at the other end connected to the disc brake components as Figures \ref{fig:brake-disc-machine}, \ref{fig:brake-disc-machine-pulley} and \ref{fig-disc-brake}.
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-brake-disc-machine}
+			\includegraphics[scale=0.05]{figuras/fig-brake-disc-machine}
 			\caption{Brake Disc Machine}
 			\label{fig:brake-disc-machine}
 		\end{figure}
-		\par
-
-		The Load Cell used to measure the brake force is a xxxxx from xxxx \cite{load-cell}, it has a sensibility of 2mV/V and a maximum load of 500kgf, meaning when it is powered with 2V5 (check Section \ref{ssec:load-cell-signal-conditioning}) and submitted to its maximum load the voltage output will be of 5V. Figure \ref{fig:load-cell-installation-scheme} shows how the load cell can be used to measured the braking force and Figure \ref{fig:load-cell-installed} shows the actual load cell installed on the Brake Disc Machine.
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-load-cell-installation-scheme}
+			\includegraphics[scale=0.05]{figuras/fig-brake-disc-machine-pulley}
+			\caption{Brake Disc Machine Pulley System}
+			\label{fig:brake-disc-machine-pulley}
+		\end{figure}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.05]{figuras/fig-brake-disc}
+			\caption{Brake Disc Arrangment}
+			\label{fig:brake-disc}
+		\end{figure}
+		\par
+
+		The Load Cell used to measure the brake force has a sensibility of 2mV/V and a maximum load of 500kgf, meaning when it is powered with 2V5 (check Section \ref{ssec:load-cell-signal-conditioning}) and submitted to its maximum load the voltage output will be of 5V. Figure \ref{fig:load-cell-installation-scheme} shows how the load cell can be used to measured the braking force and Figure \ref{fig:load-cell-installed} shows the actual load cell installed on the Brake Disc Machine.
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[scale=0.05]{figuras/fig-load-cell-installation-scheme}
 			\caption{Load Cell Installation Scheme \cite{load-cell-caxeta2017}}
 			\label{fig:load-cell-installation-scheme}
 		\end{figure}
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-load-cell-installed}
+			\includegraphics[scale=0.05]{figuras/fig-load-cell-installed}
 			\caption{Load Cell Installed}
 			\label{fig:load-cell-installed}
 		\end{figure}
@@ -52,24 +73,17 @@
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-thermocouple-installation}
+			\includegraphics[scale=0.05]{figuras/fig-thermocouple-installation}
 			\caption{Thermocouples Installed}
 			\label{fig:thermocouple-installation}
 		\end{figure}
 		\par
 
-		This project also includes a generic Crankshaft Position Sensor, to enhance the CKP signal amplitude six small magnets were placed around the inertial disc that the CKP is perpendicular mounted to, the only important consideration when doing this is that the CKP will actualy measure a frequency six times higher than the actual rotation frequency of the axel. Figures \ref{fig:inertial-mass-with-magnets} and \ref{fig:ckp-installed} shows how the magnets and the CKP sensor was placed.
+		This project also includes a generic Crankshaft Position Sensor, to enhance the CKP signal amplitude six small magnets were placed around the inertial disc that the CKP is perpendicular mounted to, the only important consideration when doing this is that the CKP will actualy measure a frequency six times higher than the actual rotation frequency of the axel. Figure \ref{fig:ckp-installed} shows how the CKP sensor was placed.
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[scale=0.7]{figuras/fig-inertial-mass-with-magnets}
-			\caption{Innertial mass with magnets placed}
-			\label{fig:inertial-mass-with-magnets}
-		\end{figure}
-
-		\begin{figure}[htbp]
-			\centering
-			\includegraphics[scale=0.7]{figuras/fig-ckp-installed}
+			\includegraphics[scale=0.05]{figuras/fig-ckp-installed}
 			\caption{CKP installed}
 			\label{fig:ckp-installed}
 		\end{figure}
