@@ -8,7 +8,7 @@
 			\item{\textit{Operating Voltage Range}}: 2.7 to 5.5V.\label{itm:operating-voltage-range}
 		\end{itemize}
 	\par
-	This microncontroller is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega32U4} is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. A very useful feature of this MCU is that it has a USB 2.0 controller built-in, this eliminates the need for a additional transceiver circuit, moreover this MCU can be easily reprogrammable through the USB port, this being a very useful feature when the hardware is fully assembled. Figure \ref{fig:atmega328pb} shows the pinout of this device.
+	This microncontroller is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega32U4} is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. A very useful feature of this MCU is that it has a USB 2.0 controller built-in, this eliminates the need for a additional transceiver circuit, moreover this MCU can be easily reprogrammable through the USB port, this being a very useful feature when the hardware is fully assembled. Figure \ref{fig:atmega32u4-pinout} shows the pinout of this device.
 
 	\begin{figure}[htbp]
 		\centering
@@ -60,7 +60,7 @@
 			\end{itemize}
 
 		\subsubsection{Crystal Oscillator Circuit}\label{sssec:crystal-oscillator-circuit}
-			According to \cite{atmega3284-datasheet}, in order to work in full-speed mode, the MCU needs a external crystal oscillator with a frequnecy of 8 to 16MHz and bypassing capacitors from 12 to 22pF on the crystal pins. Based on \cite{arduino-leonardo-schematic} besides this capacitor a 1M$\Omega$ bias resistor has been placed between crystal pins. Also a 0R jumper (first mentioned in Item \ref{itm:crystal-oscillator-jumper} from Section {ssec:mcu-circuit}) was placed between one of the crystal pins and pin XTAL2 in case a low pass filter is needed (using this resistor and the internal capacitance of the MCU port). The desined circuit for the crystal oscillator is shown in Figure \ref{fig:crystal-oscillator-circuit} (except for the 0R jumper which can be seen in Figure \ref{fig:mcu-core-circuit}.
+			According to \cite{atmega32u4-datasheet}, in order to work in full-speed mode, the MCU needs a external crystal oscillator with a frequnecy of 8 to 16MHz and bypassing capacitors from 12 to 22pF on the crystal pins. Based on \cite{arduino-leonardo-schematic} besides this capacitor a 1M$\Omega$ bias resistor has been placed between crystal pins. Also a 0R jumper (first mentioned in Item \ref{itm:crystal-oscillator-jumper} from Section {ssec:mcu-circuit}) was placed between one of the crystal pins and pin XTAL2 in case a low pass filter is needed (using this resistor and the internal capacitance of the MCU port). The desined circuit for the crystal oscillator is shown in Figure \ref{fig:crystal-oscillator-circuit} (except for the 0R jumper which can be seen in Figure \ref{fig:mcu-core-circuit}.
 
 			\begin{figure}[htbp]
 				\centering

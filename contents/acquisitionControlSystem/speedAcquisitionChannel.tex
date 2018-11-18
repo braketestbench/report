@@ -54,7 +54,7 @@
 			\par
 			According to \cite{lm2907-datasheet} the input common mode voltage is equal to $V_{CC}$ - 1.5V, and as $V_{CC}$ is equal to 5V (check Section \ref{sssec:5v-supply}) the maximum output voltage $V_{O}$ is equal to 3.5V. Considering a safer upper frequency limit of 60Hz (approximately double of the maximum calculated frequency of 31.52Hz) applied to Equation \ref{eqn:lm2907-output-voltage} with the $V_{CC}=5V$, the desired offset voltage $V_{REF}$ (1.225V, check Section \ref{sssec:1v2-reference}) and the maximum output voltage $V_{O}=3.5$ gives a time constant (R1*C1) of 0.0379. Using commercial resistor and capacitor values it is possible to achieve this time constant using C1=100nF and R1=374k$\Omega$, with this values $V_{O}$ can be described by Equation \ref{eqn:calculated-vo}.
 
-			\begin{equation}\label{eqn:diameter-to-length}
+			\begin{equation}\label{eqn:calculated-vo}
 				V_{O}=1.225V + 0.0374 \cdot f_{IN} V\/Hz
 			\end{equation}
 
@@ -77,7 +77,7 @@
 				\item\textit{\textbf{TVS Diode:}} In order to protect the the IC's input the SMBJ15CA TVS diode from \textit{Littelfuse} was added. This diode has a maximum clamping voltage of 26V, the maximum input voltage is $\pm$28V, thus the TVS will protect the input from overvoltages.\label{itm:ckp-circuit-tvs}
 				\item\textit{\textbf{LPF at the input:}} As the maximum frequency was determined to be 31.52Hz, it is possible to filter all the upper frequencies in order to avoid any noise to enter the circuit. R73, C41 and C42 form a LPF with a cutoff frequency of aproximately 160Hz, this cutoff frequency was choosen because at 31.52Hz (maximum calculated input frequency), the attenuation is quite close to 0dB (-0.15dB) and shall not affect the input signal.\label{itm:ckp-circuit-lpf-input}
 				\item\textit{\textbf{LPF at the output:}} R74 and C43 form a LPF to that is used to filter any external post-conversion noise, it has a aproximate frequency of 16Hz.\label{itm:ckp-circuit-lpf-output} 
-				\item\textit{\textbf{R78:}} This resistor is recommended by \ref{lm2907-datasheet} in order to use the voltage reference functionality.\item{itm:reference-resistor}
+				\item\textit{\textbf{R78:}} This resistor is recommended by \cite{lm2907-datasheet} in order to use the voltage reference functionality.\item{itm:reference-resistor}
 			\end{itemize}
 
 
