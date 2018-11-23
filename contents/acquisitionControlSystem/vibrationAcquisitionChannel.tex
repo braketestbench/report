@@ -15,7 +15,7 @@
 
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.8\textwidth]{figuras/fig-16lfcsp.jpg}
+		\includegraphics[width=.5\textwidth]{figuras/fig-16lfcsp.jpg}
 		\caption{16-LFCSP \cite{16lfcsp}}
 		\label{fig:16lfcsp}
 	\end{figure}
@@ -24,7 +24,7 @@
 
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.8\textwidth]{figuras/fig-adafruit-adxl335.jpg}
+		\includegraphics[width=.5\textwidth]{figuras/fig-adafruit-adxl335.jpg}
 		\caption{Adafruit ADXL335 - 5V ready \cite{adafruit-adxl335}}
 		\label{fig:adafruit-adxl335}
 	\end{figure}
@@ -42,17 +42,17 @@
 	\end{figure}
 
 
-	The circuit is composed only of a protection and filtering circuit. TZ16 is a TVS with a standoff reverse voltage of 5V, R105 and C63 form a LPF with cutoff frequency of aproximately 1.6kHz, which should not intervene with the passband signal.
+	The circuit is composed only of a protection and filtering circuit. TZ16 is a TVS with a reverse standoff voltage of 5V, R105 and C63 form a LPF with cutoff frequency of aproximately 1.6kHz, which should not interfere with the passband signal.
 
 \subsection{Sensor Detection Circuit}\label{ssec:accelerometer-sensor-detection-circuit}
 
-	The choosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)} has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
+	The choosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)}, has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
 	\par
 	The detection circuit can be seen in Figure \ref{fig:accelerometer-sensor-detection-circuit}, D14 is a schottky diode used to protect the input from polarity change. TZ19 is a TVS used to protect the circuit from overvoltage, R111 and C66 forms a LPF with cutoff frequency close to 16Hz used to protect the NMOS gate from any fast transient.s
 
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.8\textwidth]{figuras/fig-accelerometer-sensor-detection-circuit.png}
+		\includegraphics[width=1\textwidth]{figuras/fig-accelerometer-sensor-detection-circuit.png}
 		\caption{Accelerometer Sensor Detection Circuit}
 		\label{fig:accelerometer-sensor-detection-circuit}
 	\end{figure}

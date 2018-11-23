@@ -13,7 +13,7 @@
 
 		\begin{figure}[htbp]
 			\centering
-				\includegraphics[width=.8\textwidth]{figuras/fig-wegCFW08}
+				\includegraphics[width=.5\textwidth]{figuras/fig-wegCFW08}
 			\caption{Weg CFW-08 Frequency Inverter \cite{fig-wegCFW08}}
 			\label{fig:wegCFW08}
 		\end{figure}
@@ -87,12 +87,12 @@
 
 	\subsection{Complete Circuit}\label{ssec:pwm-to-speed-reference-circuit}
 	
-		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. Besides the main components of the filter the added components were two bypass capacitors (C1 and C4), TZ1 is a TVS used to protect the circuit from any transient voltage coming from the cable. Moreover, R1 was added to limit the current that is drained from the analog output. The port \textit{AOU$\_$1} is a feedback that goes to a analog input of the MCU so the output voltage can be adjusted by varying the duty cycle.
+		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. Besides the main components of the filter the added components were two bypass capacitors (C1 and C4), TZ1 is a TVS used to protect the circuit from any transient voltage coming from the cable. Moreover, R1 was added to limit the current that is drained from the analog output. The port \textit{AOUT$\_$1} is a feedback that goes to a analog input of the MCU so the output voltage can be adjusted by varying the duty cycle.
 
 	
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[width=.8\textwidth]{figuras/fig-pwmToSpeedReferenceCircuit}
+			\includegraphics[width=1\textwidth]{figuras/fig-pwmToSpeedReferenceCircuit}
 			\caption{PWM to Speed Reference Circuit}
 			\label{fig:pwmToSpeedReferenceCircuit}
 		\end{figure}

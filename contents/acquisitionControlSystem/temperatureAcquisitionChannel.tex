@@ -4,7 +4,7 @@
 
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.8\textwidth]{figuras/fig-temperature-measurement-block-diagram}
+		\includegraphics[width=1\textwidth]{figuras/fig-temperature-measurement-block-diagram}
 		\caption{Temperature Measurement Block Diagram}
 		\label{fig:temperature-measurement-block-diagram}
 	\end{figure}
@@ -34,7 +34,7 @@
 			Noise (nv\/\sqrt{Hz}) = \sqrt{4 \cdot K \cdot R \cdot T \cdot 10^{9}}
 		\end{equation}
 		
-	Because the protection circuit includes two equal resistors, whose noise is uncorrelated, that is, the two noise sources are independent of each other—the above result must be multiplied by the square root of 2 (the root sum square of the two noise voltages) and it is considered as a general rule design to tolerate additional Johnson Noise from 10 to 30$\%$ to the amplifier IC \cite{sensors2000}. \cite{two-ways-thermocouple} suggests using current-limiting resistors of 100$\Omega$, according to the AD8495 datasheet \cite{ad8495-datasheet}, the choosen amplifier (AD8495) has a voltage noise density of 32nV$\/ \sqrt{Hz}$. Combining this resistors noise with the amplifier noise will produce a overall noise of 32.485nV$\/\sqrt{Hz}$, which is just 1.5$\%$ above the amplifier's own noise. Additional protection can be achieved using (TVS) to protect the inputs from differential input overvoltage, considering a bidirectional TVS with a 10V breakdown voltage, the device will theoretically limit the differential voltage between 10V and -10V, the AD8495 has overvoltage protection from -25V to 20V when powered with 5V, so this will successfully protect the amplifier inputs. 
+	Because the protection circuit includes two equal resistors, whose noise is uncorrelated, that is, the two noise sources are independent of each other—the above result must be multiplied by the square root of 2 (the root sum square of the two noise voltages) and it is considered as a general rule design to tolerate additional Johnson Noise from 10 to 30$\%$ to the amplifier IC \cite{sensors2000}. \cite{two-ways-thermocouple} suggests using current-limiting resistors of 100$\Omega$, according to the AD8495 datasheet \cite{ad8495-datasheet}, the choosen amplifier (AD8495) has a voltage noise density of 32nV$\/ \sqrt{Hz}$. Combining this resistors noise with the amplifier noise will produce a overall noise of 32.485nV$\/\sqrt{Hz}$, which is just 1.5$\%$ above the amplifier's own noise. Additional protection can be achieved using TVS to protect the inputs from differential input overvoltage, considering a bidirectional TVS with a 10V breakdown voltage, the device will theoretically limit the differential voltage between 10V and -10V, the AD8495 has overvoltage protection from -25V to 20V when powered with 5V, so this will help protecting the amplifier inputs. 
 	\par
 	With the overloads protection done, another important feature to do is to filter unwanted signals in the inputs to avoid them to be amplified later, this is done by filtering Radio Frequency Interference (RFI), signal lines (specially for low level signals) are quite susceptible to RF interference \cite{analogDevDesignersGuide}. Interference that occurs on both lines are usually reduced by the amplifiers own CMRR (check Section \ref{itm:opamp-cmrr}), but only on a limited bandwidth, also the in-amp rectifier cannot filter differential RF interference. The choosen amplifier (AD8495) has a -3dB bandwidth at 25kHz, \cite{two-ways-thermocouple} suggests setting a common-mode cutoff filter frequency at 160kHz (in order to guarantee the filter will not attenuate signals inside the 25kHz bandwidth). The standard circuit for the RFI filter is displayed on Figure \ref{fig:rfi-standard-filter}, resistors R and capacitors C$_{C}$ are used to filter common-mode interference. Capacitor C$_{D}$ is connected across the bridge output to reduce any common-mode rejection errors due to the components mismatch, that way filtering any differential interference. C$_{D}$ is usually choosen to be ten times larger than C$_{C}$ \cite{ad8495-datasheet}.
 	
@@ -63,7 +63,7 @@
 
 	\begin{figure}[htbp]
 			\centering
-				\includegraphics[width=.8\textwidth]{figuras/fig-temperature-acq-cic}
+				\includegraphics[width=1\textwidth]{figuras/fig-temperature-acq-cic}
 			\caption{Thermocouple Signal Conditioning Circuit}
 			\label{fig:temperature-acq-cic}
 	\end{figure}
@@ -72,7 +72,7 @@
 		
 	\subsection{Thermocouple Sensor Detection}\label{ssec:thermocouple-sensor-detection}
 		
-	A important feature of any acquisition system is to detect when a sensor is disconnected from the the acquisition system input \cite{o2011pressure}, because a signal acquisition circuit without the signal source will generate outputs that are uncorrelated to what the system was designed to measure/sense on the outside world. The AD8495 has a quite useful feature \cite{ad8495-datasheet}, it offers open thermocouple detection, the inputs of the AD8495 are PNP type transistors, which means that the bias current always flows out of the inputs. This way, the input bias current drives any unconnected output high, which saturates the output to the maximum possible reading, being in this case 1000$^{o}$C or 5V (considering the fixed 5mv$\/ ^{o}$C gain. In Section \ref{sec:functionalRequirements}, it was defined that the system must measure temperatures up to 600$^{o}$C, with the fixed gain of 5mv$\/^{o}$ this means an output voltage of 3V. The so called \textit{Thermocouple Sensor Detection} must be able to detect whenever the output exceeds 3V. In order to do that, the circuit displayed in Figure \ref{fig:overvoltage-sensor-detection} was designed.
+	A important feature of any acquisition system is to detect when a sensor is disconnected from the the acquisition system input \cite{o2011pressure}, because a signal acquisition circuit without the signal source will generate outputs that are uncorrelated to what the system was designed to measure/sense on the outside world. The AD8495 has a quite useful feature \cite{ad8495-datasheet}, it offers open thermocouple detection, the inputs of the AD8495 are PNP type transistors, which means that the bias current always flows out of the inputs. This way, the input bias current drives any unconnected output high, which saturates the output to the maximum possible reading, being in this case 1000$^{o}$C or 5V (considering the fixed 5mv/$\^{o}$C gain. In Section \ref{sec:functionalRequirements}, it was defined that the system must measure temperatures up to 600$^{o}$C, with the fixed gain of 5mv$\/^{o}$ this means an output voltage of 3V. The so called \textit{Thermocouple Sensor Detection} must be able to detect whenever the output exceeds 3V. In order to do that, the circuit displayed in Figure \ref{fig:overvoltage-sensor-detection} was designed.
 	
 		\begin{figure}[htbp]
 			\centering
@@ -81,4 +81,4 @@
 			\label{fig:overvoltage-sensor-detection}
 		\end{figure}
 		
-	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the 4V1 the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net 4V1 will be further explained in Section \ref{sssec:4v1-reference}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R85} is a pull-up resistor used to guarantee that signal will go to high-logic level in case the voltage in the inputs is not present. The capacitors C50 and C51 is just bypass capacitors used to stabile both the 4V1 and 5V supplies voltage. The PMOS Q19 is used to drive a LED to indicate when the sensor is connected.
+	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the 4V1 the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net 4V1 will be further explained in Section \ref{sssec:4v1-reference}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R91} is a pull-down resistor used to guarantee that signal will go to low-logic level in case the voltage in the inputs is not present. The capacitors C50 and C53 is just bypass capacitors used to stabile both the 4V1 and 5V supplies voltage.

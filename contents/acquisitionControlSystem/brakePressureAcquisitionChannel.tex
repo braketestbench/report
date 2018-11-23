@@ -2,7 +2,7 @@
 
 \subsection{Load Cell Signal}\label{ssec:load-cell-signal}
 
-	Load cells have very low output levels, usuallu form 2 to 3mV/V, and therefore an amplification is fundamental. It is not necessary to know the nature of the strain gauges when a load cell is being calibrated since generally the manufacturers provide a calibration curve based on the signals $V_{O}$ and $V_{EX}$ of the Figure \ref{fig:wheatstone}, it is worth noting that these signals can not have the same reference, otherwise it will not be possible to excite the wheatstone bridge correctly.
+	Load cells have very low output levels, usually form 2 to 3mV/V, and therefore an amplification is fundamental. It is not necessary to know the nature of the strain gauges when a load cell is being calibrated since generally the manufacturers provide a calibration curve based on the signals $V_{O}$ and $V_{EX}$ of the Figure \ref{fig:wheatstone}, it is worth noting that these signals can not have the same reference, otherwise it will not be possible to excite the wheatstone bridge correctly.
 	\par
 	The most common way to amplify the signal of a load cell is using a instrumentation amplifier. Although it is a widely used configuration, assembling this amplifier using three different operational amplifiers and seven resistors as in Figure \ref{fig:instrumentation-amplifier} may make it inaccurate due to manufacturing imperfections of the components. Another factor that greatly influences the output signal of a load cell is the excitation voltage of its wheatstone bridge, if it varies too much the output will vary greatly as well, which will hamper its calibration.
 
@@ -13,7 +13,7 @@
 
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.8\textwidth]{figuras/fig-ina125-functional-block}
+		\includegraphics[width=.6\textwidth]{figuras/fig-ina125-functional-block}
 		\caption{INA125 Schematic \cite{ina125}}
 		\label{fig:ina125-functional-block}
 	\end{figure}
@@ -30,21 +30,20 @@
 
 	\begin{figure}[htbp]
 		\centering
-		\includegraphics[width=.8\textwidth]{figuras/fig-cic-cell}
+		\includegraphics[width=1\textwidth]{figuras/fig-cic-cell}
 		\caption{Conditioning Circuit for the Load Cell}
 		\label{fig:cic-cell}
 	\end{figure}
 
 	The main components of this circut are
 	\begin{itemize}
-		\item\textit{TVS Diodes:} INA125 only has overvoltage protection and not ESD protection so the TVS Diodes were add to ensure that protection.
+		\item\textit{TVS Diodes:} INA125 only has overvoltage protection and not ESD protection, so the TVS Diodes were add to enhance the ESD protection.
 		\item\textit{Capacitors C18 and C19:} Bypass capacitors for the signal lines.
 		\item\textit{C15:} A capacitor to filter noise between both lines.
 		\item\textit{R39 and R43:} Jumpers that can be replaced by resistors in case a RFI filter is meant to be implemented using C24, C26 and C27.
-		\item\textit{Q10 and C13:} This NPN transistor is being used to amplify the current from the 2V5 reference from the amplifier. C22 is a bypass capacitor to stabilize the voltage reference signal.
 		\item\textit{R36:} The gain resistor.
 		\item\textit{R44, R40 and C16:} R44 is used to set the impedance from the load cell signal. R40 and C16 are used to form a LPF with a cutoff frequency of 15.91Hz to filter any remaining noise from the load cell signal.
 	\end{itemize}
 
 \subsection{Load Cell Sensor Detection}\label{ssec:load-cell-sensor-detection}
-	As was explained in Subsection \ref{ssec:load-cell-signal-conditioning}, with R21 the circuit will saturate the output to the supply voltage when the load cell sensor is disconnected. The circuit to detect this voltage saturation is exact the same from the one used previously on the thermocouple circuit, the circuit schematic and functional explanation can be found in Subsection \ref{ssec:thermocouple-sensor-detection}.
+	As was explained in Subsection \ref{ssec:load-cell-signal-conditioning}, the circuit will saturate the output to the supply voltage when the load cell sensor is disconnected. The circuit to detect this voltage saturation is exact the same from the one used previously on the thermocouple circuit, the circuit schematic and functional explanation can be found in Subsection \ref{ssec:thermocouple-sensor-detection}.

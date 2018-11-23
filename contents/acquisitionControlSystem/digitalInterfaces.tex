@@ -1,7 +1,5 @@
 \section{Digital Interfaces}\label{sec:digital-interfaces}
 
-	All sensoring data was obtained using analog channels, some digital channels will be reserved on the board in order to provide another type of sensing and control.
-
 	\subsection{Digital Outputs}\label{ssec:digital-outputs}
 
 		\subsubsection{Low-side Driver}\label{sssec:digital-outputs-low-side-driver}
@@ -12,7 +10,7 @@
 
 			\begin{figure}[htbp]
 				\centering
-				\includegraphics[width=.8\textwidth]{figuras/fig-pmos-low-side-driver.png}
+				\includegraphics[width=.5\textwidth]{figuras/fig-pmos-low-side-driver.png}
 				\caption{PMOS low side driver \cite{pmos-low-side-driver}}
 				\label{fig:pmos-low-side-driver}
 			\end{figure}
@@ -21,11 +19,11 @@
 
 		\subsubsection{Digital Output Circuit}\label{sssec:digital-output-circuit}
 
-			The digital output circuit will be very similar to the one from Figure \ref{fig:pmos-low-side-driver}. The power supply connected to the mosfet will be the 5V source (check Section \ref{sssec:5v-supply}), on the PMOS drain there will be a TVS diode (SMBJ12A from \textit{Littlefuse} \cite{smbj12a-datasheet}) (check Section \ref{sssec:tvsTransientProtection}), this TVS will protect the PMOS from reverse current and from overvoltages. Figure \ref{fig:digital-output-circuit} show the equivalent circuit for the digital output.
+			The digital output circuit will be very similar to the one from Figure \ref{fig:pmos-low-side-driver}. The power supply connected to the mosfet will be the 5V source (check Section \ref{sssec:5v-supply}), on the PMOS drain there will be a TVS diode (SMBJ12A from \textit{Littlefuse} \cite{smbj12a-datasheet}) (check Section \ref{sssec:tvsTransientProtection}), this TVS will help protecting the PMOS from reverse current and from overvoltages. Figure \ref{fig:digital-output-circuit} show the equivalent circuit for the digital output.
 
 			\begin{figure}[htbp]
 				\centering
-				\includegraphics[width=.8\textwidth]{figuras/fig-digital-output-circuit.png}
+				\includegraphics[width=.7\textwidth]{figuras/fig-digital-output-circuit.png}
 				\caption{Digital Output Circuit}
 				\label{fig:digital-output-circuit}
 			\end{figure}
