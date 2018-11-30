@@ -10,11 +10,11 @@
 		
 		\par
 		
-		Other important component of a microcontroller code are interruptions. It is possible to interrupt the standard execution of a program when a event happens, or as it is more common to say, when a event triggers a interruption. This event may be a timer overflow, a event triggered by an input change among other things. Interrupt routines are really useful when working with intrumentation and timers, because using interruptions it is feasible to meet real-time requirements in a project \cite{mukaro1999microcontroller}.
+		Other important component of a microcontroller code are interruptions. It is possible to interrupt the standard execution of a program when an event happens, or as it is more common to say, when an event triggers a interruption. This event may be a timer overflow, an event triggered by an input change among other things. Interrupt routines are really useful when working with intrumentation and timers, because using interruptions it is feasible to meet real-time requirements in a project \cite{mukaro1999microcontroller}.
 		
 	\section{Code Map}\label{sec:microcontroller-code-map}
 	
-	The Figure \ref{fig:microCode} show a functional map of the microcontroller code that can be found entirely in Appendix \ref{ch:fw-code-appendix}.
+	The Figure \ref{fig:microCode} show a functional map of the microcontroller code.
 	
 	\begin{figure}[htbp]
 		\centering
@@ -26,7 +26,7 @@
 	
 	As soon as the microcontroller is turned on it enters in the \textit{Setup}, on this part the following things are setted:
 	\begin{itemize}
-		\item \textit{Acquisition Timer:} Timer max count value is setted and a interruption service routine is appointed, this timer is used for the analog sampling/reading function.\label{itm:mcu-prog-timer1}
+		\item \textit{Acquisition Timer:} Timer max count value is setted and an interruption service routine is appointed, this timer is used for the analog sampling/reading function.\label{itm:mcu-prog-timer1}
 		\item \textit{LED Timer:} Same thing done for \textit{Acquisition Timer}is done for \textit{LED Timer}, this timer controls the blinking frequency of the MCU debug LED.\label{itm:mcu-prog-timer2}
 		\item \textit{Serial Port: } The serial port baud rate is defined and the serial port is opened.\label{itm:mcu-prog-serial-port}
 		\item \textit{Port mapping: } The port mapping is done, \textit{i.e.} digital I/O ports are defined as inputs (high impedance) or as outputs (low impedance) and the analog ports are setted.\label{itm:mcu-prog-port}
@@ -82,7 +82,7 @@
 	\begin{itemize}
 		\item \textit{Digital Output Control:} As mentioned in Section \ref{sssec:lower-level-hardware-interfaces}, there are three digital outputs on the circuit board. Hence, there will be two commands for each digital channel (on and off) plus a command to turn all the digital outputs off. 
 		\item \textit{Analog Output Control:} Commands from this block will set the duty cycle for the MCU PWM outputs that will be converted to analog outputs, as explained in Section \ref{sec:speed-reference-output-channel}.
-		\item \textit{Acquisition State: } There is only one command that will lead the code to this loop (\textit{Filter Read}). When in this loop, the code will read the analog outputs for a specific number of times (\textit{Number Of Samples}), \textit{i.e.} sampling the signals. Each samples is summed up and when the desired number of samples is reached, the code divides the sum of all samples by this number, giving a averaged read. Then, this read is print together will the digital inputs read to the upstream data port.
+		\item \textit{Acquisition State: } There is only one command that will lead the code to this loop (\textit{Filter Read}). When in this loop, the code will read the analog outputs for a specific number of times (\textit{Number Of Samples}), \textit{i.e.} sampling the signals. Each samples is summed up and when the desired number of samples is reached, the code divides the sum of all samples by this number, giving an averaged read. Then, this read is print together will the digital inputs read to the upstream data port.
 	\end{itemize}
 
 	Additional to this commands there are the commands \textit{Print Version} and \textit{One Read}, the first is a command that prints the firmware version, the latter performs one read of the analog inputs and is only used for debugging.

@@ -1,7 +1,7 @@
 \subsection{System Controlling}\label{ssec:mcu-review}
 	In order to automate break tests a system block that should be able to interface both sensor signals and user commands to the system is needed. Summarizing, this block should be responsible to handle the interface between the electric signals and higher level user instructions.
 	\par
-	At the design of this block of the solution a important thing should be considered, data acquisition. According to \cite{ni-daq} DAQ (Data Acquisition) can be defined as the process of measuring an electric or physical phenomenon, such as voltage, current, temperature, pressure or sound.
+	At the design of this block of the solution an important thing should be considered, data acquisition. According to \cite{ni-daq} DAQ (Data Acquisition) can be defined as the process of measuring an electric or physical phenomenon, such as voltage, current, temperature, pressure or sound.
 	\par
 	As mentioned in Section \ref{sec:purpose}: \textit{"The system should be able to perform brake tests by controlling the mechanical parts while acquiring relevant data with the aid of sensors and transducers"}. There is a type of device that is able to perform data acquisition and system control, the microcontroller.
 
@@ -11,7 +11,7 @@
 		\par
 		Microcontrollers differ from microprocessors only in one thing, MCUs can be used standalone while microprocessors need other peripherals to be used. By reducing the size and cost compared to a design that uses a separate microprocessor, memory, and input/output devices, microcontrollers make it economical to digitally control even more devices and processes. \say{A microprocessor can be considered the heart of a computer system, whereas a microcontroller can be considered the heart of an embedded system}\cite{mcuDef}.
 		\par
-		A great thing about microcontrollers is that they can provide provide real-time response to events, so for instrumentation they are crucial. With them it is possible to acquire signals with good sampling rates without loss of relevant information \cite{bartz2004data}.
+		A great thing about microcontrollers is that they can provide real-time response to events, so for instrumentation they are crucial. With them it is possible to acquire signals with good sampling rates without loss of relevant information \cite{bartz2004data}.
 
 	\subsubsection{Microcontroller Architecture and Most Important Parts}\label{sssec:microcontroller-architecture-and-most-important-parts}
 
@@ -51,7 +51,7 @@
 		D_{ \left( \% \right) } =\frac{PW}{T}
 	\end{equation}
 
-	One useful way of using a PWM duty cycle variation is by enconding a analog voltage level proportional into it's percentage \cite{holmes2003pulse}, meaning that 100$\%$ duty cycle would represent maximum voltage amplitude and 0$\%$ the minimum voltage. This means it is possible to extract a analog voltage level by taking a PWM average level \cite{alter2008pwm}, this is a practical way for designing digital to analog converters.
+	One useful way of using a PWM duty cycle variation is by enconding an analog voltage level proportional into it's percentage \cite{holmes2003pulse}, meaning that 100$\%$ duty cycle would represent maximum voltage amplitude and 0$\%$ the minimum voltage. This means it is possible to extract a analog voltage level by taking a PWM average level \cite{alter2008pwm}, this is a practical way for designing digital to analog converters.
 
 \begin{comment}
 	\subsubsection{Microcontroller ISP programming}\label{sssec:microcontroller-isp-programming}

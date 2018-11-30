@@ -1,6 +1,6 @@
 \section{Temperature Acquisition Channel}\label{sec:temperatura-acquisition-channel}
 	
-	Figure \ref{fig:temperature-measurement-block-diagram} shows the solution overview for the themocouple circuit.
+	Figure \ref{fig:temperature-measurement-block-diagram} shows the solution overview for the thermocouple circuit.
 
 	\begin{figure}[htbp]
 		\centering
@@ -15,7 +15,7 @@
 		
 		For this project it was defined that thermocouples of type K (formed by the junction of two metal leagues: Alumel and Cromel) would be used in this project. This is because this specific type of thermocouple has a wide range of operation (-200$^{\circ}$C - 1200 $^{\circ}$C), so according to the requirements they are never too close from the boundary values, a thermocouple of type T or even a type J would not be suitable. Other appealing factor is that this type of thermocouple is quite common so getting eventual replacements would be easier, in comparisson with type E thermocouples.
 		\par
-		As mentioned in sub-section \ref{ssec:temperatureMeasurement}, besides amplification and linearization, the thermocouple signal also needs cold junction temperature difference compensation. There is an integrated solution from \textit{Analog Device} called AD8495, this IC functional diagram is displayed on Figure \ref{fig:ad8495-functional-block}.
+		As mentioned in Section \ref{ssec:temperatureMeasurement}, besides amplification and linearization, the thermocouple signal also needs cold junction temperature difference compensation. There is an integrated solution from \textit{Analog Device} called AD8495, this IC functional diagram is displayed on Figure \ref{fig:ad8495-functional-block}.
 		
 			\begin{figure}[htbp]
 				\centering
@@ -28,7 +28,7 @@
 
 	\subsection{Input Protection and Filtering}\label{ssec:ad8495InputProtectionAndFiltering}
 	
-	Although this IC already has overvoltage and ESD protection, thermocouples tips can pick a load of unwanted noise and transients. Hence, additional protection and external filtering is also recommended by \cite{two-ways-thermocouple}. First thing to do is to add current-limint series resistors, the drawback is doing that is that resistors in the circuit net increases the overall noise. This type of noise is called Johnson-Nyquist Thermal Noise or more commonly just by Johnson Noise, thermal agitation of electrons in a resistor gives rise to random fluctuations in the voltage across its terminals \cite{romero1998johnson}. Moreover, it can be calculated using the following Equation \ref{eqn:johnson-noise} where K is the Boltzamann's constant $1.38 \cdot 10^{-23}$, R is the resistance in ohms $(\Omega)$ and T the temperature in kelvin (~300K at room temperature) \cite{sensors2000}.
+	Although this IC already has overvoltage and ESD protection, thermocouples tips can pick a load of unwanted noise and transients. Hence, additional protection and external filtering is also recommended by \cite{two-ways-thermocouple}. First thing to do is to add current-limint series resistors, the drawback is doing that is that resistors in the circuit net increases the overall noise. This type of noise is called Johnson-Nyquist Thermal Noise or more commonly just by Johnson Noise, thermal agitation of electrons in a resistor gives rise to random fluctuations in the voltage across its terminals \cite{romero1998johnson}. Moreover, it can be calculated using the following Equation \ref{eqn:johnson-noise} where K is the Boltzmann constant $1.38 \cdot 10^{-23}$, R is the resistance in ohms $(\Omega)$ and T the temperature in kelvin (~300K at room temperature) \cite{sensors2000}.
 	
 		\begin{equation}\label{eqn:johnson-noise}
 			Noise (nv\/\sqrt{Hz}) = \sqrt{4 \cdot K \cdot R \cdot T \cdot 10^{9}}
@@ -72,7 +72,7 @@
 		
 	\subsection{Thermocouple Sensor Detection}\label{ssec:thermocouple-sensor-detection}
 		
-	A important feature of any acquisition system is to detect when a sensor is disconnected from the the acquisition system input \cite{o2011pressure}, because a signal acquisition circuit without the signal source will generate outputs that are uncorrelated to what the system was designed to measure/sense on the outside world. The AD8495 has a quite useful feature \cite{ad8495-datasheet}, it offers open thermocouple detection, the inputs of the AD8495 are PNP type transistors, which means that the bias current always flows out of the inputs. This way, the input bias current drives any unconnected output high, which saturates the output to the maximum possible reading, being in this case 1000$^{o}$C or 5V (considering the fixed 5mv/$\^{o}$C gain. In Section \ref{sec:functionalRequirements}, it was defined that the system must measure temperatures up to 600$^{o}$C, with the fixed gain of 5mv$\/^{o}$ this means an output voltage of 3V. The so called \textit{Thermocouple Sensor Detection} must be able to detect whenever the output exceeds 3V. In order to do that, the circuit displayed in Figure \ref{fig:overvoltage-sensor-detection} was designed.
+	An important feature of any acquisition system is to detect when a sensor is disconnected from the the acquisition system input \cite{o2011pressure}, because a signal acquisition circuit without the signal source will generate outputs that are uncorrelated to what the system was designed to measure/sense on the outside world. The AD8495 has a quite useful feature \cite{ad8495-datasheet}, it offers open thermocouple detection, the inputs of the AD8495 are PNP type transistors, which means that the bias current always flows out of the inputs. This way, the input bias current drives any unconnected output high, which saturates the output to the maximum possible reading, being in this case 1000$^{o}$C or 5V (considering the fixed 5mv/$^{o}$C gain). In Section \ref{sec:functionalRequirements}, it was defined that the system must measure temperatures up to 600$^{o}$C, with the fixed gain of 5mv/$^{o}$ this means an output voltage of 3V. The so called \textit{Thermocouple Sensor Detection} must be able to detect whenever the output exceeds 3V. In order to do that, the circuit displayed in Figure \ref{fig:overvoltage-sensor-detection} was designed.
 	
 		\begin{figure}[htbp]
 			\centering
@@ -81,4 +81,4 @@
 			\label{fig:overvoltage-sensor-detection}
 		\end{figure}
 		
-	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the 4V1 the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net 4V1 will be further explained in Section \ref{sssec:4v1-reference}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R91} is a pull-down resistor used to guarantee that signal will go to low-logic level in case the voltage in the inputs is not present. The capacitors C50 and C53 is just bypass capacitors used to stabile both the 4V1 and 5V supplies voltage.
+	U11 is a OPAMP working as a comparator, whenever the thermocouple signal is higher than the 4V1 the OPAMP output will saturate to the 5V (the supply voltage applied to the OPAMP). The net 4V1 will be further explained in Section \ref{sssec:4v1-reference}, whereas it is a constant voltage produced on the Power Supplies circuit block. The resistor \textit{R91} is a pull-down resistor used to guarantee that signal will go to low-logic level in case the voltage in the inputs is not present. The capacitors C50 and C53 is just bypass capacitors used to stabilize both the 4V1 and 5V supplies voltage.
