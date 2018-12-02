@@ -19,7 +19,7 @@
 
 	\begin{figure}[htbp]
 		\centering
-			\includegraphics[width=1\textwidth]{figuras/fig-atmega32u4-architecture}
+			\includegraphics[width=1.2\textwidth]{figuras/fig-atmega32u4-architecture}
 		\caption{ATmega16/32U4 Block Diagram \cite{atmega32u4-architecture}}
 		\label{fig:atmega32u4-architecture}
 	\end{figure}
@@ -32,7 +32,7 @@
 			\item\textit{Port Drivers}: This are the device \textit{I/Os (inputs/outputs)}, they can be digital or analog ports (execpt for outputs which can only be digital).\label{itm:port-drivers}
 			\item\textit{ADC (Analogic to Digital Converter)}: MCUs are by nature digital devices, when acquiring a analog signal, they first make a conversion to a digital value and then copy this data to a register.\label{itm:adc}
 			\item\textit{USB 2.0}: Although not being a common feature, some MCUs include a USB (Universal Serial Bus) port. When interfacing with other USB devices, already having this feature inside the MCU saves space and costs when integrating the MCU in a circuit board.\label{itm:mcu-usb}
-			\item\textit{High Speed Timer/PWM}: As mentioned in Item \ref{itm:port-drivers}, MCUs do not have analog outputs, the high speed is used to generate a special digital output signal which will be explained on Section \ref{ssec:mcu-pwm}.\label{itm:high-speed-timer-pwm}
+			\item\textit{High Speed Timer/PWM}: As mentioned in Item \ref{itm:port-drivers}, some MCUs do not have analog outputs, the high speed is used to generate a special digital output signal which will be explained on Section \ref{ssec:mcu-pwm}.\label{itm:high-speed-timer-pwm}
 		\end{itemize}
 
 	\subsubsection{Pulse Width Modulation} \label{ssec:mcu-pwm}

@@ -46,7 +46,7 @@
 
 \subsection{Sensor Detection Circuit}\label{ssec:accelerometer-sensor-detection-circuit}
 
-	The choosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)}, has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
+	The chosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)}, has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
 	\par
 	The detection circuit can be seen in Figure \ref{fig:accelerometer-sensor-detection-circuit}, D14 is a schottky diode used to protect the input from polarity change. TZ19 is a TVS used to protect the circuit from overvoltage, R111 and C66 forms a LPF with cutoff frequency close to 16Hz used to protect the NMOS gate from any fast transient.s
 

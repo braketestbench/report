@@ -5,7 +5,7 @@
 		As mentioned in Section \ref{ssec:speedMeasurement}, a CKP sensor has an analog signal with variable amplitude. For this project the only important parameter to extract from the sensor output signal in order to obtain the wheel speed is its frequency (angular velocity). The most practical way to obtain this data is to use a tachometer interface circuit, for this project the LM2907 from \textit{Texas Instruments} \cite{lm2907-datasheet} will be used. LM2907 is a \textit{frequency-to-voltage} converter with a ground-referenced tachometer input with $\pm$28V maximum voltage, making it versatile for many different sensor models.
 		
 		\subsubsection{LM2907 Basic Tachometer Circuit}\label{sssec:lm2907-basic-tachometer-circuit}
-			The conditioning circuit for this project was based on the \textit{Minimum Component Tachometer Diagram } from Figure \ref{fig:lm2907-minimum-component-tachometer-diagram} and \textit{Tachometer with Adjustable Zero Speed Voltage Output} from Figure \ref{fig:lm2907-minimum-component-tachometer} suggested by LM2907 datasheet \cite{lm2907-datasheet}.
+			The conditioning circuit for this project was based on the \textit{Minimum Component Tachometer Diagram } from Figure \ref{fig:lm2907-minimum-component-tachometer-diagram} and \textit{Tachometer with Adjustable Zero Speed Voltage Output} suggested by LM2907 datasheet  \cite{lm2907-datasheet} on the Typical Applications part.
 
 			\begin{figure}[htbp]
 				\centering
@@ -57,7 +57,13 @@
 				C = \pi \cdot D
 			\end{equation}
 
-			Considering this upper limit speed of 180kph, calculated values of tyre circumference length, we have maximum frequencies of aproximately 28.36Hz (for the smaller tyre standard) and 20.59Hz (for the bigger tyre standard). 
+			Considering this upper limit speed of 180kph (50 m/s) and the wheel lengths calculated above (1.762m and 2.2428m) applied it to Equation \ref{eqn:speed-to-freq}:
+
+			\begin{equation}
+				Frequency = \frac{Speed}{Length}
+			\end{equation}
+
+			We have maximum frequencies of aproximately 28.36Hz (for the smaller tyre standard (1.762m)) and 20.59Hz (for the bigger tyre standard (2.428m)). 
 			\par
 			According to \cite{lm2907-datasheet} the input common mode voltage is equal to $V_{CC}$ - 1.5V, and as $V_{CC}$ is equal to 5V (check Section \ref{sssec:5v-supply}) the maximum output voltage $V_{O}$ is equal to 3.5V. Considering a safer upper frequency limit of 150Hz (approximately six times the maximum calculated frequency of 31.52Hz, this multiplication factor will be explained better in Section \ref{sec:materials}) applied to Equation \ref{eqn:lm2907-output-voltage} with the $V_{CC}=5V$, the desired offset voltage $V_{REF}$ (1.225V, check Section \ref{sssec:1v2-reference}) and the maximum output voltage $V_{O}=3.5$ gives a time constant (R1*C1) of 0.003. Using the recommended capacitor values from \ref{fig:lm2907-minimum-component-tachometer-diagram} and commercial resistor values it is possible to achieve this time constant using R1=300k$\Omega$, with this values $V_{O}$ can be described by Equation \ref{eqn:calculated-vo}.
 
@@ -83,8 +89,8 @@
 			In addition to the components from the circuit \textit{Tachometer with Adjustable Zero Speed Voltage Output} on Figure \ref{fig:lm2907-minimum-component-tachometer}, the following features have been added:
 
 			\begin{itemize}
-				\item\textit{\textbf{TVS Diode:}} In order to protect the the IC's input the SMBJ15CA TVS diode from \textit{Littelfuse} was added. This diode has a maximum clamping voltage of 26V, the maximum input voltage is $\pm$28V, thus the TVS will help protecting the input from overvoltages.\label{itm:ckp-circuit-tvs}
-				\item\textit{\textbf{LPF at the input:}} As the maximum frequency was determined to be 31.52Hz, it is possible to filter all the upper frequencies in order to avoid any noise to enter the circuit. R73, C41 and C42 form a LPF with a cutoff frequency of aproximately 160Hz.
+				\item\textit{\textbf{TVS Diode:}} In order to protect the the IC's input the SMBJ15CA TVS diode from \textit{Littelfuse} was added. This diode has a maximum clamping voltage of 24.4V, the maximum input voltage is $\pm$28V, thus the TVS will help protecting the input from overvoltages.\label{itm:ckp-circuit-tvs}
+				\item\textit{\textbf{LPF at the input:}} As the maximum frequency was determined to be 31.52Hz, it is possible to filter all the upper frequencies in order to avoid any noise to enter the circuit. R73 and C41 form a LPF with a cutoff frequency of aproximately 160Hz, as mentioned in Section \ref{sssec:lm2907-designed-circuit} the maximum signal frequency is approximately 150Hz.
 				\item\textit{\textbf{LPF at the output:}} R74 and C43 form a LPF to that is used to filter any external post-conversion noise, it has a aproximate frequency of 16Hz.\label{itm:ckp-circuit-lpf-output} 
 				\item\textit{\textbf{R78:}} This resistor is recommended by \cite{lm2907-datasheet} in order to use the voltage reference functionality.
 			\end{itemize}
@@ -105,7 +111,7 @@
 
 		The working principle of this circuit is this: when ground is connected to the input (sensor connected) the output goes to zero volts and the LED is turned ON, when high level voltage is connected to the input or it is on open load the output goes to high level and the LED turns off. D11 is a diode to guarantee that no transient voltage will flow from the input to the circuit. D13 is a additional protection clamping diode working alongside with the LPF formed by R81 and C46 to protect the Q17's gate.
 		\end{comment}
-	\subsection{1V2 Reference}\label{sssec:1v2-reference}
+	\subsection{1.225V  Reference}\label{sssec:1v2-reference}
 
 			The 1V2 reference from the circuit of Section \ref{ssec:ckp-signal-conditioning-circuit} is achieved using the LM4040CYM3-1.2 from \textit{Microchip} \cite{lm4040-datasheet}. This is a 1.225V precision voltage reference with a tolerance of $\pm 1.15\%$ and maximum operating output current of 10mA. The only external component needed is a bias resistor which can be calculated using \ref{eqn:rbis-adr510} \cite{lm4040-datasheet}.
 
@@ -115,11 +121,11 @@
 
 			The used $V_{S}$ \textit{Voltage Supply} will be the 5V obtained in the circuit from Figure \ref{fig:tl2575-05-circuit} in Section \ref{sssec:5v-supply}. According to the datasheet, the minimul operating voltage ($I_{Q}$ in this case) is 100uA. Moreover, $V_{OUT}$ is naturally 1.225V. The minimum bias current (load current $I_{L}$) is of 500nA (according to the \cite{lm2907-datasheet}). Hence, any value of resistance that guarantee that the current that flows through the regulator is less than 10mA is acceptable.
 			\par
-			Using a 1k$\Omega$ resistor a current of 4mA can be achieved. Figure \ref{fig:1v2-circuit} shows the circuit for the 1V2 reference, the capacitors are just a bypass capacitors recommended by the datasheet.
+			Using a 1k$\Omega$ resistor a current of 3.775mA can be achieved. Figure \ref{fig:1v2-circuit} shows the circuit for the 1V2 reference, the capacitors are just a bypass capacitors recommended by the datasheet.
 
 			\begin{figure}[htbp]
 				\centering
 				\includegraphics[width=.6\textwidth]{figuras/fig-1v2-circuit}
-				\caption{1V2 voltage reference circuit}
+				\caption{1.225V  voltage reference circuit}
 				\label{fig:1v2-circuit}
 			\end{figure}	 

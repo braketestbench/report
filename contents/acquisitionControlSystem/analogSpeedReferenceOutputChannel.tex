@@ -39,7 +39,7 @@
 		As the $V_{PWM}$ will already be amplified prior to filtering, $V_{PWM}=V_{max}$, this will produce the following Equation \ref{eqn:attenuation}.
 		
 			\begin{equation}\label{eqn:attenuation}
-				A_{dB}=-20 \cdot n \cdot log \left( 2 \right) 
+				A_{dB}=-20 \cdot log \left( 2^n - 1\right) 
 			\end{equation}
 	
 		And Equation \ref{eqn:LPFcuttoffFrequency} \cite{metivier2013pwm}, is used to calculate the maximum needed cuttoff frequency for the further to be designed LPF (\textit{Low-Pass-Filter}) in order to convert the PWM signal to an analog voltage. The slope value is the filter slope and for first order filters and second order filters this slope value is equal respectively to 20dB/decade and 40dB/decade \cite{metivier2013pwm}.
@@ -53,8 +53,8 @@
 			\begin{equation}\label{eqn:LPFcuttoffFrequency2}
 				\begin{split}
 					f_{c}=f_{PWM} \cdot 10^{-\frac{A_{dB}}{Slope}}	\\
-					f_{c}=f_{PWM} \cdot 10^{-\frac{-20 \cdot n \cdot log \left( 2 \right)}{Slope}}	\\
-					f_{c}=f_{PWM} \cdot 10^{log \left( 2^{\frac{20 \cdot n }{Slope}} \right)}	\\
+					f_{c}=f_{PWM} \cdot 10^{-\frac{-20 \cdot log \left( 2^n - 1\right)}{Slope}}	\\
+					f_{c}=f_{PWM} \cdot 10^{log \left( 2^n - 1 \right)^\frac{20}{Slope}}	\\
 					Knowing:	\\
 					x \cdot log \left( A \right) =  log \left( A^{X} \right) \\
 					10^{log \left( A \right) } = A	\\
@@ -64,7 +64,7 @@
 			\end{equation}
 
 	
-		As shown in Appendix \ref{ch:fw-code-appendix}, the default PWM frequency for the defined pins are $f_{PWM}=490Hz$, also $n=8$ (number of bits of the ADC from the frequency inverter) and as according to \cite{metivier2013pwm}, a second order LPF is better for converting a PWM signal to voltage and it has by default $Slope=-40dB/decade$, using Equation \ref{eqn:LPFcuttoffFrequency2} it is possible to calculate a maximum cutoff frequency of 30.625Hz. 
+		The default PWM frequency for the defined pins are $f_{PWM}=490Hz$, also $n=8$ (number of bits of the ADC from the frequency inverter) and as according to \cite{metivier2013pwm}, a second order LPF is better for converting a PWM signal to voltage and it has by default $Slope=-40dB/decade$, using Equation \ref{eqn:LPFcuttoffFrequency2} it is possible to calculate a maximum cutoff frequency of 30.68Hz. 
 
 	\subsection{Sallen-Key Low Pass Active Filter}\label{ssec:sallen-key-low-pass-active-filter}
 	
@@ -100,7 +100,7 @@
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[width=.8\textwidth]{figuras/fig-sim-dt-25}
+			\includegraphics[width=1\textwidth]{figuras/fig-sim-dt-25}
 			\caption{Simulation for 25$\%$ duty cycle}
 			\label{fig:sim-dt-25}
 		\end{figure}
@@ -109,7 +109,7 @@
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[width=.8\textwidth]{figuras/fig-sim-dt-50}
+			\includegraphics[width=1\textwidth]{figuras/fig-sim-dt-50}
 			\caption{Simulation for 50$\%$ duty cycle}
 			\label{fig:sim-dt-50}
 		\end{figure}
@@ -118,7 +118,7 @@
 
 		\begin{figure}[htbp]
 			\centering
-			\includegraphics[width=.8\textwidth]{figuras/fig-sim-dt-75}
+			\includegraphics[width=1\textwidth]{figuras/fig-sim-dt-75}
 			\caption{Simulation for 75$\%$ duty cycle}
 			\label{fig:sim-dt-75}
 		\end{figure}
