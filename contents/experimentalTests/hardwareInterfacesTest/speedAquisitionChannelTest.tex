@@ -1,1 +1,59 @@
-\section{Speed Aquisition Channel Test}\label{sec:speed-aquisition-channel-test}
+\subsection{Rotation Aquisition Channel Test}\label{sec:speed-aquisition-channel-test}
+	
+	\subsubsection{Configuration and Background}
+
+		As mentioned in Section \ref{sssec:lm2907-basic-tachometer-circuit}, the \textit{Rotation Acquisition Channel} is based in a frequency-to-voltage converter. Hence, in order to test this acquisition channel it must be submitted to different input frequencies and this input frequency and the output voltage should be registered so that the circuit gain can be compaired to the theoretical value.
+		\par
+		The input of this circuit was wired to a function generator configured on the following way:
+
+			\begin{itemize}
+				\item High Voltage Level = 5V
+				\item Low Voltage Level = -5V
+				\item Waveform = Triangular
+			\end{itemize}
+		A triangular waveform was chosen because it is the most similar to a CKP signal as Figure \ref{fig:ckp-signal} shows. For the tests the input frequency was varried from nought to 150Hz (check Section \ref{sssec:lm2907-designed-circuit}) at a 10Hz step. In order to incorporate the microcontroller's analog-to-digital converter error the monitored output was the analog read (0 - 1023) that can be retreived from the serial port as the command cheatset at Table \ref{table:ascii-commands} from Section \ref{sec:microcontroller-code-map} shows.
+
+	\subsubsection{Results and Discussion}
+
+		Table \ref{table:results-rotation-test} shows the results from the test described above.
+
+			\begin{table}[h!]
+				\begin{tabular}{|l|l|l|l|}
+					\hline
+					\textbf{Frequency (Hz)} & \textbf{Output Read} & \textbf{Output Voltage (V)} & \textbf{Gain} \\ \hline
+					0 & 170 & 0.831 & - \\ \hline
+					10 & 198 & 0.968 & 13.67 \\ \hline
+					20 & 226 & 1.105 & 13.68 \\ \hline
+					30 & 254 & 1.241 & 13.68 \\ \hline
+					40 & 282 & 1.378 & 13.68 \\ \hline
+					50 & 310 & 1.515 & 13.68 \\ \hline
+					60 & 338 & 1.652 & 13.68 \\ \hline
+					70 & 366 & 1.789 & 13.68 \\ \hline
+					80 & 394 & 1.926 & 13.68 \\ \hline
+					90 & 422 & 2.063 & 13.68 \\ \hline
+					100 & 450 & 2.199 & 13.68 \\ \hline
+					110 & 478 & 2.336 & 13.68 \\ \hline
+					120 & 506 & 2.473 & 13.68 \\ \hline
+					130 & 534 & 2.610 & 13.68 \\ \hline
+					140 & 561 & 2.742 & 13.65 \\ \hline
+					150 & 589 & 2.879 & 13.65 \\ \hline
+				\end{tabular}
+				\caption{Rotation Acquisition Channel Test Results}
+				\label{table:results-rotation-test}
+			\end{table}
+
+		The theoretical voltage output was calculate at Section \ref{sssec:lm2907-designed-circuit} and is described by Equation \ref{eqn:rotation-theoretical-vo} bellow.
+
+			\begin{equation}\label{eqn:rotation-theoretical-vo}
+				V_{O}=1.225V + 0.015 \cdot f_{IN}   V\/Hz
+			\end{equation}
+
+		The average voltage gain from the circuit of 13.68Hz and the experimental error was 8.8$\%$, the standard deviation was only 0.01 Hz though. That means that even though the circuit gain is almost 10$\%$ different from the theoretical gain, the circuit gain varries very little along the frequency input range.
+		\par
+		The major difference the calculated to the real voltage output Equation is the voltage offset. Although it was designed to be 1.225V, the measured value was 0.831V, this is probably due to the lack of a high impedance buffer between the voltage reference circuit and the frequency-to-voltage converter offset pin. A future version of this project should consider a operational amplifier to fix this issue. However, as Table \ref{table:results-rotation-test} shows, the circuit has a linear output in respect to the input, the only difference during the tests is that test applications should consider a 0.831V offset instead of a 1.225V offset.
+		\par
+		The voltage output of the \textit{Rotation Acquisition Channel} can be calculated using Equation \ref{eqn:rotation-circuit-vo} bellow.
+			\begin{equation}\label{eqn:rotation-theoretical-vo}
+
+				V_{O}=0.831V + 0.01368 \cdot f_{IN}   V\/Hz
+			\end{equation}
