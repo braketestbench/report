@@ -1,1 +1,78 @@
 \subsection{Brake Force Acquisition Channels Test}\label{sec:brake-pressure-acquisition-channels-test}
+
+	\subsubsection{Configuration and Background}
+
+		As mentioned in Section \ref{ssec:load-cell-signal-conditioning}, the \textit{Brake Force Acquisition Channel} is a bridge amplifier with a gain of 500 and voltage output offset of 2.5V.
+		\par
+		In order to test this interface, the input of this channel will be submitted to input voltages from -4mv to 4mV at a 0.5mV step. This input voltage range was chosen because according the amplifier datasheet \cite{ina125}, when the device is powered up with 5V the voltage output can only typically go from 0.3V to 4.2V, and this input voltage range amplified by a factor of 500 with a offset of 2.5V will not go beyond the specified output voltage range.
+		
+	\subsubsection{Results}
+
+		\subsubsubsection{Channel 1}
+
+			Table \ref{table:results-load1-test} shows the results from the test described above done at the first \textit{Brake Force Acquisition Channel}.
+
+				\begin{table}[h!]
+					\begin{tabular}{|l|l|l|l|}
+						\hline
+						\textbf{Input Voltage (mV)} & \textbf{Analog Read} & \textbf{Calculated Voltage (mV)} \\ \hline
+						-4.0 & 97 &  474.10 \\ \hline
+						-3.5 & 153 & 747.80 \\ \hline
+						-3.0 & 205 & 1001.96 \\ \hline
+						-2.5 & 250 & 1221.90 \\ \hline
+						-2.0 & 360 & 1495.60 \\ \hline
+						-1.5 & 357 & 1744.87 \\ \hline
+						-1.0 & 401 & 1959.92 \\ \hline
+						-0.5 & 438 & 2140.76 \\ \hline
+						 0.0 & 495 & 2419.35 \\ \hline
+						 0.5 & 555 & 2712.61 \\ \hline
+						 1.0 & 615 & 3005.87 \\ \hline
+						 1.5 & 632 & 3088.95 \\ \hline
+						 2.0 & 697 & 3406.65 \\ \hline
+						 2.5 & 728 & 3558.16 \\ \hline
+						 3.0 & 815 & 3983.38 \\ \hline
+						 3.5 & 855 & 4178.89 \\ \hline
+						 4.0 & 921 & 4212.68 \\ \hline
+					\end{tabular}
+					\caption{Brake Force Acquisition Channel 1 Test Results}
+					\label{table:results-load1-test}
+				\end{table}
+
+			The average experimental error for this amplification circuit was 2.43$\%$ and the standard deviation is 1.81$\%$. 
+
+		\subsubsubsection{Channel 2}
+
+			Table \ref{table:results-load2-test} shows the results from the test described above done at the second \textit{Brake Force Acquisition Channel}.
+
+				\begin{table}[h!]
+					\begin{tabular}{|l|l|l|l|}
+						\hline
+						\textbf{Input Voltage (mV)} & \textbf{Analog Read} & \textbf{Calculated Voltage (mV)} \\ \hline
+						-4.0 & 98 & 478.98 \\ \hline
+						-3.5 & 154 & 752.69 \\ \hline
+						-3.0 & 204 & 997.07 \\ \hline
+						-2.5 & 243 & 1187.68 \\ \hline
+						-2.0 & 304 & 1485.83 \\ \hline
+						-1.5 & 347 & 1695.99 \\ \hline
+						-1.0 & 404 & 1974.58 \\ \hline
+						-0.5 & 462 & 2258.06 \\ \hline
+						 0.0 & 506 & 2473.12 \\ \hline
+						 0.5 & 551 & 2693.06 \\ \hline
+						 1.0 & 600 & 2932.55 \\ \hline
+						 1.5 & 669 & 3269.79 \\ \hline
+						 2.0 & 701 & 3426.20 \\ \hline
+						 2.5 & 766 & 3743.89 \\ \hline
+						 3.0 & 822 & 4017.60 \\ \hline
+						 3.5 & 852 & 4164.22 \\ \hline
+						 4.0 & 993 & 4211.15 \\ \hline
+					\end{tabular}
+					\caption{Brake Force Acquisition Channel 2 Test Results}
+					\label{table:results-load2-test}
+				\end{table}
+
+			The average experimental error for this amplification circuit was 1.92$\%$ and the standard deviation is 1.39$\%$. 
+		
+
+	\subsubsection{Discussion}
+
+		With this test the \textit{Brake Force Acquisition Channel} amplifier showed satisfatory results, with errors of less than 3$\%$. The combination of this precise amplifier and the Precision Voltage Reference provided by this IC gives a great compound solution for dealing with load cell signals.

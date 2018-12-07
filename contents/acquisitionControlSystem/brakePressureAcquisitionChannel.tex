@@ -1,8 +1,8 @@
-\section{Brake Pressure Acquisition Channel}\label{sec:brake-pressure-acquisition-channel}
+\section{Brake Force Acquisition Channel}\label{sec:brake-pressure-acquisition-channel}
 
 \subsection{Load Cell Signal}\label{ssec:load-cell-signal}
 
-	Load cells have very low output levels, usually from 2 to 3mV/V, and therefore an amplification is fundamental. It is not necessary to know the nature of the strain gauges when a load cell is being calibrated since generally the manufacturers provide a calibration curve based on the signals $V_{O}$ and $V_{EX}$ of the Figure \ref{fig:wheatstone}, it is worth noting that these signals can not have the same reference, otherwise it will not be possible to excite the wheatstone bridge correctly.
+	Load cells have very low output levels, usually from 2 to 3mV for each volt applied at the bridge, and therefore an amplification is fundamental. It is not necessary to know the nature of the strain gauges when a load cell is being calibrated since generally the manufacturers provide a calibration curve based on the signals $V_{O}$ and $V_{EX}$ of the Figure \ref{fig:wheatstone}, it is worth noting that these signals can not have the same reference, otherwise it will not be possible to excite the wheatstone bridge correctly.
 	\par
 	The most common way to amplify the signal of a load cell is using a instrumentation amplifier. Although it is a widely used configuration, assembling this amplifier using three different operational amplifiers and seven resistors as in Figure \ref{fig:instrumentation-amplifier} may make it inaccurate due to manufacturing imperfections of the components. Another factor that greatly influences the output signal of a load cell is the excitation voltage of its wheatstone bridge, if it varies too much the output will vary greatly as well, which will hamper its calibration.
 
@@ -24,7 +24,7 @@
 
 	Taking into account the sensitivity of 2mV/V, this means that if the cell is excited with 2V5, its output will vary from 0 to 5mV.
 	\par
-	Since the analog input of the chosen microcontroller \textit{(Atmega32U4)} is 0 to 5V, we may to amplify the cell output signal by a factor of 1000 in order to use the most number of bits from de MCU's ADC. Using Equation \ref{eqn:ina125-g}, to obtain a gain of amplification ratio of the ideal $R_{G}$ would be 60$\Omega$, a resistor of this value and minimal tolerance (1$\%$) is not commercially available, the closest one is 60.4$\Omega$. This resistor will generate a gain of aproximately 997.378 and cause the IC output to range from about 0V to 4.986V, using 99.72\% of the resolution of the microcontroller input. 
+	Since the analog input of the chosen microcontroller \textit{(Atmega32U4)} is 0 to 5V, we may to amplify the cell output signal by a factor of 500 in order to use the most number of bits from de MCU's ADC. Using Equation \ref{eqn:ina125-g}, to obtain a gain of amplification ratio of the ideal $R_{G}$ would be 121$\Omega$. This resistor will cause the IC output to range from about 0V to 5V (0 to 2.5V for contraction and 2.5V to 5V for tension), using 100\% of the resolution of the microcontroller input. 
 	\par
 	Figure \ref{fig:cic-cell} shows the schematic of the load cell conditioning circuit with the INA125.
 
