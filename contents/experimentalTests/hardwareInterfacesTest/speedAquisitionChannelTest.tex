@@ -45,7 +45,7 @@
 		The theoretical voltage output was calculate at Section \ref{sssec:lm2907-designed-circuit} and is described by Equation \ref{eqn:rotation-theoretical-vo} bellow.
 
 			\begin{equation}\label{eqn:rotation-theoretical-vo}
-				V_{O}=1.225V + 0.015 \cdot f_{IN}   V\/Hz
+				V_{O}=1.225V + 0.015 \cdot f_{IN}  \cdot \frac{V}{Hz}
 			\end{equation}
 
 		The average voltage gain from the circuit of 13.68Hz and the experimental error was 8.8$\%$, the standard deviation was only 0.01 Hz though. That means that even though the circuit gain is almost 10$\%$ different from the theoretical gain, the circuit gain varries very little along the frequency input range.
@@ -53,7 +53,7 @@
 		The major difference the calculated to the real voltage output Equation is the voltage offset. Although it was designed to be 1.225V, the measured value was 0.831V, this is probably due to the lack of a high impedance buffer between the voltage reference circuit and the frequency-to-voltage converter offset pin. A future version of this project should consider a operational amplifier to fix this issue. However, as Table \ref{table:results-rotation-test} shows, the circuit has a linear output in respect to the input, the only difference during the tests is that test applications should consider a 0.831V offset instead of a 1.225V offset.
 		\par
 		The voltage output of the \textit{Rotation Acquisition Channel} can be calculated using Equation \ref{eqn:rotation-circuit-vo} bellow.
-			\begin{equation}\label{eqn:rotation-theoretical-vo}
-
-				V_{O}=0.831V + 0.01368 \cdot f_{IN}   V\/Hz
+			
+			\begin{equation}\label{eqn:rotation-circuit-vo}
+				V_{O}=0.831V + 0.01368 \cdot f_{IN}  \cdot \frac{V}{Hz}
 			\end{equation}
