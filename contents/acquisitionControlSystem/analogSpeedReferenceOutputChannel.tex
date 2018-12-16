@@ -7,9 +7,9 @@
 				\item First way is the deceleration of the rotor with the aid of the brake system using the brake pads.
 				\item Second way of controlling it by accelerating the rotor with the aid of the electric motor.
 			\end{itemize}
-		The electric motor used is a alternate current three-phase type, it in order to control it's speed a frequency inverter was used. The frequency inverter has many different controlling interfaces that lead to manipulating the three-phase electric system in order to control the engine's rotationary speed.
+		The electric motor used is an alternate current three-phase type, it in order to control it's speed a frequency inverter was used. The frequency inverter has many different controlling interfaces that lead to manipulating the three-phase electric system in order to control the engine's rotationary speed.
 		\par
-		In this project the frequency inverter used was the \textit{Weg CFW-08} (shown in Figure \ref{fig:wegCFW08}, according to \cite{wegCFW08Manual} there are many port interfaces that can be used to control the desired speed remotely. One of this ways is using one of the device's 0-10V analog input with 8-bit resolution. According to the datasheet, this analog input can be used as a speed reference with programmable gain (0-20), the input parameters are the lower limit speed (when the input is on 0V) and the upper limit speed (when the input is at 10V).
+		In this project the frequency inverter used was the \textit{Weg CFW-08} (shown in Figure \ref{fig:wegCFW08}, according to \cite{wegCFW08Manual} there are many port interfaces that can be used to control the desired speed remotely. One of this ways is using one of the device's 0-10V analog input with 8-bit resolution. According to the datasheet, this analog input can be used as a speed reference with programmable gain (0 to 20), the input parameters are the lower limit speed (when the input is on 0V) and the upper limit speed (when the input is at 10V).
 
 		\begin{figure}[htbp]
 			\centering
@@ -127,7 +127,7 @@
 
 	\subsection{Complete Circuit}\label{ssec:pwm-to-speed-reference-circuit}
 	
-		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. Besides the main components of the filter the added components were two bypass capacitors (C1 and C4), TZ1 is a TVS used to protect the circuit from any transient voltage coming from the cable. Moreover, R1 was added to limit the current that is drained from the analog output. The port \textit{AOUT$\_$1} is a feedback that goes to a analog input of the MCU so the output voltage can be adjusted by varying the duty cycle.
+		Based on all the previously calculations and on \cite{texas1999sallenkey}, the final circuit will be the one in Figure \ref{fig:pwmToSpeedReferenceCircuit}. Besides the main components of the filter the added components were two bypass capacitors (C1 and C4), TZ1 is a TVS used to protect the circuit from any transient voltage coming from the cable. Moreover, R1 was added to limit the current that is drained from the analog output. The port \textit{AOUT$\_$1} is a feedback that goes to an analog input of the MCU so the output voltage can be adjusted by varying the duty cycle.
 
 	
 		\begin{figure}[htbp]

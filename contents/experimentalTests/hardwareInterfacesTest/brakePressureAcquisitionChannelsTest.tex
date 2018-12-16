@@ -4,7 +4,7 @@
 
 		As mentioned in Section \ref{ssec:load-cell-signal-conditioning}, the \textit{Brake Force Acquisition Channel} is a bridge amplifier with a gain of 500 and voltage output offset of 2.5V.
 		\par
-		In order to test this interface, the input of this channel will be submitted to input voltages from -4mv to 4mV at a 0.5mV step. This input voltage range was chosen because according the amplifier datasheet \cite{ina125}, when the device is powered up with 5V the voltage output can only typically go from 0.3V to 4.2V, and this input voltage range amplified by a factor of 500 with a offset of 2.5V will not go beyond the specified output voltage range.
+		In order to test this interface, the input of this channel will be submitted to input voltages from -4mv to 4mV at a 0.5mV step. This input voltage range was chosen because according the amplifier datasheet \cite{ina125}, when the device is powered up with 5V the voltage output can only typically go from 0.3V to 4.2V, and this input voltage range amplified by a factor of 500 with an offset of 2.5V will not go beyond the specified output voltage range.
 		
 	\subsubsection{Results}
 
@@ -13,6 +13,7 @@
 			Table \ref{table:results-load1-test} shows the results from the test described above done at the first \textit{Brake Force Acquisition Channel}.
 
 				\begin{table}[h!]
+				\centering
 					\begin{tabular}{|l|l|l|l|}
 						\hline
 						\textbf{Input Voltage (mV)} & \textbf{Analog Read} & \textbf{Calculated Voltage (mV)} \\ \hline
@@ -45,6 +46,7 @@
 			Table \ref{table:results-load2-test} shows the results from the test described above done at the second \textit{Brake Force Acquisition Channel}.
 
 				\begin{table}[h!]
+				\centering
 					\begin{tabular}{|l|l|l|l|}
 						\hline
 						\textbf{Input Voltage (mV)} & \textbf{Analog Read} & \textbf{Calculated Voltage (mV)} \\ \hline

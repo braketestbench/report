@@ -18,6 +18,7 @@
 		Table \ref{table:results-rotation-test} shows the results from the test described above.
 
 			\begin{table}[h!]
+				\centering
 				\begin{tabular}{|l|l|l|l|}
 					\hline
 					\textbf{Frequency (Hz)} & \textbf{Output Read} & \textbf{Output Voltage (V)} & \textbf{Gain} \\ \hline
@@ -50,7 +51,7 @@
 
 		The average voltage gain from the circuit of 13.68Hz and the experimental error was 8.8$\%$, the standard deviation was only 0.01 Hz though. That means that even though the circuit gain is almost 10$\%$ different from the theoretical gain, the circuit gain varries very little along the frequency input range.
 		\par
-		The major difference the calculated to the real voltage output Equation is the voltage offset. Although it was designed to be 1.225V, the measured value was 0.831V, this is probably due to the lack of a high impedance buffer between the voltage reference circuit and the frequency-to-voltage converter offset pin. A future version of this project should consider a operational amplifier to fix this issue. However, as Table \ref{table:results-rotation-test} shows, the circuit has a linear output in respect to the input, the only difference during the tests is that test applications should consider a 0.831V offset instead of a 1.225V offset.
+		The major difference the calculated to the real voltage output Equation is the voltage offset. Although it was designed to be 1.225V, the measured value was 0.831V, this is probably due to the lack of a high impedance buffer between the voltage reference circuit and the frequency-to-voltage converter offset pin. A future version of this project should consider an operational amplifier to fix this issue. However, as Table \ref{table:results-rotation-test} shows, the circuit has a linear output in respect to the input, the only difference during the tests is that test applications should consider a 0.831V offset instead of a 1.225V offset.
 		\par
 		The voltage output of the \textit{Rotation Acquisition Channel} can be calculated using Equation \ref{eqn:rotation-circuit-vo} bellow.
 			

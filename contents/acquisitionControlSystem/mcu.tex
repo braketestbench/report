@@ -8,7 +8,7 @@
 			\item{\textit{Operating Voltage Range}}: 2.7 to 5.5V.\label{itm:operating-voltage-range}
 		\end{itemize}
 	\par
-	This microcontroller family is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega32U4} is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. A very useful feature of this MCU is that it has a USB 2.0 controller built-in, this eliminates the need for an additional transceiver circuit, moreover this MCU can be easily reprogrammable through the USB port, this being a very useful feature when the hardware is fully assembled. Figure \ref{fig:atmega32u4-pinout} shows the pinout of this device.
+	This microcontroller family is widely used in academic environment (specially after the Arduino project started, when microncontroller programming became much more feasible and reachable), and is famous for being easy and reliable to use. The \textit{ATmega32U4} is really versatile and more important it meets this project requirements, listed in Section \ref{sec:functionalRequirements}. A very useful feature of this MCU is that it has an USB 2.0 controller built-in, this eliminates the need for an additional transceiver circuit, moreover this MCU can be easily reprogrammable through the USB port, this being a very useful feature when the hardware is fully assembled. Figure \ref{fig:atmega32u4-pinout} shows the pinout of this device.
 
 	\begin{figure}[htbp]
 		\centering
@@ -53,7 +53,7 @@
 				\item\textit{PWM$\_$OUT$\_$1, AOUT$\_$1, PWM$\_$OUT$\_$2 and AOUT$\_$2}: Those are respectively: first PWM output, MCU analog input to monitor the first system analog output, second PWM output, MCU analog input to monitor the second system analog output.
 				\item\textit{SCK, MOSI and MISO}: Those are signal used to program the MCU through ISP(In System Programming).
 				\item\textit{XTAL1 and XTAL2}: Respectively the input and output for the crystal oscilator circuit.
-				\item\textit{VUSB}: This is the suppy voltage pin for the USB controller, it is being powered by a external USB host connected to the board.
+				\item\textit{VUSB}: This is the suppy voltage pin for the USB controller, it is being powered by an external USB host connected to the board.
 				\item\textit{DM and DP}: USB data lines.
 				\item\textit{RXLED and TXLED}: Pins that goes to low logic level when data is being transmitted and high logic level when not.
 			\end{itemize}

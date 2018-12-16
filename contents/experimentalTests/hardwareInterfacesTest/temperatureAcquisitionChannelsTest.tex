@@ -2,7 +2,7 @@
 	
 	\subsubsection{Configuration and Background}
 
-		As mentioned in Section \ref{ssec:thermocouple-signal-conditioning}, the \textit{Temperature Acquisition Channel} as implemented using a IC that performs amplification, linearization and cold junction compensation, meaning it already gives a output voltage with a fixed gain of 5mv/$^{\circ}$C in respect to the measured temperature.
+		As mentioned in Section \ref{ssec:thermocouple-signal-conditioning}, the \textit{Temperature Acquisition Channel} as implemented using an IC that performs amplification, linearization and cold junction compensation, meaning it already gives an output voltage with a fixed gain of 5mv/$^{\circ}$C in respect to the measured temperature.
 		\par
 		In order to perform the test, the tip of the thermocouple connected to this circuit was placed touching the tip of another thermocouple connected to a multimeter from TEK instruments (model number: TEK Instruments 10709). Both tips were heated using a soldering iron placed close to the thermocouple tips, the \textit{Temperature Acquisition Channel} was evaluating compairing the reads from the multimeter to the reads (0 - 1023) acquired through the acquisition serial port at every 20$^{\circ}$C interval.
 
@@ -13,6 +13,7 @@
 			Table \ref{table:results-temp1-test} shows the results from the test described above done at the first \textit{Temperature Acquisition Channel}.
 
 				\begin{table}[h!]
+				\centering
 					\begin{tabular}{|l|l|l|l|}
 						\hline
 						\textbf{Input Temperature (${\circ}$C)} & \textbf{Analog Read} & \textbf{Read Temperature (${\circ}$C)} \\ \hline
@@ -37,6 +38,7 @@
 			Table \ref{table:results-temp2-test} shows the results from the test described above done at the second \textit{Temperature Acquisition Channel}.
 
 				\begin{table}[h!]
+					\centering
 					\begin{tabular}{|l|l|l|l|}
 						\hline
 						\textbf{Input Temperature (${\circ}$C)} & \textbf{Analog Read} & \textbf{Read Temperature (${\circ}$C)} \\ \hline
@@ -58,4 +60,4 @@
 
 	\subsubsection{Discussion}
 
-		The used thermocouple amplifer datasheet \cite{ad8495-datasheet} specifies a maximum signal conditioning error of $\pm2\%$, considering that this test includes the error from the thermocouple tip to the serial port, only 1$\%$ higher for the first channel and only 0.27$\%$ higher for the second channel than the amplifier on error is a great result and shows the quality of the choosen solution.
+		The used thermocouple amplifer datasheet \cite{ad8495-datasheet} specifies a maximum signal conditioning error of $\pm2\%$, considering that this test includes the error from the thermocouple tip to the serial port, only 1$\%$ higher for the first channel and only 0.27$\%$ higher for the second channel than the amplifier on error is a great result and shows the quality of the chosen solution.

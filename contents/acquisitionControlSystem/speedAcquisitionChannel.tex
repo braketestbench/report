@@ -51,7 +51,7 @@
 
 			The first parameter to be calculated is the maximum frequency, functional requirement from Item \ref{itm:func-req-5} in Section \ref{sec:functionalRequirements} says the the system should be able to reach 200kph. Hence, to know the relation between frequency and speed on a wheel it's important to know the wheel's diameter.
 			\par
-			According to \cite{pneus-facil-todas-as-medidas-de-pneu}, the smallest commercial tyre size in terms of diameter in Brazil is the standard 165/70R13 which has a diameter (D) of 561.2mm and the one with the biggest diameter (D) is the standard 265/50R20 having 773mm. Using Equation \ref{eqn:diameter-to-length} to calculate the overall length of the wheel gives a aproximately length of 1.762m for the smaller tyre and a aproximately length of 2.428m for the bigger one.
+			According to \cite{pneus-facil-todas-as-medidas-de-pneu}, the smallest commercial tyre size in terms of diameter in Brazil is the standard 165/70R13 which has a diameter (D) of 561.2mm and the one with the biggest diameter (D) is the standard 265/50R20 having 773mm. Using Equation \ref{eqn:diameter-to-length} to calculate the overall length of the wheel gives an aproximately length of 1.762m for the smaller tyre and an aproximately length of 2.428m for the bigger one.
 
 			\begin{equation}\label{eqn:diameter-to-length}
 				C = \pi \cdot D
@@ -74,7 +74,7 @@
 			For instance applying the upper frequency value of 28.36Hz calculated previously will give a $V_{O}=1.6504V$.
 			\par
 			\begin{comment}
-			According to \ref{sec:mcu-hw}, the choosen microcontroller's ADC has a resolution of 10-bit. A analog reference of 5V with 10-bit resolution gives a voltage resolution of 4.88mV. Hence, the calculated voltage ripple of the frequency-to-voltage converter must be less than the ADC resolution. Using values o $V_{RIPPLE}$, C1, R1, $f_{IN}$ and $V_{CC}$ in Equation \ref{eqn:lm2907-ripple} gives a C2 value of aproximately 10$\mu$F.
+			According to \ref{sec:mcu-hw}, the choosen microcontroller's ADC has a resolution of 10-bit. An analog reference of 5V with 10-bit resolution gives a voltage resolution of 4.88mV. Hence, the calculated voltage ripple of the frequency-to-voltage converter must be less than the ADC resolution. Using values o $V_{RIPPLE}$, C1, R1, $f_{IN}$ and $V_{CC}$ in Equation \ref{eqn:lm2907-ripple} gives a C2 value of aproximately 10$\mu$F.
 			\end{comment}
 			\par
 			Figure \ref{fig:ckp-conditioning-circuit} shows the designed circuit for the speed acquisition channel.
@@ -91,7 +91,7 @@
 			\begin{itemize}
 				\item\textit{\textbf{TVS Diode:}} In order to protect the the IC's input the SMBJ15CA TVS diode from \textit{Littelfuse} was added. This diode has a maximum clamping voltage of 24.4V, the maximum input voltage is $\pm$28V, thus the TVS will help protecting the input from overvoltages.\label{itm:ckp-circuit-tvs}
 				\item\textit{\textbf{LPF at the input:}} As the maximum frequency was determined to be 31.52Hz, it is possible to filter all the upper frequencies in order to avoid any noise to enter the circuit. R73 and C41 form a LPF with a cutoff frequency of aproximately 160Hz, as mentioned in Section \ref{sssec:lm2907-designed-circuit} the maximum signal frequency is approximately 150Hz.
-				\item\textit{\textbf{LPF at the output:}} R74 and C43 form a LPF to that is used to filter any external post-conversion noise, it has a aproximate frequency of 16Hz.\label{itm:ckp-circuit-lpf-output} 
+				\item\textit{\textbf{LPF at the output:}} R74 and C43 form a LPF to that is used to filter any external post-conversion noise, it has an aproximate frequency of 16Hz.\label{itm:ckp-circuit-lpf-output} 
 				\item\textit{\textbf{R78:}} This resistor is recommended by \cite{lm2907-datasheet} in order to use the voltage reference functionality.
 			\end{itemize}
 
@@ -109,7 +109,7 @@
 				\label{fig:ckp-detection-circuit}
 			\end{figure}
 
-		The working principle of this circuit is this: when ground is connected to the input (sensor connected) the output goes to zero volts and the LED is turned ON, when high level voltage is connected to the input or it is on open load the output goes to high level and the LED turns off. D11 is a diode to guarantee that no transient voltage will flow from the input to the circuit. D13 is a additional protection clamping diode working alongside with the LPF formed by R81 and C46 to protect the Q17's gate.
+		The working principle of this circuit is this: when ground is connected to the input (sensor connected) the output goes to zero volts and the LED is turned ON, when high level voltage is connected to the input or it is on open load the output goes to high level and the LED turns off. D11 is a diode to guarantee that no transient voltage will flow from the input to the circuit. D13 is an additional protection clamping diode working alongside with the LPF formed by R81 and C46 to protect the Q17's gate.
 		\end{comment}
 	\subsection{1.225V  Reference}\label{sssec:1v2-reference}
 

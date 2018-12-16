@@ -29,8 +29,8 @@
 			\item\textit{Timing and Control}: This circuit block represents the part of MCU responsible for maintaing the clock signals and handle time events.\label{itm:timing-and-control}
 			\item\textit{Program Flash}: This is a non-volatile memory used to store the code, MCUs can execute code directly from the flash memory.\label{itm:program-flash}
 			\item\textit{Port Drivers}: This are the device \textit{I/Os (inputs/outputs)}, they can be digital or analog ports (execpt for outputs which can only be digital).\label{itm:port-drivers}
-			\item\textit{ADC (Analogic to Digital Converter)}: MCUs are by nature digital devices, when acquiring a analog signal, they first make a conversion to a digital value and then copy this data to a register.\label{itm:adc}
-			\item\textit{USB 2.0}: Although not being a common feature, some MCUs include a USB (Universal Serial Bus) port. When interfacing with other USB devices, already having this feature inside the MCU saves space and costs when integrating the MCU in a circuit board.\label{itm:mcu-usb}
+			\item\textit{ADC (Analogic to Digital Converter)}: MCUs are by nature digital devices, when acquiring an analog signal, they first make a conversion to a digital value and then copy this data to a register.\label{itm:adc}
+			\item\textit{USB 2.0}: Although not being a common feature, some MCUs include an USB (Universal Serial Bus) port. When interfacing with other USB devices, already having this feature inside the MCU saves space and costs when integrating the MCU in a circuit board.\label{itm:mcu-usb}
 			\item\textit{High Speed Timer/PWM}: As mentioned in Item \ref{itm:port-drivers}, some MCUs do not have analog outputs, the high speed is used to generate a special digital output signal which will be explained on Section \ref{ssec:mcu-pwm}.\label{itm:high-speed-timer-pwm}
 		\end{itemize}
 
@@ -50,7 +50,7 @@
 		D_{ \left( \% \right) } =\frac{PW}{T}
 	\end{equation}
 
-	One useful way of using a PWM duty cycle variation is by enconding an analog voltage level proportional into it's percentage \cite{holmes2003pulse}, meaning that 100$\%$ duty cycle would represent maximum voltage amplitude and 0$\%$ the minimum voltage. This means it is possible to extract a analog voltage level by taking a PWM average level \cite{alter2008pwm}, this is a practical way for designing digital to analog converters.
+	One useful way of using a PWM duty cycle variation is by enconding an analog voltage level proportional into it's percentage \cite{holmes2003pulse}, meaning that 100$\%$ duty cycle would represent maximum voltage amplitude and 0$\%$ the minimum voltage. This means it is possible to extract an analog voltage level by taking a PWM average level \cite{alter2008pwm}, this is a practical way for designing digital to analog converters.
 
 \begin{comment}
 	\subsubsection{Microcontroller ISP programming}\label{sssec:microcontroller-isp-programming}
