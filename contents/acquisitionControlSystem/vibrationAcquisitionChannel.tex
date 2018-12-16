@@ -1,7 +1,7 @@
 \section{Vibration Acquisition Channel}\label{sec:vibration-acquisition-channel}
 
 \subsection{Accelerometer}\label{ssec:accelerometer-signal}
-	The choosen accelerometer for this project was the \textit{ADXL335} from \textit{Analog Devices} \cite{devices2010adxl335}. This accelerometer was choosen because it is the cheapest one availabe with the following characteristics:
+	The selected accelerometer for this project was the \textit{ADXL335} from \textit{Analog Devices} \cite{devices2010adxl335}. This accelerometer was chosen because it is the cheapest one availabe with the following characteristics:
 
 	\begin{itemize}
 		\item It has 3 axis sensing (easy to install).
@@ -32,7 +32,7 @@
 
 \subsection{Signal Conditioning Circuit}\label{ssec:accelerometer-signal-conditioning-circuit}
 
-	The ADXL335 datasheet \cite{devices2010adxl335} says that for a -3g measured acceleration the device output is of 0V and for +3g measurement it is 3V3 voltage. The sensor conditioning circuit is displayed on Figure \ref{fig:accelerometer-signal-conditioning-circuit}.
+	The ADXL335 datasheet \cite{devices2010adxl335} says that for a -3g measured acceleration the device output is of 0V and for +3g measurement it is 3V3 voltage. The sensor conditioning circuit is shown on Figure \ref{fig:accelerometer-signal-conditioning-circuit}.
 
 	\begin{figure}[htbp]
 		\centering
@@ -46,7 +46,7 @@
 
 \subsection{Sensor Detection Circuit}\label{ssec:accelerometer-sensor-detection-circuit}
 
-	The chosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)}, has a integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
+	The chosen solution for the accelerometer \textit{(Adafruit ADXL335 - 5V ready)}, has an integrated 3V3 voltage regulator. In Figure \ref{fig:adafruit-adxl335} it is possible to see that the 3V3 voltage output from the voltage regulator has a connection point on the board. Hence, if a wire is connected to this point and to the main circuit board, whenever this point does not have 3V3 voltage the sensor is disconnected. Moreover, the detection circuit just need to detect when the net is in 0V or 3V3.
 	\par
 	The detection circuit can be seen in Figure \ref{fig:accelerometer-sensor-detection-circuit}, D14 is a schottky diode used to protect the input from polarity change. TZ19 is a TVS used to protect the circuit from overvoltage, R111 and C66 forms a LPF with cutoff frequency close to 16Hz used to protect the NMOS gate from any fast transient.s
 

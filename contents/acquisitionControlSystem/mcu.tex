@@ -16,8 +16,7 @@
 		\caption{\textit{ATmega32U4} pinout \cite{atmega32u4-pinout}}
 		\label{fig:atmega32u4-pinout}
 	\end{figure}
-		
-
+	
 	\subsection{MCU circuit}\label{ssec:mcu-circuit}
 
 		This MCU is the same used on the Arduino Leonardo Board \cite{arduino-leonardo}, whereas, in order to avoid implementation problems the MCU peripheral components were chosen based on the Arduino board schematic \cite{arduino-leonardo-schematic}. The circuit with all the peripheral components to the ATmega32U4 can be divided in five parts.
@@ -60,7 +59,7 @@
 			\end{itemize}
 
 		\subsubsection{Crystal Oscillator Circuit}\label{sssec:crystal-oscillator-circuit}
-			According to \cite{atmega32u4-datasheet}, in order to work in full-speed mode, the MCU needs an external crystal oscillator with a frequency of 8 to 16MHz and bypassing capacitors from 12 to 22pF on the crystal pins. Based on \cite{arduino-leonardo-schematic} besides this capacitor a 1M$\Omega$ bias resistor has been placed between crystal pins. Also a 0R jumper (first mentioned in Item \ref{itm:crystal-oscillator-jumper} from Section \ref{ssec:mcu-circuit} was placed between one of the crystal pins and pin XTAL2 in case a low pass filter is needed (using this resistor and the internal capacitance of the MCU port). The desined circuit for the crystal oscillator is shown in Figure \ref{fig:crystal-oscillator-circuit} (except for the 0R jumper which can be seen in Figure \ref{fig:mcu-core-circuit}.
+			According to \cite{atmega32u4-datasheet}, in order to work in full-speed mode, the MCU needs an external crystal oscillator with a frequency of 8 to 16MHz and bypassing capacitors from 12 to 22pF on the crystal pins. Based on \cite{arduino-leonardo-schematic} besides this capacitor a 1M$\Omega$ bias resistor has been placed between crystal pins. Also a 0R jumper (first mentioned in Item \ref{itm:crystal-oscillator-jumper} from Section \ref{ssec:mcu-circuit} was placed between one of the crystal pins and pin XTAL2 in case a low pass filter is needed (using this resistor and the internal capacitance of the MCU port). The designed circuit for the crystal oscillator is shown in Figure \ref{fig:crystal-oscillator-circuit} (except for the 0R jumper which can be seen in Figure \ref{fig:mcu-core-circuit}.
 
 			\begin{figure}[htbp]
 				\centering

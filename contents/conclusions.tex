@@ -1,7 +1,6 @@
 \chapter{Conclusions and Future Endavours}\label{ch:conclusions-and-future-endavours}
-	
-	\section{Conclusions}\label{sec:conclusions}
-		The initial goals of this paper can be summarized as being the project of an electronic test bench to perform brake tests in automotive components, and this goal was achieved.
+		\section{Conclusions}\label{sec:conclusions}
+The goals of this work can be summarized as being the project of an electronic test bench to perform brake tests in automotive components, and this goal was achieved.
 		\par
 		As the tests proved the testbench can perform the required data acquisition of the specified physical quantities listed on Section \ref{sec:monitored-parameters} and also meet the mandatory requirements from Section \ref{sec:functionalRequirements} as well as the system can control the actuators needed for the brake tests.
 		\par
@@ -12,7 +11,7 @@
 		As mentioned before, this system is extremely versatile, making it able to perform many different functions. Although this system was initially developed with the final goal of performing braketests, at another point of view it can be seen as a control and acquisition system. For example, considering it has thermocouple reading inputs and digital inputs, it could be used to control a SMT (Surface Mount Technology)  reflow oven temperature. Moreover the force acquistion channels can be used to control an industrial precision scale. Considering a vibration channel was implemented, even a vibration testbench could be controlled and monitored. Possibilities are infinite, the only restriction is the amount of inputs and outputs of the designed hardware.
 
 	\section{Future Endavours}\label{sec:future-endavours}
-		A possible interesting improvement for this project would be developing a personalized software intead of using a default \textit{LabView} application. An open source plataform could make the system more capable of being readily changed and maybe developing a system using Java could even make it easier to migrate the system to a web plataform.
+		A possible interesting improvement for this project would be developing a personalized software instead of using a default \textit{LabView} application. An open source plataform could make the system more capable of being readily changed and maybe developing a system using Java could even make it easier to migrate the system to a web plataform.
 		\par
 		A future version of this project could maybe consider switching from an integrated architecture to a distribuited one, instead of putting all acquisition channels in one board, a single board for each acquisition channel could be created and all this boards could communicate through a I2C bus for example. That way the system versatility would be only limit to the number of allowed devices on the bus. Moreover, as the sensors cables could be smaller (peripheral boards would be placed closer to the sensors), there would probably be less noise captured by those cables.
 

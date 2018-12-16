@@ -2,7 +2,7 @@
 
 	\subsection{CKP Signal Conditioning}\label{ssec:ckp-signal-conditioning-circuit}
 
-		As mentioned in Section \ref{ssec:speedMeasurement}, a CKP sensor has an analog signal with variable amplitude. For this project the only important parameter to extract from the sensor output signal in order to obtain the wheel speed is its frequency (angular velocity). The most practical way to obtain this data is to use a tachometer interface circuit, for this project the LM2907 from \textit{Texas Instruments} \cite{lm2907-datasheet} will be used. LM2907 is a \textit{frequency-to-voltage} converter with a ground-referenced tachometer input with $\pm$28V maximum voltage, making it versatile for many different sensor models.
+		As mentioned in Section \ref{ssec:speedMeasurement}, a CKP sensor has an analog signal with variable amplitude. For this project the only important parameter to retrieve from the sensor output signal in order to obtain the wheel speed is its frequency (angular velocity). The most practical way to obtain this data is to use a tachometer interface circuit, for this project the LM2907 from \textit{Texas Instruments} \cite{lm2907-datasheet} will be used. LM2907 is a \textit{frequency-to-voltage} converter with a ground-referenced tachometer input with $\pm$28V maximum voltage, making it versatile for many different sensor models.
 		
 		\subsubsection{LM2907 Basic Tachometer Circuit}\label{sssec:lm2907-basic-tachometer-circuit}
 			The conditioning circuit for this project was based on the \textit{Minimum Component Tachometer Diagram } from Figure \ref{fig:lm2907-minimum-component-tachometer-diagram} and \textit{Tachometer with Adjustable Zero Speed Voltage Output} suggested by LM2907 datasheet  \cite{lm2907-datasheet} on the Typical Applications part.
@@ -21,11 +21,11 @@
 				\label{fig:lm2907-minimum-component-tachometer}
 			\end{figure}
 
-			According to the datasheet (\cite{lm2907-datasheet}), in order to configure the gain of the frequency-to-voltage converter, C1, R1 and C2 must configured in respect to the following design requirements.
+			According to the datasheet \cite{lm2907-datasheet}, in order to configure the gain of the frequency-to-voltage converter, C1, R1 and C2 must configured in respect to the following design requirements.
 
 			\begin{itemize}
 				\item\textbf{\textit{C1:}} This capacitor is charged and discharged every cycle by a 180$\mu$A typical current source. C1 must not be sized lower than 500-pF due to its role in internal compensation.\label{itm:lm2907-c1}
-				\item\textbf{\textit{R1:}} Higher of R1 values increase the output voltage for a given frequency, but too large will degrade the output’s linearity. Because the current pulses are a fixed magnitude of 180 $\mu$A  typical, R1 must be big enough to produce the maximum desired output voltage at maximum input frequency. At maximum input frequency the pulse train duty cycle is 100$\%$, therefore the average current is 180 $\mu$A and R1 = Vo(max) / 180 $\mu$A.\label{itm:lm2907-r1}
+				\item\textbf{\textit{R1:}} Higher of R1 values increase the output voltage for a given frequency, but too large will degrade the output’s linearity. Because the current pulses are a fixed magnitude of 180 $\mu$A  typical, R1 must be high enough to produce the maximum desired output voltage at maximum input frequency. At maximum input frequency the pulse train duty cycle is 100$\%$, therefore the average current is 180 $\mu$A and R1 = Vo(max) / 180 $\mu$A.\label{itm:lm2907-r1}
 				\item\textbf{\textit{C2:}} This capacitor filters the ripple produced by the current pulses sourced by the charge pump. Large values reduce the output voltage ripple but increase the output’s response time to changes in input frequency.\label{itm:lm2907-c2}
 			\end{itemize}
 
